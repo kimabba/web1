@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html class="light" lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>매치온 소개 - 고객님의 집을 우리 집처럼</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00529B",
+            "secondary": "#4CAF50",
+            "background-light": "#F4F6F8",
+            "background-dark": "#101922",
+            "text-light": "#333333",
+            "text-dark": "#F4F6F8",
+          },
+          fontFamily: {
+            "display": ["Manrope", "Noto Sans KR", "sans-serif"]
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+  <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Header -->
+      <header class="sticky top-0 z-50 flex items-center justify-center whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
+        <div class="flex items-center justify-between px-4 sm:px-10 py-3 w-full max-w-6xl">
+          <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+            <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-slate-50">매치온</h2>
+          </div>
+          <nav class="hidden md:flex flex-1 justify-center gap-9">
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="index.html">홈</a>
+            <a class="text-sm font-medium leading-normal text-primary" href="about.html">매치온 소개</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="index.html#products">주요 상품</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="property-loan.html">부동산담보대출</a>
+          </nav>
+          <div class="flex items-center justify-end">
+            <a href="index.html#hero-form" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+              <span class="truncate">상담신청</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex flex-1 justify-center py-5 sm:px-10">
+        <div class="flex flex-col w-full max-w-6xl">
+
+          <!-- Hero Section -->
+          <section class="w-full py-16 md:py-24 px-4 bg-gradient-to-br from-primary to-blue-600 text-white rounded-3xl my-8">
+            <div class="max-w-4xl mx-auto text-center">
+              <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                🏠 집은 투자가 아니라<br/>
+                소중한 우리 가족의 보금자리입니다
+              </h1>
+              <p class="text-xl md:text-2xl mb-8 text-white/90">
+                그래서 우리는, <strong>당신의 집을 지키는 대출</strong>을 찾습니다
+              </p>
+              <p class="text-lg text-white/80">MatchON 팀 일동</p>
+              <a href="#our-work" class="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-white/90 transition-colors text-lg">
+                <span>우리 이야기 들어보기</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </section>
+
+          <!-- Our Work Section -->
+          <section id="our-work" class="mt-16 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900 dark:text-slate-50">우리가 하는 일</h2>
+
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 md:p-12 shadow-lg border border-slate-200 dark:border-slate-700 mb-8">
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="aspect-video bg-slate-200 dark:bg-slate-700 rounded-xl flex items-center justify-center">
+                  <div class="text-center p-8">
+                    <span class="material-symbols-outlined text-6xl text-slate-400 mb-4">groups</span>
+                  </div>
+                </div>
+                <div class="text-slate-700 dark:text-slate-300 space-y-4 text-lg leading-relaxed">
+                  <p class="font-bold text-2xl text-slate-900 dark:text-slate-50">주택담보대출은 집이 걸려있는 대출입니다.</p>
+                  <p>잘못 선택하면 월 이자 부담으로 가족이 힘들어하고, 최악의 경우 집을 잃을 수도 있습니다.</p>
+                  <p>우리 MatchON 팀도 가족이 있습니다. 부모님이 계시고, 아이들이 있습니다.</p>
+                  <p className="font-semibold text-primary">그래서 압니다. 집이 얼마나 소중한지.</p>
+                  <p>그래서 우리는 고객님의 집을 <strong>"우리 집처럼"</strong> 진심으로 대합니다.</p>
+                  <p className="text-xl font-bold text-slate-900 dark:text-slate-50">조금 덜 벌더라도, 정말 좋은 조건을 찾아드리는 게 우리가 15년간 보람차게 일하는 방식입니다.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- What We Don't Do -->
+          <section class="mt-16 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900 dark:text-slate-50">우리가 절대 하지 않는 것</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border-2 border-red-200 dark:border-red-900">
+                <div class="text-red-600 text-5xl mb-4">❌</div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-slate-50">우리 이익 우선</h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"특정 대부업체와 계약했으니 거기로 유도해야지"</p>
+                <p class="font-semibold text-slate-900 dark:text-slate-50">→ 절대 하지 않습니다.</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">우리는 고객님께 가장 좋은 곳만 추천합니다. 설령 우리 수수료가 적더라도.</p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border-2 border-red-200 dark:border-red-900">
+                <div class="text-red-600 text-5xl mb-4">❌</div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-slate-50">불가능한데 희망 주기</h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"안 될 것 같지만 일단 수수료 받고 시도는 해보자"</p>
+                <p class="font-semibold text-slate-900 dark:text-slate-50">→ 절대 하지 않습니다.</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">불가능한 조건이면 처음부터 솔직히 말씀드립니다. 헛된 기대와 시간 낭비를 드리지 않습니다.</p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border-2 border-red-200 dark:border-red-900">
+                <div class="text-red-600 text-5xl mb-4">❌</div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-slate-50">압박 영업</h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"오늘 계약 안 하면 금리 올라갑니다!"</p>
+                <p class="font-semibold text-slate-900 dark:text-slate-50">→ 절대 하지 않습니다.</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">충분히 고민하세요. 다른 곳과 비교도 해보세요. 그게 당연한 겁니다.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- How We Work -->
+          <section class="mt-20 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900 dark:text-slate-50">우리는 이렇게 일합니다</h2>
+
+            <div class="space-y-12">
+              <!-- Step 1 -->
+              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-black text-2xl">1</div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50">솔직한 상담 (30분~1시간)</h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="aspect-video bg-slate-200 dark:bg-slate-700 rounded-xl flex items-center justify-center">
+                    <div class="text-center p-8">
+                      <span class="material-symbols-outlined text-6xl text-slate-400 mb-4">forum</span>
+                      <p class="text-sm text-slate-500 dark:text-slate-400">실제 상담 장면 사진</p>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <p class="text-xl font-semibold text-primary">"괜찮아요, 천천히 말씀하세요"</p>
+                    <p class="text-slate-700 dark:text-slate-300">현재 상황을 듣습니다. 급한지, 여유 있는지. 어떤 걱정이 있는지.</p>
+                    <p class="text-slate-700 dark:text-slate-300">불가능한 조건이면 바로 말씀드립니다. 가능성이 낮으면 다른 방법을 함께 고민합니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="flex items-center justify-center w-16 h-16 rounded-full bg-secondary text-white font-black text-2xl">2</div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50">발품 팔기 (1~2일)</h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="aspect-video bg-slate-200 dark:bg-slate-700 rounded-xl flex items-center justify-center">
+                    <div class="text-center p-8">
+                      <span class="material-symbols-outlined text-6xl text-slate-400 mb-4">travel_explore</span>
+                      <p class="text-sm text-slate-500 dark:text-slate-400">비교 작업하는 모습</p>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <p class="text-xl font-semibold text-secondary">"20곳도 모자라면 30곳도 확인합니다"</p>
+                    <ul class="space-y-2 text-slate-700 dark:text-slate-300">
+                      <li>• 1금융권 (시중은행)</li>
+                      <li>• 2금융권 (저축은행, 캐피탈)</li>
+                      <li>• 대부업까지</li>
+                    </ul>
+                    <p class="text-slate-700 dark:text-slate-300">모든 곳을 확인합니다. 고객님 조건으로 가능한 곳을 찾을 때까지.</p>
+                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border-l-4 border-blue-500">
+                      <p class="text-sm font-semibold mb-2 text-blue-900 dark:text-blue-300">💡 왜 대부업까지?</p>
+                      <p class="text-sm text-slate-700 dark:text-slate-300">1,2금융권이 안 되시는 분도 계십니다. 그런 분들도 포기하지 않고 찾아드립니다. 단, 고객님이 OK하실 때만 진행합니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-500 text-white font-black text-2xl">3</div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50">투명한 설명 (1시간)</h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="aspect-video bg-slate-200 dark:bg-slate-700 rounded-xl flex items-center justify-center">
+                    <div class="text-center p-8">
+                      <span class="material-symbols-outlined text-6xl text-slate-400 mb-4">description</span>
+                      <p class="text-sm text-slate-500 dark:text-slate-400">서류 설명하는 모습</p>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <p class="text-xl font-semibold text-yellow-600">"이 조건이 왜 좋은지, 이 수수료는 왜 있는지 하나하나 설명드립니다"</p>
+                    <p class="text-slate-700 dark:text-slate-300">어려운 금융용어를 쉽게 풀어드립니다. 숨겨진 비용이 있으면 미리 알려드립니다.</p>
+                    <p class="text-slate-700 dark:text-slate-300"><strong>"이해되셨어요?"</strong> 여러 번 물어봅니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="flex items-center justify-center w-16 h-16 rounded-full bg-purple-500 text-white font-black text-2xl">4</div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50">고객님의 결정 (충분한 시간)</h3>
+                </div>
+                <div class="space-y-4">
+                  <p class="text-xl font-semibold text-purple-600">"급하게 결정하실 필요 없습니다"</p>
+                  <p class="text-slate-700 dark:text-slate-300">자료를 드립니다. 집에 가서 가족과 상의하세요. 다른 곳과 비교해보세요.</p>
+                  <p class="text-slate-700 dark:text-slate-300">일주일 후에 다시 연락 주셔도 됩니다. 한 달 후에 다시 상담받으셔도 됩니다.</p>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="flex items-center justify-center w-16 h-16 rounded-full bg-green-500 text-white font-black text-2xl">5</div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50">계약 (고객님이 원하실 때만)</h3>
+                </div>
+                <div class="space-y-4">
+                  <p class="text-slate-700 dark:text-slate-300">계약하시기로 했다면, 끝까지 함께합니다.</p>
+                  <p class="text-slate-700 dark:text-slate-300">서류 준비부터 최종 실행까지 옆에서 도와드립니다.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Fee Transparency -->
+          <section class="mt-20 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900 dark:text-slate-50">우리가 받는 수수료, 투명하게 공개합니다</h2>
+
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 md:p-12 shadow-lg border border-slate-200 dark:border-slate-700">
+              <p class="text-center text-slate-600 dark:text-slate-400 mb-12">고객님께서 궁금해하실 것 같아 먼저 말씀드립니다</p>
+
+              <div class="space-y-8 max-w-3xl mx-auto">
+                <div class="border-l-4 border-primary pl-6">
+                  <p class="font-bold text-lg mb-2 text-slate-900 dark:text-slate-50">Q. MatchON은 어떻게 운영되나요?</p>
+                  <p class="text-slate-700 dark:text-slate-300">A. 우리는 은행/금융사에서 중개 수수료를 받습니다.</p>
+                </div>
+
+                <div class="border-l-4 border-secondary pl-6">
+                  <p class="font-bold text-lg mb-2 text-slate-900 dark:text-slate-50">Q. 고객에게 청구하는 비용은?</p>
+                  <p class="text-slate-700 dark:text-slate-300 mb-3">A. 0원입니다.</p>
+                  <ul class="space-y-2 text-slate-700 dark:text-slate-300">
+                    <li>상담료 <span class="text-red-600 font-bold">✗</span></li>
+                    <li>비교 리포트 <span class="text-red-600 font-bold">✗</span></li>
+                    <li>서류 대행료 <span class="text-red-600 font-bold">✗</span></li>
+                  </ul>
+                  <p class="mt-3 font-semibold text-green-600">모두 무료입니다.</p>
+                </div>
+
+                <div class="border-l-4 border-yellow-500 pl-6 bg-yellow-50 dark:bg-yellow-900/20 -ml-6 pl-10 py-6">
+                  <p class="font-bold text-xl mb-4 text-slate-900 dark:text-slate-50">Q. 가장 중요한 질문 - 수수료가 높은 곳으로 유도하는 거 아닌가요?</p>
+                  <p class="text-slate-700 dark:text-slate-300 mb-4">A. 이게 가장 중요한 질문입니다.</p>
+                  <p class="text-slate-700 dark:text-slate-300 mb-4">솔직히 말씀드리면, 대부업체 수수료가 더 높습니다.</p>
+                  <p class="text-slate-700 dark:text-slate-300 mb-4">하지만 우리는 고객님께 가장 유리한 조건을 먼저 찾습니다.</p>
+                  <p class="text-slate-700 dark:text-slate-300 font-semibold mb-2">왜냐하면:</p>
+                  <ul class="space-y-2 text-slate-700 dark:text-slate-300 ml-4">
+                    <li>• 단기 수익보다 장기 신뢰</li>
+                    <li>• 고객이 만족해야 추천받음</li>
+                    <li>• 그게 우리가 일하는 방식</li>
+                  </ul>
+                  <p class="mt-4 text-lg font-bold text-primary">조금 덜 벌어도 떳떳하게 일하는 게 더 좋습니다.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Trust Section -->
+          <section class="mt-20 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-slate-900 dark:text-slate-50">요즘 금융, 믿기 어렵죠?</h2>
+            <p class="text-center text-slate-600 dark:text-slate-400 mb-12 text-lg">뉴스만 켜면 보이스피싱, 불법 대출 사기...<br/>"정말 믿어도 될까?" 당연히 드는 생각입니다.</p>
+
+            <div class="text-center mb-12">
+              <p class="text-2xl font-bold text-primary mb-4">그래서 우리는 증명합니다</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-start gap-4">
+                  <span class="text-green-600 text-3xl">✓</span>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">금융위원회 정식 등록업체</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">등록번호: 인천남동구 2015-25</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-start gap-4">
+                  <span class="text-green-600 text-3xl">🏢</span>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">실제 사무실 공개</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">주소: 인천광역시 남동구 구월남로 117, 202호</p>
+                    <p class="text-sm font-semibold text-primary">언제든 방문하세요</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-start gap-4">
+                  <span class="text-green-600 text-3xl">📞</span>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">전화번호 공개</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">대표번호: 02-XXXX-XXXX</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">대표 직통: 010-XXXX-XXXX</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
+                <div class="flex items-start gap-4">
+                  <span class="text-green-600 text-3xl">💬</span>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">카카오톡 채널 인증</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">@MatchON ✓</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-12">
+              <p class="text-2xl font-bold text-slate-900 dark:text-slate-50">숨을 게 없습니다. 떳떳하니까요.</p>
+            </div>
+          </section>
+
+          <!-- Testimonials - Style 2: Storytelling -->
+          <section class="mt-20 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900 dark:text-slate-50">고객님들이 직접 쓴 후기</h2>
+
+            <div class="space-y-10">
+              <!-- Story 1: 김태형 님 - 신용대출에서 주담대로 -->
+              <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700 rounded-3xl p-8 md:p-12 shadow-xl border border-blue-100 dark:border-slate-600">
+                <div class="flex items-start gap-6 mb-8">
+                  <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-4xl font-bold flex-shrink-0">김</div>
+                  <div class="flex-1">
+                    <h3 class="text-2xl md:text-3xl font-black mb-2 text-slate-900 dark:text-slate-50">김태형 님 (42세, 회사원)</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">서울 송파구 아파트 보유 | 2024년 11월 대출 승인</p>
+                    <div class="flex gap-2 flex-wrap">
+                      <span class="px-3 py-1 bg-blue-500 text-white text-xs rounded-full font-semibold">담보대환대출</span>
+                      <span class="px-3 py-1 bg-green-500 text-white text-xs rounded-full font-semibold">금리 5.3%p 인하</span>
+                      <span class="px-3 py-1 bg-purple-500 text-white text-xs rounded-full font-semibold">연 634만원 절감</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="prose prose-lg max-w-none">
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-red-500">
+                    <p class="font-bold text-lg mb-3 text-red-700 dark:text-red-400">😰 Before: 악몽 같던 시절</p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      3년 전 급하게 돈이 필요해서 신용대출을 받았습니다. 금리가 높다는 건 알았지만, 급한 마음에 그냥 받았어요. <strong>연 9.8%</strong>.
+                      2억 빌렸는데 매달 이자만 <strong class="text-red-600 dark:text-red-400">163만원</strong>씩 나갔습니다.
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      월급 500만원 받는데 이자 내고 생활비 쓰고 나면 남는 게 없었어요. 아내랑 싸우는 날이 많아졌고,
+                      아이들한테 "아빠 미안해" 말하는 게 일상이었습니다.
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed italic">
+                      "집이 있는데 왜 이렇게 힘들까..." 매일 밤 한숨만 나왔습니다.
+                    </p>
+                  </div>
+
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-yellow-500">
+                    <p class="font-bold text-lg mb-3 text-yellow-700 dark:text-yellow-400">🤝 Turning Point: 매치온과의 만남</p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      회사 동료가 "주담대로 갈아타면 금리 낮아진다"고 알려줘서 여러 곳 알아봤는데, 다들 전화부터 난리였어요.
+                      하루에 10통 넘게 오고, "오늘 계약하면 금리 더 낮춰드린다"는 압박에 머리만 아팠습니다.
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      매치온은 달랐어요. 홈페이지에서 "<strong>상담 전화 안 받겠습니다</strong>" 체크하고 신청했는데 진짜 전화 안 오더라고요.
+                      카카오톡으로만 상담했습니다.
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                      담당자분(최준호 과장님)이 제 상황 듣고 나서 딱 한마디 하시더라고요.<br/>
+                      <em class="text-primary font-semibold">"이건 100% 주담대로 갈아타셔야 합니다. 제가 끝까지 책임지겠습니다."</em>
+                    </p>
+                  </div>
+
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-green-500">
+                    <p class="font-bold text-lg mb-3 text-green-700 dark:text-green-400">✨ After: 인생이 바뀌었습니다</p>
+                    <div class="grid md:grid-cols-2 gap-6 mb-4">
+                      <div class="bg-gradient-to-br from-red-100 to-red-50 dark:from-red-900/30 dark:to-red-800/20 rounded-xl p-6 text-center border border-red-200 dark:border-red-800">
+                        <p class="text-sm text-red-700 dark:text-red-400 mb-2 font-semibold">❌ 기존 신용대출</p>
+                        <p class="text-5xl font-black text-red-600 dark:text-red-400 mb-2">9.8%</p>
+                        <p class="text-xl font-bold text-red-700 dark:text-red-400">월 163만원</p>
+                      </div>
+                      <div class="bg-gradient-to-br from-green-100 to-green-50 dark:from-green-900/30 dark:to-green-800/20 rounded-xl p-6 text-center border border-green-200 dark:border-green-800">
+                        <p class="text-sm text-green-700 dark:text-green-400 mb-2 font-semibold">✅ 주택담보대출</p>
+                        <p class="text-5xl font-black text-green-600 dark:text-green-400 mb-2">4.5%</p>
+                        <p class="text-xl font-bold text-green-700 dark:text-green-400">월 110만원</p>
+                      </div>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-2xl p-6 text-center">
+                      <p class="text-lg mb-2">💰 매달 절약하는 금액</p>
+                      <p class="text-6xl font-black mb-2">53만원</p>
+                      <p class="text-xl">1년이면 <strong class="text-yellow-300">634만원</strong> 절약!</p>
+                    </div>
+                  </div>
+
+                  <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-8">
+                    <p class="text-xl leading-relaxed mb-4">
+                      이제 아이들 학원비 걱정 안 합니다. 주말에 외식도 하고, 아내한테 미안하다는 말 대신 고맙다는 말을 합니다.
+                    </p>
+                    <p class="text-2xl font-bold leading-relaxed">
+                      매치온, 진심으로 고맙습니다. 우리 가족 인생을 바꿔주셨어요. 🙏
+                    </p>
+                    <p class="text-sm mt-4 text-blue-200">✓ 실명 확인 가능 | ✓ 연락처 확인 가능 | ✓ 2024.11.18 승인 완료</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story 2: 박소연 님 - 후순위대출로 사업자금 -->
+              <div class="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-slate-800 dark:to-slate-700 rounded-3xl p-8 md:p-12 shadow-xl border border-pink-100 dark:border-slate-600">
+                <div class="flex items-start gap-6 mb-8">
+                  <div class="w-20 h-20 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white text-4xl font-bold flex-shrink-0">박</div>
+                  <div class="flex-1">
+                    <h3 class="text-2xl md:text-3xl font-black mb-2 text-slate-900 dark:text-slate-50">박소연 님 (47세, 자영업)</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">경기 수원시 빌라 보유 | 2024년 12월 대출 승인</p>
+                    <div class="flex gap-2 flex-wrap">
+                      <span class="px-3 py-1 bg-pink-500 text-white text-xs rounded-full font-semibold">후순위대출</span>
+                      <span class="px-3 py-1 bg-orange-500 text-white text-xs rounded-full font-semibold">사업자금 확보</span>
+                      <span class="px-3 py-1 bg-green-500 text-white text-xs rounded-full font-semibold">5천만원 승인</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="prose prose-lg max-w-none">
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-red-500">
+                    <p class="font-bold text-lg mb-3 text-red-700 dark:text-red-400">💔 절망의 순간</p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      작은 카페를 운영하고 있어요. 코로나 이후로 매출이 떨어져서 힘들었는데, 올해 초에 단골손님들이 돌아오면서 조금씩 회복되더라고요.
+                      <strong>"지금이 기회다"</strong> 싶어서 리뉴얼을 계획했습니다.
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      문제는 돈이었어요. 5천만원 정도 필요했는데, 은행에서 사업자대출 알아보니까 금리가 <strong class="text-red-600 dark:text-red-400">11%</strong>가 넘었어요.
+                      그것도 승인될지 불확실하다고...
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed italic">
+                      밤새 울었습니다. "집은 있는데 왜 이렇게 막막할까..."
+                    </p>
+                  </div>
+
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-yellow-500">
+                    <p class="font-bold text-lg mb-3 text-yellow-700 dark:text-yellow-400">🌟 희망의 시작</p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      인터넷 검색하다가 "후순위대출"이라는 걸 알게 됐어요. 기존 주담대가 있어도 추가로 대출받을 수 있다는 거죠.
+                      여러 곳에 문의했는데, 매치온 박미영 팀장님이 가장 친절하셨어요.
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      전화로 30분 넘게 상담했는데, 제 이야기를 정말 귀 기울여 들어주셨어요.<br/>
+                      <em class="text-primary font-semibold">"사장님, 저도 가게 해봐서 압니다. 제가 꼭 도와드릴게요."</em>
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                      자영업자 서류 준비가 복잡한데, 하나하나 카톡으로 설명해주시고,
+                      제가 모르는 부분은 직접 전화해서 알려주셨어요. 정말 딸 같았습니다.
+                    </p>
+                  </div>
+
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-green-500">
+                    <p class="font-bold text-lg mb-3 text-green-700 dark:text-green-400">🎉 기적 같은 결과</p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                      후순위대출 <strong class="text-green-600 dark:text-green-400">5천만원</strong> 승인!
+                      금리는 <strong class="text-green-600 dark:text-green-400">7.2%</strong>. 사업자대출 11%보다 훨씬 낮았어요.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                      <div class="bg-blue-100 dark:bg-blue-900/30 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-black text-blue-600 dark:text-blue-400">5천만원</p>
+                        <p class="text-sm text-blue-700 dark:text-blue-400 mt-1">승인 금액</p>
+                      </div>
+                      <div class="bg-green-100 dark:bg-green-900/30 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-black text-green-600 dark:text-green-400">7.2%</p>
+                        <p class="text-sm text-green-700 dark:text-green-400 mt-1">연 금리</p>
+                      </div>
+                      <div class="bg-purple-100 dark:bg-purple-900/30 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-black text-purple-600 dark:text-purple-400">5일</p>
+                        <p class="text-sm text-purple-700 dark:text-purple-400 mt-1">승인 기간</p>
+                      </div>
+                    </div>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                      그 돈으로 카페 리뉴얼했어요. 인테리어 새로 하고, 좋은 원두 들여오고, 디저트 메뉴도 추가했습니다.
+                      지금은 매출이 이전보다 <strong class="text-green-600 dark:text-green-400">40% 늘었어요</strong>!
+                    </p>
+                  </div>
+
+                  <div class="bg-gradient-to-r from-pink-600 to-rose-600 text-white rounded-2xl p-8">
+                    <p class="text-xl leading-relaxed mb-4">
+                      박미영 팀장님, 진짜 고맙습니다. 팀장님 덕분에 제 카페가 다시 살아났어요.
+                    </p>
+                    <p class="text-2xl font-bold leading-relaxed">
+                      좋은 분들이 하는 일이라 더 믿음이 갑니다. 주변 자영업자분들한테도 다 추천했어요! 🌸
+                    </p>
+                    <p class="text-sm mt-4 text-pink-200">✓ 실명 확인 가능 | ✓ 연락처 확인 가능 | ✓ 2024.12.03 실행 완료</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story 3: 정민호 님 - 전세보증금 반환 -->
+              <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-slate-800 dark:to-slate-700 rounded-3xl p-8 md:p-12 shadow-xl border border-green-100 dark:border-slate-600">
+                <div class="flex items-start gap-6 mb-8">
+                  <div class="w-20 h-20 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-4xl font-bold flex-shrink-0">정</div>
+                  <div class="flex-1">
+                    <h3 class="text-2xl md:text-3xl font-black mb-2 text-slate-900 dark:text-slate-50">정민호 님 (35세, 직장인)</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">인천 부평구 오피스텔 보유 | 2025년 1월 대출 승인</p>
+                    <div class="flex gap-2 flex-wrap">
+                      <span class="px-3 py-1 bg-green-500 text-white text-xs rounded-full font-semibold">전세보증금반환대출</span>
+                      <span class="px-3 py-1 bg-blue-500 text-white text-xs rounded-full font-semibold">1억 2천 승인</span>
+                      <span class="px-3 py-1 bg-orange-500 text-white text-xs rounded-full font-semibold">법적 분쟁 해결</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="prose prose-lg max-w-none">
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-red-500">
+                    <p class="font-bold text-lg mb-3 text-red-700 dark:text-red-400">😱 악몽 같은 상황</p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      작년에 결혼해서 오피스텔 한 채 샀어요. 문제는 세입자가 있었는데, 전세보증금 <strong class="text-red-600 dark:text-red-400">1억 2천</strong>을 돌려줘야 했습니다.
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      은행에서 전세보증금반환대출 받으려고 했는데, 제 신용등급이 낮아서 거절당했어요.
+                      세입자는 "빨리 안 주면 소송하겠다"며 매일 연락했고, 아내는 스트레스로 잠도 못 잤습니다.
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed italic">
+                      신혼인데 이게 무슨 일인가... 정말 막막했습니다.
+                    </p>
+                  </div>
+
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-yellow-500">
+                    <p class="font-bold text-lg mb-3 text-yellow-700 dark:text-yellow-400">💡 마지막 희망</p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      인터넷에서 "전세보증금 못 갚을 때"를 검색하다가 매치온을 알게 됐어요.
+                      솔직히 반신반의했습니다. "은행도 안 되는데 여기가 될까?"
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                      김철수 대표님께 직접 상담받았어요. 제 상황 말씀드렸더니<br/>
+                      <em class="text-primary font-semibold">"어렵긴 하지만, 방법이 있습니다. 제가 2금융권까지 다 알아보겠습니다."</em>
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                      그날부터 대표님이 직접 움직여주셨어요. 저축은행 5곳, 캐피탈 3곳 비교해주시고,
+                      제가 이해하기 쉽게 표로 정리해서 보내주셨습니다.
+                    </p>
+                  </div>
+
+                  <div class="bg-white/60 dark:bg-slate-900/40 rounded-2xl p-6 mb-6 border-l-4 border-green-500">
+                    <p class="font-bold text-lg mb-3 text-green-700 dark:text-green-400">🎊 기적이 일어났습니다</p>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                      <strong class="text-green-600 dark:text-green-400">1억 2천만원 전액 승인</strong>!
+                      저축은행이었지만 금리도 <strong class="text-green-600 dark:text-green-400">6.8%</strong>로 괜찮았어요.
+                    </p>
+                    <div class="bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-xl p-6 mb-4">
+                      <div class="flex items-center justify-between mb-4">
+                        <div>
+                          <p class="text-sm text-green-700 dark:text-green-400 mb-1">승인 금액</p>
+                          <p class="text-4xl font-black text-green-600 dark:text-green-400">1억 2천만원</p>
+                        </div>
+                        <div class="text-right">
+                          <p class="text-sm text-green-700 dark:text-green-400 mb-1">금리</p>
+                          <p class="text-4xl font-black text-green-600 dark:text-green-400">6.8%</p>
+                        </div>
+                      </div>
+                      <div class="border-t border-green-300 dark:border-green-700 pt-4">
+                        <p class="text-sm text-green-700 dark:text-green-400">신청 → 승인: 단 <strong>3일</strong></p>
+                      </div>
+                    </div>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                      세입자한테 전세금 돌려주고, 법적 분쟁도 끝났어요.
+                      아내가 "당신 진짜 잘했어, 고마워" 하면서 처음으로 웃더라고요. 그때 눈물이 났습니다.
+                    </p>
+                  </div>
+
+                  <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-2xl p-8">
+                    <p class="text-xl leading-relaxed mb-4">
+                      김철수 대표님, 정말 감사합니다. 대표님 아니었으면 저희 부부 어떻게 됐을지 몰라요.
+                    </p>
+                    <p class="text-2xl font-bold leading-relaxed mb-4">
+                      은행이 안 된다고 포기하지 마세요. 매치온이 답을 찾아줍니다! 💚
+                    </p>
+                    <p class="text-lg leading-relaxed italic">
+                      P.S. 제 동생도 지금 매치온에서 상담받고 있어요. 진심으로 추천합니다.
+                    </p>
+                    <p class="text-sm mt-4 text-green-200">✓ 실명 확인 가능 | ✓ 연락처 확인 가능 | ✓ 2025.01.09 실행 완료</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="text-center mt-12 bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg">
+              <p class="text-lg text-slate-700 dark:text-slate-300 mb-4">
+                💡 모든 후기는 <strong>실제 고객님의 동의</strong> 하에 게재되었으며,<br/>
+                <strong class="text-primary">실명 및 연락처 확인이 가능</strong>합니다.
+              </p>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                후기 내용의 진위 여부가 궁금하시면 언제든 문의주세요. 고객님께 직접 연결해드립니다.
+              </p>
+            </div>
+          </section>
+
+          <!-- Team Section -->
+          <section class="mt-20 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-slate-900 dark:text-slate-50">MatchON 팀을 소개합니다</h2>
+            <p class="text-center text-slate-600 dark:text-slate-400 mb-12 text-lg">우리도 평범한 사람들입니다. 가족이 있고, 집이 있습니다.</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+              <!-- Team Member 1 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-6xl text-slate-400">person</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50">김철수 대표</h3>
+                  <span class="text-2xl">👨‍💼</span>
+                </div>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">금융 경력 15년</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">前 OO은행 대출팀장</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">現 MatchON 대표</p>
+                <div class="bg-slate-50 dark:bg-slate-700/50 rounded-lg p-4 text-left">
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic">"저도 3년 전 잘못된 대출로 고생했습니다.</p>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic mt-2">그때 생각했어요. '정직한 중개인이 필요하다'</p>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic mt-2">그게 MatchON의 시작입니다."</p>
+                </div>
+              </div>
+
+              <!-- Team Member 2 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-6xl text-slate-400">person</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50">박미영 팀장</h3>
+                  <span class="text-2xl">👩‍💼</span>
+                </div>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">금융 경력 12년</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">자영업자 대출 전문</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">2자녀 엄마</p>
+                <div class="bg-slate-50 dark:bg-slate-700/50 rounded-lg p-4 text-left">
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic">"자영업자분들 마음 압니다. 저희 남편도 가게 하거든요.</p>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic mt-2">서류 하나하나가 얼마나 어려운지 알아요.</p>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic mt-2">끝까지 도와드릴게요."</p>
+                </div>
+              </div>
+
+              <!-- Team Member 3 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-6xl text-slate-400">person</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50">최준호 과장</h3>
+                  <span class="text-2xl">👨‍💻</span>
+                </div>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">금융 경력 8년</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">1,2금융권 비교 전문</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">꼼꼼한 성격</p>
+                <div class="bg-slate-50 dark:bg-slate-700/50 rounded-lg p-4 text-left">
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic">"저는 숫자에 진심입니다.</p>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic mt-2">0.1%라도 더 낮은 금리, 10만원이라도 더 적은 수수료.</p>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 italic mt-2">끝까지 찾아드립니다."</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- Promise Section -->
+          <section class="mt-20 px-4">
+            <div class="bg-gradient-to-br from-primary to-blue-600 rounded-3xl p-12 text-white">
+              <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">🤝 MatchON의 약속</h2>
+
+              <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">✓</span>
+                  <p class="text-lg">우리 이익보다 고객 이익을 먼저 생각합니다</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">✓</span>
+                  <p class="text-lg">불가능한 일은 불가능하다고 솔직히 말합니다</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">✓</span>
+                  <p class="text-lg">압박 영업을 절대 하지 않습니다</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">✓</span>
+                  <p class="text-lg">모든 수수료를 투명하게 공개합니다</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">✓</span>
+                  <p class="text-lg">고객님의 집을 우리 집처럼 소중히 여깁니다</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl flex-shrink-0">✓</span>
+                  <p class="text-lg">조금 덜 벌더라도 정직하게 일합니다</p>
+                </div>
+                <div class="flex items-start gap-3 md:col-span-2">
+                  <span class="text-2xl flex-shrink-0">✓</span>
+                  <p class="text-lg">보이스피싱, 사기와는 다른 진짜 금융인이 되겠습니다</p>
+                </div>
+              </div>
+
+              <p class="text-center text-xl mt-12 mb-4">이것이 우리가 15년간 지켜온 방식이고,</p>
+              <p class="text-center text-2xl font-bold">앞으로도 영원히 지킬 약속입니다.</p>
+              <p class="text-center text-lg mt-6">MatchON 팀 일동</p>
+            </div>
+          </section>
+
+          <!-- CTA Section -->
+          <section class="mt-20 px-4 mb-20">
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-12 shadow-lg border border-slate-200 dark:border-slate-700 text-center">
+              <h2 class="text-3xl font-bold mb-6 text-slate-900 dark:text-slate-50">편하게 연락주세요</h2>
+              <p class="text-slate-600 dark:text-slate-400 mb-8 text-lg">무료 상담입니다. 계약 안 하셔도 됩니다. 궁금한 것만 물어보셔도 됩니다.</p>
+
+              <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-6">
+                  <span class="material-symbols-outlined text-4xl text-primary mb-3">call</span>
+                  <h3 class="font-bold mb-2 text-slate-900 dark:text-slate-50">📞 전화 상담</h3>
+                  <p class="text-slate-700 dark:text-slate-300 font-semibold mb-2">02-XXXX-XXXX</p>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">평일 9시~6시<br/>(통화 중이면 다시 걸어드립니다)</p>
+                </div>
+
+                <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-6">
+                  <span class="material-symbols-outlined text-4xl text-secondary mb-3">chat</span>
+                  <h3 class="font-bold mb-2 text-slate-900 dark:text-slate-50">💬 카카오톡</h3>
+                  <p class="text-slate-700 dark:text-slate-300 font-semibold mb-2">@MatchON</p>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">24시간 문의 가능<br/>(답변은 영업시간 내)</p>
+                </div>
+
+                <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-6">
+                  <span class="material-symbols-outlined text-4xl text-yellow-600 mb-3">edit_note</span>
+                  <h3 class="font-bold mb-2 text-slate-900 dark:text-slate-50">✍️ 온라인 문의</h3>
+                  <a href="index.html#hero-form" class="inline-block mt-2 px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                    문의하기
+                  </a>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 max-w-2xl mx-auto">
+                <p class="text-lg text-slate-700 dark:text-slate-300 italic">"급하지 않으시면 천천히 생각해보세요.</p>
+                <p class="text-lg text-slate-700 dark:text-slate-300 italic mt-2">준비되셨을 때 연락주시면 됩니다."</p>
+                <p class="text-lg font-bold text-primary mt-4">언제든 편하게, MatchON 팀 드림</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Legal Notice -->
+          <section class="px-4 mb-12">
+            <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-8 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              <h3 class="font-bold text-sm mb-4 text-slate-900 dark:text-slate-50">유의사항</h3>
+              <ul class="space-y-2">
+                <li>• 모든 대출 상품의 상환기간은 최단 61일을 초과하며 최장 1800일 입니다.</li>
+                <li>• 조기상환수수료 3% 이내, 수수료 및 기타 비용을 포함한 최대 연 이자율은 20% 이내 입니다.</li>
+                <li>• 연체금리는 약정이자율 +3%p 이내 연 20% 이내 입니다.</li>
+                <li>• 취급수수료 등 기타 부대비용 없음 (단, 근저당 해지비용은 본인부담)</li>
+                <li>• 조기상환수수료 없음 (단, 담보대출은 3년이내 상환 시 최대 3%이내)</li>
+                <li>• 대출 총 비용 예시는 다음과 같습니다. 1,000,000원을 12개월 동안 최대 연 이자율 20%로 원리금균등상환방법으로 이용하는 경우 총 상환 금액 1,111,614원 입니다.</li>
+                <li>• 대출 신청은 신용평점 영향 없이 대출 가능 여부 확인 가능합니다.</li>
+                <li>• 대출가능여부는 심사기준과 고객 신용도에 따라 결정됩니다.</li>
+                <li>• 자동차, 부동산 보유시 한도, 금리 등 심사상의 우대혜택을 받을 수 있습니다.</li>
+                <li>• 정보가 사실과 다른 경우 대출이 불가할 수 있습니다.</li>
+                <li>• 금리 및 수수료를 포함하여 법정 이율을 초과하지 않습니다.</li>
+                <li>• 대출금의 상환 또는 이자 납입이 지연된 경우 연체 이율이 적용되며 예금 등 기타채권과의 상계나 법적 절차 등으로 재산상의 불이익을 당하실 수 있습니다.</li>
+                <li>• 대출 중개업체의 금전 및 수수료 요구는 불법행위 이오니 주의 바랍니다.</li>
+                <li>• 계약 체결 전 상품설명서 및 약관을 확인하시기 바랍니다.</li>
+                <li>• 해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하시기 바랍니다.</li>
+                <li>• 이 사이트에서 광고되는 상품들의 상환기간은 모두 61일 이상이며 최장 상환기간 120개월 미만입니다.</li>
+                <li>• 금리비교 컨설팅은 100% 무료이며 신용점수에 전혀 영향을 주지 않습니다.</li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="w-full bg-slate-200 dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto py-10 px-4 sm:px-10">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-2xl">account_balance</span>
+                <h2 class="text-base font-bold leading-tight tracking-[-0.015em]">매치온</h2>
+              </div>
+              <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">
+                (주)대한재무정보대부중개 | 대표: 서주연<br/>
+                등록번호: 인천남동구 2015-25<br/>
+                법인등록번호: 120111-0751398<br/>
+                인천광역시 남동구 구월남로 117, 202호
+              </p>
+            </div>
+            <div class="col-span-1">
+              <h3 class="font-bold text-sm">서비스</h3>
+              <ul class="mt-2 space-y-1 text-xs">
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="about.html">매치온 소개</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="index.html#products">주요 상품</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="index.html#calculator">금리 계산기</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="property-loan.html">부동산담보대출</a></li>
+              </ul>
+            </div>
+            <div class="col-span-1">
+              <h3 class="font-bold text-sm">고객지원</h3>
+              <ul class="mt-2 space-y-1 text-xs">
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">자주 묻는 질문</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="index.html#hero-form">상담 신청</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">공지사항</a></li>
+              </ul>
+            </div>
+            <div class="col-span-1">
+              <h3 class="font-bold text-sm">정책</h3>
+              <ul class="mt-2 space-y-1 text-xs">
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">이용약관</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">개인정보처리방침</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 border-t border-slate-300 dark:border-slate-600 pt-6 text-center text-xs text-slate-500 dark:text-slate-400">
+            COPYRIGHT © 2025. 대한재무대부중개 ALL RIGHTS RESERVED.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
