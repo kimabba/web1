@@ -23,7 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0"></script>
 
   <!-- CountUp.js -->
-  <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.min.js"></script>
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -256,20 +256,32 @@
             <div class="max-w-5xl mx-auto hero-content">
               <!-- Main Headline -->
               <div class="text-center mb-8">
-                <div
-                  class="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4 pulse-animation">
-                  ✨ 전화 부담 없이, 한도만 먼저 확인하세요
+                <div class="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-md mb-4">
+                  17년 전통의 신뢰할 수 있는 금융 파트너
                 </div>
-                <h1
-                  class="text-4xl md:text-6xl font-black text-slate-900 dark:text-slate-50 tracking-tight leading-tight mb-4">
-                  <span class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">담보대출
-                    한도</span>부터<br class="md:hidden" /> 확인하고<br />
-                  <span class="text-3xl md:text-5xl">필요시 통화하세요</span>
+                <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-slate-50 tracking-tight leading-tight mb-4">
+                  <span class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">주택담보대출</span><br class="sm:inline md:hidden"/>
+                  무료 한도 조회
                 </h1>
-                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-                  원하지 않으면 <strong class="text-primary">상담 전화를 받지 않아도 됩니다.</strong><br class="sm:hidden" />
-                  메시지로 <strong>예상 한도와 금리</strong>만 받아보세요.
+                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                  상담 전화 선택제 시스템으로<br class="sm:hidden"/>
+                  <strong class="text-primary">고객님의 선택을 존중</strong>합니다.<br/>
+                  간편하게 <strong>예상 한도와 금리</strong>를<br class="sm:hidden"/> 문자로 안내받으세요.
                 </p>
+                <div class="mt-6 flex items-center justify-center gap-8 text-sm text-slate-600 dark:text-slate-400">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">verified</span>
+                    <span>금융위원회 등록</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">security</span>
+                    <span>정보보호 인증</span>
+                  </div>
+                  <div class="hidden md:flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">account_balance</span>
+                    <span>1금융권 제휴</span>
+                  </div>
+                </div>
               </div>
 
               <!-- Main Form Card -->
@@ -497,6 +509,50 @@
             </div>
           </section>
 
+          <!-- Counter Animation Section -->
+          <section class="mt-16 px-4">
+            <div class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-8 md:p-12">
+              <h2 class="text-center text-3xl font-bold mb-12 text-slate-900 dark:text-slate-50">17년간 쌓아온 신뢰와 실적</h2>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                  <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+                    <span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+                  </div>
+                  <p class="text-4xl font-black mb-2 text-slate-900 dark:text-slate-50">
+                    <span class="counter" data-target="150000">0</span><span>건+</span>
+                  </p>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">누적 대출 실행</p>
+                </div>
+                <div class="text-center">
+                  <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-4">
+                    <span class="material-symbols-outlined text-secondary text-3xl">workspace_premium</span>
+                  </div>
+                  <p class="text-4xl font-black mb-2 text-slate-900 dark:text-slate-50">
+                    <span class="counter" data-target="92">0</span><span>%</span>
+                  </p>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">평균 대출 승인율</p>
+                </div>
+                <div class="text-center">
+                  <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-500/10 mb-4">
+                    <span class="material-symbols-outlined text-yellow-600 text-3xl">star</span>
+                  </div>
+                  <p class="text-4xl font-black mb-2 text-slate-900 dark:text-slate-50">
+                    <span class="counter" data-target="4.7" data-decimals="1">0</span><span>/5.0</span>
+                  </p>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">고객 만족도</p>
+                </div>
+                <div class="text-center">
+                  <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/10 mb-4">
+                    <span class="material-symbols-outlined text-blue-600 text-3xl">groups</span>
+                  </div>
+                  <p class="text-4xl font-black mb-2 text-slate-900 dark:text-slate-50">
+                    <span class="counter" data-target="250000">0</span><span>명+</span>
+                  </p>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">누적 상담 고객</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <!-- Products Section - Tab Navigation -->
           <section id="products" class="mt-16 px-4">
@@ -1202,38 +1258,6 @@
             </div>
           </section>
 
-          <!-- Partner Banks Section -->
-          <section class="mt-16 text-center px-4">
-            <h2
-              class="text-slate-900 dark:text-slate-50 text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
-              주요 1금융권 은행들과 함께합니다</h2>
-            <p class="text-slate-600 dark:text-slate-300 mb-8">국내 최고의 금융사들과 제휴하여 가장 유리한 조건을 제공합니다.</p>
-            <div class="py-6">
-              <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12">
-                <div
-                  class="h-12 px-4 flex items-center justify-center bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                  <span class="text-lg font-bold text-slate-700 dark:text-slate-300">KB국민은행</span>
-                </div>
-                <div
-                  class="h-12 px-4 flex items-center justify-center bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                  <span class="text-lg font-bold text-slate-700 dark:text-slate-300">신한은행</span>
-                </div>
-                <div
-                  class="h-12 px-4 flex items-center justify-center bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                  <span class="text-lg font-bold text-slate-700 dark:text-slate-300">우리은행</span>
-                </div>
-                <div
-                  class="h-12 px-4 flex items-center justify-center bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                  <span class="text-lg font-bold text-slate-700 dark:text-slate-300">하나은행</span>
-                </div>
-                <div
-                  class="h-12 px-4 flex items-center justify-center bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow">
-                  <span class="text-lg font-bold text-slate-700 dark:text-slate-300">NH농협은행</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
           <!-- Live Status Section -->
           <section class="mt-16 px-4">
             <div
@@ -1718,6 +1742,244 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </section>
+
+          <!-- 대출 자격 요건 Section -->
+          <section class="mt-16 px-4">
+            <div class="max-w-6xl mx-auto">
+              <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold mb-4">대출 자격 요건</h2>
+              <p class="text-center text-slate-600 dark:text-slate-300 mb-12">아래 요건을 충족하시면 대출 신청이 가능합니다</p>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-md border border-slate-200 dark:border-slate-700">
+                  <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-primary text-2xl">person</span>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">기본 자격</h3>
+                      <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary mt-1">•</span>
+                          <span>만 19세 이상 대한민국 국민</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary mt-1">•</span>
+                          <span>정상적인 소득 활동 중인 분</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary mt-1">•</span>
+                          <span>담보 부동산 소유자 또는 공동명의자</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary mt-1">•</span>
+                          <span>신용등급 6등급 이내 (협의 가능)</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-md border border-slate-200 dark:border-slate-700">
+                  <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-primary text-2xl">home</span>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">담보 요건</h3>
+                      <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary mt-1">•</span>
+                          <span>아파트, 빌라, 주택, 오피스텔 등</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary mt-1">•</span>
+                          <span>시가 1억원 이상의 부동산</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary mt-1">•</span>
+                          <span>등기부등본 상 권리관계 명확</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-primary mt-1">•</span>
+                          <span>재건축, 재개발 제외 지역 선호</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 필요 서류 Section -->
+          <section class="mt-16 px-4">
+            <div class="max-w-6xl mx-auto">
+              <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold mb-4">필요 서류 안내</h2>
+              <p class="text-center text-slate-600 dark:text-slate-300 mb-12">신속한 심사를 위해 아래 서류를 준비해 주세요</p>
+
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-slate-200 dark:border-slate-700">
+                  <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-blue-600 text-2xl">description</span>
+                  </div>
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-3">신분 증빙</h3>
+                  <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                    <li>• 주민등록증 또는 운전면허증</li>
+                    <li>• 주민등록등본 (최근 3개월 이내)</li>
+                    <li>• 가족관계증명서 (해당 시)</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-slate-200 dark:border-slate-700">
+                  <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-green-600 text-2xl">receipt_long</span>
+                  </div>
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-3">소득 증빙</h3>
+                  <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                    <li>• 재직증명서 + 급여명세서</li>
+                    <li>• 사업자등록증 + 소득금액증명원</li>
+                    <li>• 건강보험자격득실확인서</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-slate-200 dark:border-slate-700">
+                  <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-purple-600 text-2xl">real_estate_agent</span>
+                  </div>
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-3">부동산 서류</h3>
+                  <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                    <li>• 등기부등본 (최근 1개월 이내)</li>
+                    <li>• 건축물대장 또는 토지대장</li>
+                    <li>• 부동산 매매계약서 (해당 시)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-8 bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-blue-600 text-2xl flex-shrink-0">info</span>
+                  <div class="text-sm text-slate-700 dark:text-slate-300">
+                    <strong class="block mb-2">서류 준비 안내</strong>
+                    <p>• 모든 서류는 원본 또는 사본 가능하며, 심사 과정에서 추가 서류가 요청될 수 있습니다.</p>
+                    <p>• 서류 준비가 어려우신 경우, 상담 시 안내해 드립니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 금리 우대 조건 Section -->
+          <section class="mt-16 px-4">
+            <div class="max-w-6xl mx-auto">
+              <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold mb-4">금리 우대 조건</h2>
+              <p class="text-center text-slate-600 dark:text-slate-300 mb-12">아래 조건에 해당하시면 금리 혜택을 받으실 수 있습니다</p>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-white text-xl">star</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">신용등급 우대</h3>
+                  </div>
+                  <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                    <li class="flex items-center gap-2">
+                      <span class="text-blue-600">▪</span>
+                      <span><strong>1~3등급:</strong> 최대 0.7%p 우대</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="text-blue-600">▪</span>
+                      <span><strong>4~5등급:</strong> 최대 0.4%p 우대</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="text-blue-600">▪</span>
+                      <span><strong>6등급 이하:</strong> 개별 협의</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-green-600 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-white text-xl">account_balance</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">거래 실적 우대</h3>
+                  </div>
+                  <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                    <li class="flex items-center gap-2">
+                      <span class="text-green-600">▪</span>
+                      <span><strong>급여 이체:</strong> 0.2%p 우대</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="text-green-600">▪</span>
+                      <span><strong>자동이체 3건 이상:</strong> 0.1%p 우대</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="text-green-600">▪</span>
+                      <span><strong>적금 보유:</strong> 0.1%p 우대</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-6 border border-purple-200 dark:border-purple-800">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-white text-xl">home_work</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">부동산 가치 우대</h3>
+                  </div>
+                  <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                    <li class="flex items-center gap-2">
+                      <span class="text-purple-600">▪</span>
+                      <span><strong>시세 5억 이상:</strong> 0.3%p 우대</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="text-purple-600">▪</span>
+                      <span><strong>강남3구 부동산:</strong> 0.2%p 우대</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="text-purple-600">▪</span>
+                      <span><strong>준공 5년 이내:</strong> 0.1%p 우대</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-xl p-6 border border-orange-200 dark:border-orange-800">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-orange-600 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-white text-xl">savings</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">특별 우대</h3>
+                  </div>
+                  <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                    <li class="flex items-center gap-2">
+                      <span class="text-orange-600">▪</span>
+                      <span><strong>모바일 신청:</strong> 0.1%p 우대</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="text-orange-600">▪</span>
+                      <span><strong>재거래 고객:</strong> 0.3%p 우대</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="text-orange-600">▪</span>
+                      <span><strong>전자계약:</strong> 0.1%p 우대</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-8 bg-amber-50 dark:bg-amber-900/20 rounded-xl p-6 border border-amber-200 dark:border-amber-800">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-amber-600 text-2xl flex-shrink-0">lightbulb</span>
+                  <div class="text-sm text-slate-700 dark:text-slate-300">
+                    <strong class="block mb-2">금리 우대 혜택 중복 적용 가능</strong>
+                    <p>• 여러 조건에 해당하시는 경우 우대 금리가 중복 적용되어 최대 <strong class="text-amber-600">1.5%p</strong>까지 금리 인하 혜택을 받으실 수 있습니다.</p>
+                    <p>• 정확한 우대 금리는 심사 후 개별 안내됩니다.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
