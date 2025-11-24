@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "source": "https://linear.app/",
+    "analyzedDate": "2025-11-14",
+    "description": "Linear 홈페이지 디자인 시스템 및 컴포넌트 분석 데이터"
+  },
+  "designSystem": {
+    "colors": {
+      "theme": {
+        "default": "dark",
+        "backgroundColor": "#08090a"
+      },
+      "textHierarchy": [
+        {
+          "name": "primary",
+          "variable": "--color-text-primary",
+          "usage": "주요 텍스트, 헤드라인"
+        },
+        {
+          "name": "secondary",
+          "variable": "--color-text-secondary",
+          "usage": "보조 텍스트"
+        },
+        {
+          "name": "tertiary",
+          "variable": "--color-text-tertiary",
+          "usage": "서브 텍스트"
+        },
+        {
+          "name": "quaternary",
+          "variable": "--color-text-quaternary",
+          "usage": "최소 강조 텍스트"
+        }
+      ],
+      "accents": [
+        {
+          "name": "red",
+          "usage": "에러, 경고 상태"
+        },
+        {
+          "name": "orange",
+          "usage": "주의 상태"
+        },
+        {
+          "name": "green",
+          "usage": "성공 상태"
+        }
+      ],
+      "selection": {
+        "variable": "--color-selection-dim",
+        "description": "텍스트 선택 색상"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "primary": "Inter Variable",
+        "source": "static.linear.app (preloaded)",
+        "fallback": "system-ui, -apple-system, sans-serif"
+      },
+      "scales": {
+        "titles": [
+          {
+            "name": "title-1",
+            "description": "가장 큰 타이틀 (Hero)"
+          },
+          {
+            "name": "title-2",
+            "description": "메인 섹션 타이틀"
+          },
+          {
+            "name": "title-3",
+            "description": "서브 섹션 타이틀"
+          },
+          {
+            "name": "title-4",
+            "description": "카드 타이틀"
+          },
+          {
+            "name": "title-5",
+            "description": "작은 타이틀"
+          },
+          {
+            "name": "title-6",
+            "description": "태블릿 반응형 타이틀"
+          },
+          {
+            "name": "title-7",
+            "description": "최소 타이틀"
+          },
+          {
+            "name": "title-8",
+            "description": "모바일 타이틀"
+          }
+        ],
+        "text": [
+          {
+            "name": "text-regular",
+            "description": "기본 본문 텍스트"
+          },
+          {
+            "name": "text-small",
+            "description": "작은 본문 텍스트"
+          },
+          {
+            "name": "text-mini",
+            "description": "캡션, 라벨용 최소 텍스트"
+          }
+        ]
+      },
+      "weights": [
+        {
+          "name": "medium",
+          "usage": "주요 타이틀, 강조"
+        },
+        {
+          "name": "normal",
+          "usage": "본문 텍스트"
+        }
+      ],
+      "features": [
+        "text-wrap: balance (최적 가독성)",
+        "letter-spacing 변수 지원",
+        "line-height 변수 지원"
+      ]
+    },
+    "spacing": {
+      "system": "CSS 변수 기반",
+      "baseUnit": "32px",
+      "properties": [
+        "--height",
+        "--width"
+      ],
+      "description": "32px 단위의 간격 시스템 사용"
+    },
+    "breakpoints": {
+      "tablet": "768px",
+      "mobile": "640px",
+      "responsive": {
+        "strategy": "Hide/Show 클래스 기반",
+        "classes": [
+          "hide-tablet",
+          "show-tablet"
+        ]
+      }
+    }
+  },
+  "components": {
+    "text": {
+      "variants": [
+        {
+          "name": "UnderlinedText",
+          "styles": {
+            "textDecoration": "solid underline",
+            "textDecorationThickness": "1.5px",
+            "textUnderlineOffset": "2.5px"
+          },
+          "usage": "링크, 강조 텍스트"
+        },
+        {
+          "name": "SuperscriptText",
+          "styles": {
+            "top": "-0.5em",
+            "fontSize": "0.6em",
+            "position": "relative"
+          },
+          "usage": "각주, 지수 표현"
+        },
+        {
+          "name": "CodeText",
+          "styles": {
+            "fontFamily": "monospace",
+            "userSelect": "text"
+          },
+          "usage": "코드 블록"
+        },
+        {
+          "name": "LabelText",
+          "styles": {
+            "userSelect": "none"
+          },
+          "usage": "UI 라벨"
+        },
+        {
+          "name": "GradientText",
+          "styles": {
+            "backgroundClip": "text",
+            "webkitTextFillColor": "transparent",
+            "backgroundImage": "linear-gradient(to right, ...)",
+            "boxDecorationBreak": "clone"
+          },
+          "usage": "프리미엄 강조 텍스트"
+        }
+      ]
+    },
+    "icons": {
+      "avatar": {
+        "sizes": [
+          {
+            "size": "24px",
+            "aspectRatio": "1/1"
+          },
+          {
+            "size": "16px",
+            "aspectRatio": "1/1"
+          },
+          {
+            "size": "18px",
+            "aspectRatio": "1/1"
+          }
+        ],
+        "styles": {
+          "borderRadius": "50%",
+          "objectFit": "cover"
+        }
+      },
+      "format": "SVG inline",
+      "manipulation": "fill 속성으로 색상 제어"
+    },
+    "cards": {
+      "types": [
+        {
+          "name": "DifferentCard",
+          "usage": "기능 소개, 특징 표시"
+        },
+        {
+          "name": "WorkflowCard",
+          "usage": "통합, 워크플로우 표시"
+        }
+      ],
+      "imageOptimization": "CDN 배포 최적화"
+    },
+    "containers": {
+      "layout": {
+        "name": "LayoutContent",
+        "display": "flex",
+        "flexDirection": "row",
+        "description": "메인 레이아웃 컨테이너"
+      },
+      "section": {
+        "element": "section",
+        "semantic": true,
+        "description": "시맨틱 섹션 구조"
+      }
+    },
+    "navigation": {
+      "primary": {
+        "items": [
+          "Product",
+          "Resources",
+          "Pricing",
+          "Customers",
+          "Now",
+          "Contact"
+        ]
+      },
+      "secondary": {
+        "items": [
+          "Docs",
+          "Open app",
+          "Log in",
+          "Sign up"
+        ]
+      },
+      "accessibility": {
+        "skipNav": "#skip-nav",
+        "description": "접근성 향상을 위한 건너뛰기 링크"
+      },
+      "footer": {
+        "columns": 6,
+        "sections": [
+          {
+            "name": "Features",
+            "links": ["Plan", "Build", "Insights"]
+          },
+          {
+            "name": "Product",
+            "description": "제품 관련 링크"
+          },
+          {
+            "name": "Company",
+            "description": "회사 정보"
+          },
+          {
+            "name": "Resources",
+            "description": "리소스 링크"
+          },
+          {
+            "name": "Connect",
+            "description": "소셜 미디어"
+          }
+        ]
+      }
+    }
+  },
+  "animations": {
+    "textEffects": [
+      {
+        "name": "GradientOverlay",
+        "technique": "background-clip: text",
+        "description": "텍스트에 그라데이션 적용"
+      },
+      {
+        "name": "MultilineTextEffect",
+        "technique": "box-decoration-break: clone",
+        "description": "여러 줄에 걸친 텍스트 효과 유지"
+      }
+    ],
+    "interactions": {
+      "selection": {
+        "property": "--color-selection-dim",
+        "description": "텍스트 선택 시 색상 변경"
+      }
+    }
+  },
+  "performance": {
+    "strategies": [
+      {
+        "name": "Font Preload",
+        "implementation": "preconnect + preload",
+        "target": "Inter Variable font"
+      },
+      {
+        "name": "CDN Optimization",
+        "description": "static.linear.app CDN 사용"
+      },
+      {
+        "name": "Lazy Loading",
+        "description": "이미지 지연 로딩"
+      }
+    ]
+  },
+  "cssTechniques": {
+    "framework": "styled-components (CSS-in-JS)",
+    "features": [
+      {
+        "name": "CSS Custom Properties",
+        "usage": "테마 시스템, 일관된 디자인 토큰"
+      },
+      {
+        "name": "Modern CSS",
+        "features": [
+          "aspect-ratio",
+          "text-wrap: balance",
+          "background-clip: text"
+        ]
+      },
+      {
+        "name": "Semantic HTML",
+        "description": "접근성과 SEO를 위한 시맨틱 마크업"
+      }
+    ]
+  },
+  "designPhilosophy": {
+    "principles": [
+      "Relentless focus",
+      "Fast execution",
+      "Commitment to craft"
+    ],
+    "visualStrategy": {
+      "theme": "미니멀리스트 다크 인터페이스",
+      "spacing": "넉넉한 여백으로 인지 부하 감소",
+      "hierarchy": "명확한 정보 스캔을 위한 계층적 텍스트 크기",
+      "performance": "속도 최적화 (CDN 사전 연결, 지연 로딩)"
+    }
+  },
+  "implementationGuide": {
+    "recommended": {
+      "cssFramework": "styled-components 또는 Emotion",
+      "fontLoading": "next/font 또는 @font-face with preload",
+      "colorManagement": "CSS 변수 기반 테마 시스템",
+      "responsive": "모바일 우선 + breakpoint 유틸리티",
+      "components": "재사용 가능한 원자적 컴포넌트 구조"
+    },
+    "codeExample": {
+      "cssVariables": "/* 테마 변수 */\n:root {\n  --color-text-primary: #ffffff;\n  --color-text-secondary: #b4b4b4;\n  --spacing-base: 32px;\n  --font-family: 'Inter Variable', system-ui;\n}",
+      "component": "/* Gradient Text Component */\n.gradient-text {\n  background: linear-gradient(to right, #ff0, #f0f);\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  box-decoration-break: clone;\n}"
+    }
+  },
+  "usageRecommendations": {
+    "whenToUse": [
+      "SaaS 제품 랜딩 페이지",
+      "개발자 도구 웹사이트",
+      "프로젝트 관리 툴 UI",
+      "B2B 제품 마케팅 사이트"
+    ],
+    "keyTakeaways": [
+      "다크 테마로 현대적이고 집중된 느낌 제공",
+      "타이포그래피 스케일로 명확한 정보 계층 구조",
+      "32px 기반 간격 시스템으로 일관성 유지",
+      "CSS 변수로 유지보수 용이한 테마 시스템",
+      "성능 최적화를 위한 폰트 사전 로딩",
+      "접근성을 고려한 시맨틱 HTML 구조"
+    ]
+  }
+}
