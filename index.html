@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html class="light" lang="ko">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>매치온 - 부담없이 한도만 확인하세요</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto Sans KR:wght@400;500;700;800&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto Sans KR:wght@400;500;700;800&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -100,10 +103,10 @@
   <style>
     .material-symbols-outlined {
       font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 24
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
     }
 
     #particles-js {
@@ -134,6 +137,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -141,10 +145,13 @@
     }
 
     @keyframes pulse {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1);
         opacity: 1;
       }
+
       50% {
         transform: scale(1.05);
         opacity: 0.8;
@@ -156,10 +163,21 @@
       animation-fill-mode: both;
     }
 
-    .badge-animate:nth-child(1) { animation-delay: 0.1s; }
-    .badge-animate:nth-child(2) { animation-delay: 0.2s; }
-    .badge-animate:nth-child(3) { animation-delay: 0.3s; }
-    .badge-animate:nth-child(4) { animation-delay: 0.4s; }
+    .badge-animate:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .badge-animate:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .badge-animate:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .badge-animate:nth-child(4) {
+      animation-delay: 0.4s;
+    }
 
     .comparison-table {
       overflow-x: auto;
@@ -197,25 +215,33 @@
     }
   </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
   <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
     <div class="layout-container flex h-full grow flex-col">
       <!-- Header -->
-      <header class="sticky top-0 z-50 flex items-center justify-center whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
+      <header
+        class="sticky top-0 z-50 flex items-center justify-center whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
         <div class="flex items-center justify-between px-4 sm:px-10 py-3 w-full max-w-6xl">
           <div class="flex items-center gap-4">
             <span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
             <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-slate-50">매치온</h2>
           </div>
           <nav class="hidden md:flex flex-1 justify-center gap-9">
-            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="about.html">매치온 소개</a>
-            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#how-it-works">이용방법</a>
-            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#products">주요 상품</a>
-            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#calculator">금리 계산기</a>
-            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="property-loan.html">부동산담보대출</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors"
+              href="about.html">매치온 소개</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors"
+              href="#how-it-works">이용방법</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors"
+              href="#products">주요 상품</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors"
+              href="#calculator">금리 계산기</a>
+            <a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors"
+              href="property-loan.html">부동산담보대출</a>
           </nav>
           <div class="flex items-center justify-end">
-            <a href="#hero-form" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+            <a href="#hero-form"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
               <span class="truncate">한도 확인하기</span>
             </a>
           </div>
@@ -259,7 +285,8 @@
               </div>
 
               <!-- Main Form Card -->
-              <div id="hero-form" class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 max-w-2xl mx-auto">
+              <div id="hero-form"
+                class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 max-w-2xl mx-auto">
                 <!-- Property Type Selection -->
                 <div class="mb-6">
                   <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
@@ -267,19 +294,29 @@
                     부동산 유형
                   </label>
                   <div class="grid grid-cols-5 gap-2">
-                    <button class="property-type-btn active h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all" data-type="아파트" onclick="selectPropertyType(this)">
+                    <button
+                      class="property-type-btn active h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all"
+                      data-type="아파트" onclick="selectPropertyType(this)">
                       아파트
                     </button>
-                    <button class="property-type-btn h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all" data-type="주택" onclick="selectPropertyType(this)">
+                    <button
+                      class="property-type-btn h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all"
+                      data-type="주택" onclick="selectPropertyType(this)">
                       주택
                     </button>
-                    <button class="property-type-btn h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all" data-type="빌라" onclick="selectPropertyType(this)">
+                    <button
+                      class="property-type-btn h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all"
+                      data-type="빌라" onclick="selectPropertyType(this)">
                       빌라
                     </button>
-                    <button class="property-type-btn h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all" data-type="오피스텔" onclick="selectPropertyType(this)">
+                    <button
+                      class="property-type-btn h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all"
+                      data-type="오피스텔" onclick="selectPropertyType(this)">
                       오피스텔
                     </button>
-                    <button class="property-type-btn h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all" data-type="무설정" onclick="selectPropertyType(this)">
+                    <button
+                      class="property-type-btn h-12 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-sm font-medium hover:border-primary transition-all"
+                      data-type="무설정" onclick="selectPropertyType(this)">
                       무설정
                     </button>
                   </div>
@@ -294,13 +331,10 @@
                   <div class="relative">
                     <input
                       class="w-full h-14 px-4 pr-12 border-2 border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 focus:ring-2 focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-50 placeholder-slate-400 transition-all"
-                      id="address"
-                      placeholder="예) 서울시 강남구 테헤란로 123 (클릭하여 검색)"
-                      type="text"
-                      onclick="searchAddress()"
-                      readonly
-                    />
-                    <button onclick="searchAddress()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors">
+                      id="address" placeholder="예) 서울시 강남구 테헤란로 123 (클릭하여 검색)" type="text" onclick="searchAddress()"
+                      readonly />
+                    <button onclick="searchAddress()"
+                      class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors">
                       <span class="material-symbols-outlined text-2xl">search</span>
                     </button>
                   </div>
@@ -314,11 +348,7 @@
                   </label>
                   <input
                     class="w-full h-14 px-4 border-2 border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 focus:ring-2 focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-50 placeholder-slate-400 transition-all"
-                    id="phone"
-                    placeholder="'-' 없이 숫자만 입력"
-                    type="tel"
-                    maxlength="11"
-                  />
+                    id="phone" placeholder="'-' 없이 숫자만 입력" type="tel" maxlength="11" />
                   <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 ml-1">
                     <span class="material-symbols-outlined text-xs align-middle">info</span>
                     예상 한도와 금리를 메시지로 보내드리기 위해 필요합니다
@@ -326,18 +356,17 @@
                 </div>
 
                 <!-- No Call Checkbox -->
-                <div class="mb-6 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-600">
+                <div
+                  class="mb-6 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-600">
                   <label class="flex items-start gap-3 cursor-pointer group">
                     <div class="flex items-center h-6">
-                      <input
-                        type="checkbox"
-                        id="no-call"
+                      <input type="checkbox" id="no-call"
                         class="w-5 h-5 text-primary border-2 border-slate-300 rounded focus:ring-2 focus:ring-primary cursor-pointer"
-                        checked
-                      />
+                        checked />
                     </div>
                     <div class="flex-1">
-                      <span class="text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">
+                      <span
+                        class="text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">
                         ✅ 상담 전화를 받지 않겠습니다 (리포트만 수령)
                       </span>
                       <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
@@ -348,12 +377,12 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button
-                  onclick="submitForm()"
-                  class="w-full flex items-center justify-center gap-2 h-16 px-6 rounded-xl bg-gradient-to-r from-kakao to-yellow-400 text-black font-bold text-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
-                >
+                <button onclick="submitForm()"
+                  class="w-full flex items-center justify-center gap-2 h-16 px-6 rounded-xl bg-gradient-to-r from-kakao to-yellow-400 text-black font-bold text-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
                   <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.477 2 2 5.79 2 9.993C2 12.444 3.388 14.636 5.738 16.14L5.13 18.828C5.064 19.167 5.373 19.45 5.706 19.378L8.857 18.59C9.858 18.87 10.91 19.017 12 19.017C17.523 19.017 22 15.227 22 11.023C22 6.82 17.523 3 12 3C12 3 12 2 12 2Z" fill="rgba(0,0,0,0.9)"></path>
+                    <path
+                      d="M12 2C6.477 2 2 5.79 2 9.993C2 12.444 3.388 14.636 5.738 16.14L5.13 18.828C5.064 19.167 5.373 19.45 5.706 19.378L8.857 18.59C9.858 18.87 10.91 19.017 12 19.017C17.523 19.017 22 15.227 22 11.023C22 6.82 17.523 3 12 3C12 3 12 2 12 2Z"
+                      fill="rgba(0,0,0,0.9)"></path>
                   </svg>
                   <span>카톡으로 무료 한도 받기</span>
                 </button>
@@ -367,7 +396,8 @@
               </div>
 
               <!-- Trust Indicators -->
-              <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+              <div
+                class="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
                 <div class="flex items-center gap-2">
                   <span class="material-symbols-outlined text-secondary">check_circle</span>
                   <span>전화 부담 없음</span>
@@ -395,7 +425,8 @@
               <p class="text-lg text-slate-600 dark:text-slate-300">부담 없이, 투명하게, 고객님의 선택을 존중합니다</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow">
                 <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
                   <span class="text-4xl font-black text-primary">1</span>
                 </div>
@@ -405,7 +436,8 @@
                   <strong class="text-primary">상담 전화 거부</strong> 옵션을 선택하시면 전화 없이 진행됩니다.
                 </p>
               </div>
-              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow">
                 <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-secondary/10 mb-6">
                   <span class="text-4xl font-black text-secondary">2</span>
                 </div>
@@ -415,7 +447,8 @@
                   <strong>예상 한도, 금리, 조건</strong>을 자세히 안내드립니다.
                 </p>
               </div>
-              <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow">
                 <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-500/10 mb-6">
                   <span class="text-4xl font-black text-blue-600">3</span>
                 </div>
@@ -523,29 +556,44 @@
 
           <!-- Products Section - Tab Navigation -->
           <section id="products" class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">주요 대출 상품</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              주요 대출 상품</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-8">목적에 맞는 최적의 담보대출 상품을 선택하세요</p>
 
             <!-- Tab Navigation -->
-            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
-              <div class="flex overflow-x-auto border-b border-slate-200 dark:border-slate-700">
-                <button onclick="switchTab(0)" class="product-tab active flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold transition-all border-b-2 border-primary bg-primary/5" data-tab="0">
+            <div
+              class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+              <div class="flex flex-wrap border-b border-slate-200 dark:border-slate-700">
+                <button onclick="switchTab(0)"
+                  class="product-tab active w-1/2 md:w-auto md:flex-1 px-4 py-4 text-sm font-semibold transition-all border-b-2 border-primary bg-primary/5"
+                  data-tab="0">
                   담보대환대출
                 </button>
-                <button onclick="switchTab(1)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700" data-tab="1">
+                <button onclick="switchTab(1)"
+                  class="product-tab w-1/2 md:w-auto md:flex-1 px-4 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700"
+                  data-tab="1">
                   후순위대출
                 </button>
-                <button onclick="switchTab(2)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700" data-tab="2">
+                <button onclick="switchTab(2)"
+                  class="product-tab w-1/2 md:w-auto md:flex-1 px-4 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700"
+                  data-tab="2">
                   무설정대출
                 </button>
-                <button onclick="switchTab(3)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700" data-tab="3">
+                <button onclick="switchTab(3)"
+                  class="product-tab w-1/2 md:w-auto md:flex-1 px-4 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700"
+                  data-tab="3">
                   생활자금
                 </button>
-                <button onclick="switchTab(4)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700" data-tab="4">
-                  전세보증금
+                <button onclick="switchTab(4)"
+                  class="product-tab w-1/2 md:w-auto md:flex-1 px-4 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700"
+                  data-tab="4">
+                  전월세보증금
                 </button>
-                <button onclick="switchTab(5)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700" data-tab="5">
-                  세금납부
+                <button onclick="switchTab(5)"
+                  class="product-tab w-1/2 md:w-auto md:flex-1 px-4 py-4 text-sm font-semibold transition-all border-b-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-700"
+                  data-tab="5">
+                  신용대출
                 </button>
               </div>
 
@@ -553,33 +601,42 @@
                 <!-- Tab Content 0: 담보대환대출 -->
                 <div class="tab-content active" data-content="0">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop");'></div>
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                      style='background-image: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop");'>
+                    </div>
                     <div>
                       <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-50">담보대환대출 (갈아타기)</h3>
                       <p class="text-slate-600 dark:text-slate-300 mb-4">기존 대출을 더 낮은 금리로 갈아타기</p>
                       <div class="flex gap-3 mb-6 flex-wrap">
-                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연 3.0%</span>
-                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도 20억</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연
+                          3.0%</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도
+                          20억</span>
                       </div>
                       <ul class="space-y-3 text-slate-700 dark:text-slate-300">
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>기존 대출보다 <strong>최대 2% 낮은 금리</strong> 제공</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>여러 대출을 하나로 통합하여 관리 편의성 향상</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span><strong>중도상환수수료 지원</strong> 가능</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>1금융권 전 상품 비교 후 최적 조건 제시</span>
                         </li>
                       </ul>
-                      <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                      <a href="#hero-form"
+                        class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
                         <span>무료 한도 확인하기</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                       </a>
@@ -590,33 +647,42 @@
                 <!-- Tab Content 1: 후순위대출 -->
                 <div class="tab-content hidden" data-content="1">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop");'></div>
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                      style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop");'>
+                    </div>
                     <div>
                       <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-50">후순위 담보대출</h3>
                       <p class="text-slate-600 dark:text-slate-300 mb-4">기존 대출 유지하며 추가 자금 확보</p>
                       <div class="flex gap-3 mb-6 flex-wrap">
-                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연 4.5%</span>
-                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도 10억</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연
+                          4.5%</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도
+                          10억</span>
                       </div>
                       <ul class="space-y-3 text-slate-700 dark:text-slate-300">
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span><strong>기존 대출 그대로 유지</strong>하면서 추가 자금 마련</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>중도상환수수료 부담 없이 자금 확보</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>기존 저금리 대출 조건 유지 가능</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>담보가치 대비 최대 90%까지 대출 가능</span>
                         </li>
                       </ul>
-                      <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                      <a href="#hero-form"
+                        class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
                         <span>무료 한도 확인하기</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                       </a>
@@ -627,33 +693,42 @@
                 <!-- Tab Content 2: 무설정대출 -->
                 <div class="tab-content hidden" data-content="2">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=600&fit=crop");'></div>
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                      style='background-image: url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=600&fit=crop");'>
+                    </div>
                     <div>
                       <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-50">무설정 담보대출 (아파트론)</h3>
                       <p class="text-slate-600 dark:text-slate-300 mb-4">담보설정 없이 신속하게 자금 확보</p>
                       <div class="flex gap-3 mb-6 flex-wrap">
-                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연 5.0%</span>
-                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도 3억</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연
+                          5.0%</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도
+                          3억</span>
                       </div>
                       <ul class="space-y-3 text-slate-700 dark:text-slate-300">
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span><strong>담보설정 불필요</strong>, 등기부등본에 기록 없음</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span><strong>1~2일 신속 실행</strong>, 긴급 자금에 최적</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>등기비용, 법무사 수수료 절감</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>아파트 소유주에 한해 가능 (재건축/재개발 불가)</span>
                         </li>
                       </ul>
-                      <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                      <a href="#hero-form"
+                        class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
                         <span>무료 한도 확인하기</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                       </a>
@@ -664,33 +739,42 @@
                 <!-- Tab Content 3: 생활자금 -->
                 <div class="tab-content hidden" data-content="3">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&h=600&fit=crop");'></div>
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                      style='background-image: url("https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&h=600&fit=crop");'>
+                    </div>
                     <div>
                       <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-50">주택담보 생활자금대출</h3>
                       <p class="text-slate-600 dark:text-slate-300 mb-4">용도 제한 없이 자유롭게 사용</p>
                       <div class="flex gap-3 mb-6 flex-wrap">
-                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연 4.0%</span>
-                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도 15억</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연
+                          4.0%</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도
+                          15억</span>
                       </div>
                       <ul class="space-y-3 text-slate-700 dark:text-slate-300">
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span><strong>사용 용도 제한 없음</strong> (의료비, 교육비, 사업자금 등)</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>신용대출보다 낮은 금리, 높은 한도</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>소득 증빙 간소화 (프리랜서, 자영업자 가능)</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>최대 30년 장기 분할 상환 가능</span>
                         </li>
                       </ul>
-                      <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                      <a href="#hero-form"
+                        class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
                         <span>무료 한도 확인하기</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                       </a>
@@ -698,36 +782,45 @@
                   </div>
                 </div>
 
-                <!-- Tab Content 4: 전세보증금 -->
+                <!-- Tab Content 4: 전월세보증금 -->
                 <div class="tab-content hidden" data-content="4">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop");'></div>
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                      style='background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop");'>
+                    </div>
                     <div>
-                      <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-50">전세보증금 반환대출</h3>
+                      <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-50">전월세보증금 반환대출</h3>
                       <p class="text-slate-600 dark:text-slate-300 mb-4">전세 만료 시 보증금 미반환 문제 해결</p>
                       <div class="flex gap-3 mb-6 flex-wrap">
-                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연 4.8%</span>
-                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도 10억</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연
+                          4.8%</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도
+                          10억</span>
                       </div>
                       <ul class="space-y-3 text-slate-700 dark:text-slate-300">
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span><strong>전세 만료 시 즉시 대응</strong>, 보증금 미반환 걱정 해소</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>임차인의 전세금 우선변제권 보호</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>긴급 자금 필요 시 48시간 내 실행</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
                           <span>전세금 반환 소송 진행 중에도 신청 가능</span>
                         </li>
                       </ul>
-                      <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                      <a href="#hero-form"
+                        class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
                         <span>무료 한도 확인하기</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                       </a>
@@ -735,36 +828,45 @@
                   </div>
                 </div>
 
-                <!-- Tab Content 5: 세금납부 -->
+                <!-- Tab Content 5: 신용대출 -->
                 <div class="tab-content hidden" data-content="5">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop");'></div>
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                      style='background-image: url("https://images.unsplash.com/photo-1518458028785-8fbcd101659f?w=800&h=600&fit=crop");'>
+                    </div>
                     <div>
-                      <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-50">증여/상속세 납부대출</h3>
-                      <p class="text-slate-600 dark:text-slate-300 mb-4">세금 납부 기한 대응, 분할 납부 가능</p>
+                      <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-50">신용대출</h3>
+                      <p class="text-slate-600 dark:text-slate-300 mb-4">주택 담보 없이 신용으로 자금 확보</p>
                       <div class="flex gap-3 mb-6 flex-wrap">
-                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연 5.5%</span>
-                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도 20억</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-primary/10 text-primary rounded-lg">최저금리 연
+                          6.0%</span>
+                        <span class="text-sm font-bold px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-lg">최대 한도
+                          2억</span>
                       </div>
                       <ul class="space-y-3 text-slate-700 dark:text-slate-300">
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
-                          <span><strong>증여세, 상속세 전용</strong> 특별 상품</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span><strong>무담보, 무보증</strong>으로 간편하게 신청</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
-                          <span>세금 납부 기한 내 신속 실행</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span>복잡한 서류 없이 <strong>온라인으로 빠르게 진행</strong></span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
-                          <span>가산세, 연체료 부담 없이 분할 납부</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span>직장인, 사업자, 프리랜서 등 다양한 직군 가능</span>
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
-                          <span>부동산 증여/상속 후 즉시 신청 가능</span>
+                          <span
+                            class="material-symbols-outlined text-secondary text-xl flex-shrink-0">check_circle</span>
+                          <span>최대 10년 장기 상환으로 부담 완화</span>
                         </li>
                       </ul>
-                      <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                      <a href="#hero-form"
+                        class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
                         <span>무료 한도 확인하기</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                       </a>
@@ -772,183 +874,32 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <!-- Products Section - Grid Cards -->
-          <section class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">대출 상품 한눈에 비교</h2>
-            <p class="text-center text-slate-600 dark:text-slate-300 mb-8">6가지 목적별 담보대출을 카드로 간편하게 비교하세요</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <!-- Card 1: 담보대환대출 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop");'></div>
-                <div class="p-6">
-                  <div class="flex items-center gap-2 mb-3">
-                    <span class="material-symbols-outlined text-primary text-2xl">sync_alt</span>
-                    <h3 class="text-lg font-bold">담보대환대출</h3>
-                  </div>
-                  <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">기존 대출을 더 낮은 금리로</p>
-                  <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="text-xs font-semibold px-3 py-1 bg-primary/10 text-primary rounded-full">연 3.0%</span>
-                    <span class="text-xs font-semibold px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full">최대 20억</span>
-                  </div>
-                  <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-2 mb-4">
-                    <li>• 최대 2% 낮은 금리</li>
-                    <li>• 대출 통합 관리</li>
-                    <li>• 중도상환수수료 지원</li>
-                  </ul>
-                  <a href="#hero-form" class="w-full flex items-center justify-center gap-1 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">
-                    <span>자세히 보기</span>
-                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Card 2: 후순위대출 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop");'></div>
-                <div class="p-6">
-                  <div class="flex items-center gap-2 mb-3">
-                    <span class="material-symbols-outlined text-primary text-2xl">add_card</span>
-                    <h3 class="text-lg font-bold">후순위 담보대출</h3>
-                  </div>
-                  <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">기존 대출 유지하며 추가 자금</p>
-                  <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="text-xs font-semibold px-3 py-1 bg-primary/10 text-primary rounded-full">연 4.5%</span>
-                    <span class="text-xs font-semibold px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full">최대 10억</span>
-                  </div>
-                  <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-2 mb-4">
-                    <li>• 기존 대출 그대로 유지</li>
-                    <li>• 중도상환수수료 부담 없음</li>
-                    <li>• 담보가치 최대 90%</li>
-                  </ul>
-                  <a href="#hero-form" class="w-full flex items-center justify-center gap-1 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">
-                    <span>자세히 보기</span>
-                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Card 3: 무설정대출 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop");'></div>
-                <div class="p-6">
-                  <div class="flex items-center gap-2 mb-3">
-                    <span class="material-symbols-outlined text-primary text-2xl">bolt</span>
-                    <h3 class="text-lg font-bold">무설정 담보대출</h3>
-                  </div>
-                  <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">담보설정 없이 신속 실행</p>
-                  <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="text-xs font-semibold px-3 py-1 bg-primary/10 text-primary rounded-full">연 5.0%</span>
-                    <span class="text-xs font-semibold px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full">최대 3억</span>
-                  </div>
-                  <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-2 mb-4">
-                    <li>• 등기부등본 기록 없음</li>
-                    <li>• 1~2일 신속 실행</li>
-                    <li>• 등기비용 절감</li>
-                  </ul>
-                  <a href="#hero-form" class="w-full flex items-center justify-center gap-1 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">
-                    <span>자세히 보기</span>
-                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Card 4: 생활자금 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=400&fit=crop");'></div>
-                <div class="p-6">
-                  <div class="flex items-center gap-2 mb-3">
-                    <span class="material-symbols-outlined text-primary text-2xl">wallet</span>
-                    <h3 class="text-lg font-bold">생활자금대출</h3>
-                  </div>
-                  <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">용도 제한 없이 자유롭게</p>
-                  <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="text-xs font-semibold px-3 py-1 bg-primary/10 text-primary rounded-full">연 4.0%</span>
-                    <span class="text-xs font-semibold px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full">최대 15억</span>
-                  </div>
-                  <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-2 mb-4">
-                    <li>• 사용 용도 제한 없음</li>
-                    <li>• 소득 증빙 간소화</li>
-                    <li>• 최대 30년 장기 분할</li>
-                  </ul>
-                  <a href="#hero-form" class="w-full flex items-center justify-center gap-1 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">
-                    <span>자세히 보기</span>
-                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Card 5: 전세보증금 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop");'></div>
-                <div class="p-6">
-                  <div class="flex items-center gap-2 mb-3">
-                    <span class="material-symbols-outlined text-primary text-2xl">home_work</span>
-                    <h3 class="text-lg font-bold">전세보증금대출</h3>
-                  </div>
-                  <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">전세 만료 시 즉시 대응</p>
-                  <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="text-xs font-semibold px-3 py-1 bg-primary/10 text-primary rounded-full">연 4.8%</span>
-                    <span class="text-xs font-semibold px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full">최대 10억</span>
-                  </div>
-                  <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-2 mb-4">
-                    <li>• 보증금 미반환 해소</li>
-                    <li>• 48시간 내 실행</li>
-                    <li>• 소송 진행 중 신청 가능</li>
-                  </ul>
-                  <a href="#hero-form" class="w-full flex items-center justify-center gap-1 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">
-                    <span>자세히 보기</span>
-                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Card 6: 세금납부 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop");'></div>
-                <div class="p-6">
-                  <div class="flex items-center gap-2 mb-3">
-                    <span class="material-symbols-outlined text-primary text-2xl">account_balance</span>
-                    <h3 class="text-lg font-bold">증여/상속세대출</h3>
-                  </div>
-                  <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">세금 납부 기한 대응</p>
-                  <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="text-xs font-semibold px-3 py-1 bg-primary/10 text-primary rounded-full">연 5.5%</span>
-                    <span class="text-xs font-semibold px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full">최대 20억</span>
-                  </div>
-                  <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-2 mb-4">
-                    <li>• 증여세/상속세 전용</li>
-                    <li>• 납부 기한 내 실행</li>
-                    <li>• 가산세 부담 없음</li>
-                  </ul>
-                  <a href="#hero-form" class="w-full flex items-center justify-center gap-1 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">
-                    <span>자세히 보기</span>
-                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                  </a>
-                </div>
-              </div>
-            </div>
           </section>
 
           <!-- Products Section - Swiper -->
           <section class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">슬라이드로 둘러보기</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              슬라이드로 둘러보기</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-8">좌우로 넘기며 상품을 확인하세요</p>
             <div class="swiper productsSwiper">
               <div class="swiper-wrapper">
                 <!-- Swiper Slide 1: 담보대환대출 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop");'></div>
+                  <div
+                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                      style='background-image: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop");'>
+                    </div>
                     <div>
                       <p class="text-base font-bold leading-normal">담보대환대출 (갈아타기)</p>
-                      <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">기존 대출을 더 낮은 금리로</p>
+                      <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">기존 대출을 더 낮은 금리로
+                      </p>
                       <div class="mt-2 flex gap-2 flex-wrap">
-                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연 3.0%</span>
-                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도: 20억</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연
+                          3.0%</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도:
+                          20억</span>
                       </div>
                       <ul class="mt-3 text-xs text-slate-600 dark:text-slate-400 space-y-1">
                         <li>• 기존 대출보다 최대 2% 낮은 금리</li>
@@ -960,14 +911,20 @@
                 </div>
                 <!-- Swiper Slide 2: 후순위대출 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop");'></div>
+                  <div
+                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                      style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop");'>
+                    </div>
                     <div>
                       <p class="text-base font-bold leading-normal">후순위 담보대출</p>
-                      <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">기존 대출 유지하며 추가 자금</p>
+                      <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">기존 대출 유지하며 추가 자금
+                      </p>
                       <div class="mt-2 flex gap-2 flex-wrap">
-                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연 4.5%</span>
-                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도: 10억</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연
+                          4.5%</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도:
+                          10억</span>
                       </div>
                       <ul class="mt-3 text-xs text-slate-600 dark:text-slate-400 space-y-1">
                         <li>• 기존 대출 그대로 유지하며 추가 자금</li>
@@ -979,14 +936,19 @@
                 </div>
                 <!-- Swiper Slide 3: 무설정대출 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop");'></div>
+                  <div
+                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                      style='background-image: url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop");'>
+                    </div>
                     <div>
                       <p class="text-base font-bold leading-normal">무설정 담보대출 (아파트론)</p>
                       <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">담보설정 없이 신속하게</p>
                       <div class="mt-2 flex gap-2 flex-wrap">
-                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연 5.0%</span>
-                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도: 3억</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연
+                          5.0%</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도:
+                          3억</span>
                       </div>
                       <ul class="mt-3 text-xs text-slate-600 dark:text-slate-400 space-y-1">
                         <li>• 담보설정 불필요, 등기부등본 기록 없음</li>
@@ -998,14 +960,19 @@
                 </div>
                 <!-- Swiper Slide 4: 생활자금 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=400&fit=crop");'></div>
+                  <div
+                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                      style='background-image: url("https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=400&fit=crop");'>
+                    </div>
                     <div>
                       <p class="text-base font-bold leading-normal">주택담보 생활자금대출</p>
                       <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">용도 제한 없이 자유롭게</p>
                       <div class="mt-2 flex gap-2 flex-wrap">
-                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연 4.0%</span>
-                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도: 15억</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연
+                          4.0%</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도:
+                          15억</span>
                       </div>
                       <ul class="mt-3 text-xs text-slate-600 dark:text-slate-400 space-y-1">
                         <li>• 사용 용도 제한 없음 (의료비, 교육비 등)</li>
@@ -1017,14 +984,19 @@
                 </div>
                 <!-- Swiper Slide 5: 전세보증금 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop");'></div>
+                  <div
+                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                      style='background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop");'>
+                    </div>
                     <div>
                       <p class="text-base font-bold leading-normal">전세보증금 반환대출</p>
                       <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">전세 만료 시 즉시 대응</p>
                       <div class="mt-2 flex gap-2 flex-wrap">
-                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연 4.8%</span>
-                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도: 10억</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연
+                          4.8%</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도:
+                          10억</span>
                       </div>
                       <ul class="mt-3 text-xs text-slate-600 dark:text-slate-400 space-y-1">
                         <li>• 전세 만료 시 보증금 미반환 문제 해결</li>
@@ -1036,14 +1008,19 @@
                 </div>
                 <!-- Swiper Slide 6: 세금납부 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
-                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop");'></div>
+                  <div
+                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-full hover:shadow-lg transition-shadow">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                      style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop");'>
+                    </div>
                     <div>
                       <p class="text-base font-bold leading-normal">증여/상속세 납부대출</p>
                       <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">세금 납부 기한 대응</p>
                       <div class="mt-2 flex gap-2 flex-wrap">
-                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연 5.5%</span>
-                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도: 20억</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">최저금리: 연
+                          5.5%</span>
+                        <span class="text-xs font-semibold px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded-full">최대 한도:
+                          20억</span>
                       </div>
                       <ul class="mt-3 text-xs text-slate-600 dark:text-slate-400 space-y-1">
                         <li>• 증여세, 상속세 전용 특별 상품</li>
@@ -1060,22 +1037,35 @@
 
           <!-- Bank Comparison Table -->
           <section class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-2xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">은행별 금리 비교</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-2xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              은행별 금리 비교</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-8">실시간 금리를 비교하여 최적의 선택을 하세요</p>
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <div
+              class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
               <div class="comparison-table">
                 <table class="w-full">
                   <thead class="bg-slate-50 dark:bg-slate-700">
                     <tr>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">은행명</th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider cursor-pointer hover:text-primary" onclick="sortTable(1)">
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">
+                        은행명</th>
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider cursor-pointer hover:text-primary"
+                        onclick="sortTable(1)">
                         고정금리 ↕
                       </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider cursor-pointer hover:text-primary" onclick="sortTable(2)">
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider cursor-pointer hover:text-primary"
+                        onclick="sortTable(2)">
                         변동금리 ↕
                       </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">최대 LTV</th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">특징</th>
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">
+                        최대 LTV</th>
+                      <th
+                        class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-300 uppercase tracking-wider">
+                        특징</th>
                     </tr>
                   </thead>
                   <tbody id="bankTableBody" class="divide-y divide-slate-200 dark:divide-slate-700">
@@ -1164,28 +1154,46 @@
           </section>
 
           <!-- Calculator Section with Chart -->
-          <section id="calculator" class="mt-16 bg-white dark:bg-slate-800 rounded-xl p-6 md:p-10 shadow-sm border border-slate-200 dark:border-slate-700">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-2xl md:text-3xl font-bold leading-tight tracking-[-0.015em]">30초 만에 나의 예상 월 납입금 알아보기</h2>
+          <section id="calculator"
+            class="mt-16 bg-white dark:bg-slate-800 rounded-xl p-6 md:p-10 shadow-sm border border-slate-200 dark:border-slate-700">
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-2xl md:text-3xl font-bold leading-tight tracking-[-0.015em]">
+              30초 만에 나의 예상 월 납입금 알아보기</h2>
             <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="flex flex-col gap-6">
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="loan-amount">대출 희망 금액 (만원)</label>
-                  <input class="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer accent-primary mt-2" id="loan-amount" max="100000" min="1000" step="1000" type="range" value="30000"/>
-                  <div class="text-right font-bold text-lg text-primary mt-1"><span id="loan-amount-display">30,000</span> 만원</div>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="loan-amount">대출 희망 금액
+                    (만원)</label>
+                  <input
+                    class="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer accent-primary mt-2"
+                    id="loan-amount" max="100000" min="1000" step="1000" type="range" value="30000" />
+                  <div class="text-right font-bold text-lg text-primary mt-1"><span
+                      id="loan-amount-display">30,000</span> 만원</div>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="interest-rate">연 이자율 (%)</label>
-                  <input class="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer accent-primary mt-2" id="interest-rate" max="10" min="1" step="0.1" type="range" value="4.0"/>
-                  <div class="text-right font-bold text-lg text-primary mt-1"><span id="interest-rate-display">4.0</span> %</div>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="interest-rate">연 이자율
+                    (%)</label>
+                  <input
+                    class="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer accent-primary mt-2"
+                    id="interest-rate" max="10" min="1" step="0.1" type="range" value="4.0" />
+                  <div class="text-right font-bold text-lg text-primary mt-1"><span
+                      id="interest-rate-display">4.0</span> %</div>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="loan-period">대출 기간 (년)</label>
-                  <input class="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer accent-primary mt-2" id="loan-period" max="50" min="5" type="range" value="30"/>
-                  <div class="text-right font-bold text-lg text-primary mt-1"><span id="loan-period-display">30</span> 년</div>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="loan-period">대출 기간
+                    (년)</label>
+                  <input
+                    class="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer accent-primary mt-2"
+                    id="loan-period" max="50" min="5" type="range" value="30" />
+                  <div class="text-right font-bold text-lg text-primary mt-1"><span id="loan-period-display">30</span> 년
+                  </div>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="repayment-method">상환 방식</label>
-                  <select class="mt-2 block w-full rounded-lg border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-50 shadow-sm focus:border-primary focus:ring-primary" id="repayment-method">
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="repayment-method">상환
+                    방식</label>
+                  <select
+                    class="mt-2 block w-full rounded-lg border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-50 shadow-sm focus:border-primary focus:ring-primary"
+                    id="repayment-method">
                     <option>원리금균등분할상환</option>
                     <option>원금균등분할상환</option>
                     <option>만기일시상환</option>
@@ -1197,7 +1205,8 @@
                   <p class="text-slate-600 dark:text-slate-300">예상 월 상환액</p>
                   <p class="text-4xl font-black my-2 text-primary" id="monthly-payment">1,264,813원</p>
                   <p class="text-sm text-slate-500 dark:text-slate-400" id="total-interest">총 예상 이자: 155,332,662원</p>
-                  <a href="#hero-form" class="mt-6 w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-secondary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-secondary/90 transition-colors">
+                  <a href="#hero-form"
+                    class="mt-6 w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-secondary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-secondary/90 transition-colors">
                     <span class="truncate">내 조건으로 정확히 확인하기</span>
                   </a>
                 </div>
@@ -1210,30 +1219,36 @@
 
           <!-- Trust Badges Section -->
           <section class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-2xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">안심하고 이용하세요</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-2xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              안심하고 이용하세요</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-              <div class="badge-animate bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+              <div
+                class="badge-animate bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-3">
                   <span class="material-symbols-outlined text-primary text-3xl">verified</span>
                 </div>
                 <h3 class="font-bold text-sm mb-1">금융위원회</h3>
                 <p class="text-xs text-slate-500 dark:text-slate-400">정식 등록 업체</p>
               </div>
-              <div class="badge-animate bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+              <div
+                class="badge-animate bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-3">
                   <span class="material-symbols-outlined text-primary text-3xl">security</span>
                 </div>
                 <h3 class="font-bold text-sm mb-1">SSL 보안인증</h3>
                 <p class="text-xs text-slate-500 dark:text-slate-400">개인정보 암호화</p>
               </div>
-              <div class="badge-animate bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+              <div
+                class="badge-animate bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-3">
                   <span class="material-symbols-outlined text-primary text-3xl">shield</span>
                 </div>
                 <h3 class="font-bold text-sm mb-1">개인정보보호</h3>
                 <p class="text-xs text-slate-500 dark:text-slate-400">ISMS 인증</p>
               </div>
-              <div class="badge-animate bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+              <div
+                class="badge-animate bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-3">
                   <span class="material-symbols-outlined text-primary text-3xl">award_star</span>
                 </div>
@@ -1245,7 +1260,8 @@
 
           <!-- Live Status Section -->
           <section class="mt-16 px-4">
-            <div class="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8 border-2 border-green-200 dark:border-green-800">
+            <div
+              class="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8 border-2 border-green-200 dark:border-green-800">
               <div class="max-w-4xl mx-auto">
                 <div class="flex items-center justify-center gap-2 mb-6">
                   <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -1271,13 +1287,18 @@
 
           <!-- Success Cases Section -->
           <section class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">실제 성공 사례</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              실제 성공 사례</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-8">고객님들이 얼마나 절약하셨는지 확인하세요</p>
 
             <div class="grid md:grid-cols-3 gap-6">
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
                 <div class="flex items-center justify-between mb-4">
-                  <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold">서울 송파구</span>
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold">서울
+                    송파구</span>
                   <span class="text-green-600 font-bold">✅ 완료</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-slate-50">A씨 (45세, 자영업)</h3>
@@ -1297,9 +1318,12 @@
                 </div>
               </div>
 
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
                 <div class="flex items-center justify-between mb-4">
-                  <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold">경기 성남시</span>
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold">경기
+                    성남시</span>
                   <span class="text-green-600 font-bold">✅ 완료</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-slate-50">B씨 (52세, 사무직)</h3>
@@ -1319,9 +1343,12 @@
                 </div>
               </div>
 
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
                 <div class="flex items-center justify-between mb-4">
-                  <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold">인천 연수구</span>
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold">인천
+                    연수구</span>
                   <span class="text-green-600 font-bold">✅ 완료</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-slate-50">C씨 (39세, 프리랜서)</h3>
@@ -1341,20 +1368,26 @@
                 </div>
               </div>
             </div>
-            <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-8">* 실제 승인 사례이며, 개인정보 보호를 위해 일부 정보를 각색했습니다</p>
+            <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-8">* 실제 승인 사례이며, 개인정보 보호를 위해 일부 정보를
+              각색했습니다</p>
           </section>
 
           <!-- Customer Reviews - Style 1 (Simple) -->
           <section class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">고객 리뷰</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              고객 리뷰</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-8">실제 이용하신 분들의 솔직한 후기입니다</p>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <!-- Review 1 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
                 <div class="flex items-center justify-between mb-3">
                   <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">김</div>
+                    <div
+                      class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">김
+                    </div>
                     <div>
                       <p class="font-bold text-sm">김**</p>
                       <p class="text-xs text-slate-500">2025.01.15</p>
@@ -1368,16 +1401,21 @@
                   금리도 4.2%로 나와서 만족합니다. 설명도 자세히 해주셨어요.
                 </p>
                 <div class="mt-3 flex gap-2 flex-wrap">
-                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">대출승인</span>
-                  <span class="text-xs px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 rounded">친절함</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">대출승인</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 rounded">친절함</span>
                 </div>
               </div>
 
               <!-- Review 2 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
                 <div class="flex items-center justify-between mb-3">
                   <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold">박</div>
+                    <div
+                      class="w-10 h-10 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold">박
+                    </div>
                     <div>
                       <p class="font-bold text-sm">박**</p>
                       <p class="text-xs text-slate-500">2025.01.08</p>
@@ -1392,16 +1430,21 @@
                   갈아탔습니다. 감사합니다!
                 </p>
                 <div class="mt-3 flex gap-2 flex-wrap">
-                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">금리인하</span>
-                  <span class="text-xs px-2 py-1 bg-purple-50 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded">꼼꼼함</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">금리인하</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-purple-50 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded">꼼꼼함</span>
                 </div>
               </div>
 
               <!-- Review 3 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
                 <div class="flex items-center justify-between mb-3">
                   <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center font-bold">이</div>
+                    <div
+                      class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center font-bold">
+                      이</div>
                     <div>
                       <p class="font-bold text-sm">이**</p>
                       <p class="text-xs text-slate-500">2024.12.28</p>
@@ -1415,16 +1458,21 @@
                   낮아서 승인까지 일주일 정도 걸렸네요. 그래도 끝까지 찾아주셔서 감사합니다.
                 </p>
                 <div class="mt-3 flex gap-2 flex-wrap">
-                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">2금융권</span>
-                  <span class="text-xs px-2 py-1 bg-yellow-50 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 rounded">끈기</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">2금융권</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-yellow-50 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 rounded">끈기</span>
                 </div>
               </div>
 
               <!-- Review 4 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
                 <div class="flex items-center justify-between mb-3">
                   <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold">최</div>
+                    <div
+                      class="w-10 h-10 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold">
+                      최</div>
                     <div>
                       <p class="font-bold text-sm">최**</p>
                       <p class="text-xs text-slate-500">2024.12.20</p>
@@ -1438,16 +1486,21 @@
                   라고 명확하게 말씀해주셔서 신뢰가 갔습니다.
                 </p>
                 <div class="mt-3 flex gap-2 flex-wrap">
-                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">투명성</span>
-                  <span class="text-xs px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 rounded">무료</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">투명성</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 rounded">무료</span>
                 </div>
               </div>
 
               <!-- Review 5 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
                 <div class="flex items-center justify-between mb-3">
                   <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold">정</div>
+                    <div
+                      class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold">
+                      정</div>
                     <div>
                       <p class="font-bold text-sm">정**</p>
                       <p class="text-xs text-slate-500">2024.12.15</p>
@@ -1461,16 +1514,21 @@
                   진짜 승인 나서 깜짝 놀랐습니다. 소득증빙 간소화해주셔서 고맙습니다.
                 </p>
                 <div class="mt-3 flex gap-2 flex-wrap">
-                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">자영업자</span>
-                  <span class="text-xs px-2 py-1 bg-purple-50 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded">간소화</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">자영업자</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-purple-50 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded">간소화</span>
                 </div>
               </div>
 
               <!-- Review 6 -->
-              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
                 <div class="flex items-center justify-between mb-3">
                   <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold">강</div>
+                    <div
+                      class="w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold">강
+                    </div>
                     <div>
                       <p class="font-bold text-sm">강**</p>
                       <p class="text-xs text-slate-500">2024.12.05</p>
@@ -1484,8 +1542,10 @@
                   일주일 후에 다시 연락드렸는데 흔쾌히 진행해주셨습니다. 이런 곳 처음이에요.
                 </p>
                 <div class="mt-3 flex gap-2 flex-wrap">
-                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">압박없음</span>
-                  <span class="text-xs px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 rounded">여유롭게</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">압박없음</span>
+                  <span
+                    class="text-xs px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 rounded">여유롭게</span>
                 </div>
               </div>
             </div>
@@ -1493,15 +1553,20 @@
 
           <!-- Customer Reviews - Style 3 (Numbers) -->
           <section class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">숫자로 증명하는 효과</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              숫자로 증명하는 효과</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-8">실제로 얼마나 절약하셨는지 확인하세요</p>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <!-- Number Review 1 -->
-              <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
                 <div class="bg-gradient-to-r from-primary to-blue-600 p-6 text-white">
                   <div class="flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-2xl font-black">이</div>
+                    <div
+                      class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-2xl font-black">이
+                    </div>
                     <div>
                       <h3 class="text-xl font-bold">이수진 님 (38세)</h3>
                       <p class="text-sm text-white/80">서울 마포구 / 회사원</p>
@@ -1525,7 +1590,8 @@
                     </div>
                   </div>
 
-                  <div class="bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl p-6 mb-6">
+                  <div
+                    class="bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl p-6 mb-6">
                     <div class="text-center">
                       <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">매달 절감하는 금액</p>
                       <p class="text-4xl font-black text-primary mb-1">89만원</p>
@@ -1548,7 +1614,8 @@
                     </p>
                   </div>
 
-                  <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                  <div
+                    class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
                     <span>⭐⭐⭐⭐⭐ 5.0</span>
                     <span>2025.01.05 승인완료</span>
                   </div>
@@ -1556,10 +1623,13 @@
               </div>
 
               <!-- Number Review 2 -->
-              <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
+              <div
+                class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
                 <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">
                   <div class="flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-2xl font-black">최</div>
+                    <div
+                      class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-2xl font-black">최
+                    </div>
                     <div>
                       <h3 class="text-xl font-bold">최준호 님 (29세)</h3>
                       <p class="text-sm text-white/80">서울 송파구 / IT 개발자</p>
@@ -1596,19 +1666,24 @@
                     </div>
                   </div>
 
-                  <blockquote class="border-l-4 border-purple-500 pl-4 py-2 text-sm italic text-slate-700 dark:text-slate-300 mb-4">
+                  <blockquote
+                    class="border-l-4 border-purple-500 pl-4 py-2 text-sm italic text-slate-700 dark:text-slate-300 mb-4">
                     "20대 후반인데 신용등급이 낮아서 2금융권밖에 안 되는 줄 알았어요.
                     근데 매치온에서 '집 있으시면 1금융권 가능합니다'라고 하셔서 반신반의했는데...
                     진짜 됐습니다! 이제 결혼 자금 모을 수 있을 것 같아요."
                   </blockquote>
 
                   <div class="flex items-center gap-2 flex-wrap">
-                    <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">빠른응답</span>
-                    <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded">1금융권성공</span>
-                    <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">20대추천</span>
+                    <span
+                      class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">빠른응답</span>
+                    <span
+                      class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded">1금융권성공</span>
+                    <span
+                      class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">20대추천</span>
                   </div>
 
-                  <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                  <div
+                    class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
                     <span>⭐⭐⭐⭐⭐ 5.0</span>
                     <span>2024.12.18 승인완료</span>
                   </div>
@@ -1619,11 +1694,14 @@
 
           <!-- Comparison Table -->
           <section class="mt-16 px-4">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">타사와 비교해보세요</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              타사와 비교해보세요</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-8">왜 매치온을 선택해야 하는지 명확합니다</p>
 
             <div class="max-w-4xl mx-auto overflow-x-auto">
-              <table class="w-full bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
+              <table
+                class="w-full bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
                 <thead>
                   <tr class="border-b-2 border-slate-200 dark:border-slate-700">
                     <th class="px-6 py-4 text-left text-slate-900 dark:text-slate-50 font-bold">비교 항목</th>
@@ -1907,30 +1985,39 @@
 
           <!-- FAQ Section with Categories -->
           <section class="mt-16 px-4" id="faq">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">자주 묻는 질문</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              자주 묻는 질문</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-8">카테고리별로 궁금하신 점을 빠르게 확인하세요</p>
 
             <!-- Category Tabs -->
             <div class="flex flex-wrap justify-center gap-3 mb-8">
-              <button onclick="showFaqCategory('all')" class="faq-tab active px-5 py-2 rounded-full font-semibold text-sm transition-all bg-primary text-white hover:bg-primary/90">
+              <button onclick="showFaqCategory('all')"
+                class="faq-tab active px-5 py-2 rounded-full font-semibold text-sm transition-all bg-primary text-white hover:bg-primary/90">
                 전체
               </button>
-              <button onclick="showFaqCategory('qualification')" class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-blue-100 dark:hover:bg-blue-900">
+              <button onclick="showFaqCategory('qualification')"
+                class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-blue-100 dark:hover:bg-blue-900">
                 💼 대출자격
               </button>
-              <button onclick="showFaqCategory('cost')" class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-green-100 dark:hover:bg-green-900">
+              <button onclick="showFaqCategory('cost')"
+                class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-green-100 dark:hover:bg-green-900">
                 💰 금리·비용
               </button>
-              <button onclick="showFaqCategory('process')" class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-orange-100 dark:hover:bg-orange-900">
+              <button onclick="showFaqCategory('process')"
+                class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-orange-100 dark:hover:bg-orange-900">
                 📋 진행절차
               </button>
-              <button onclick="showFaqCategory('service')" class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-purple-100 dark:hover:bg-purple-900">
+              <button onclick="showFaqCategory('service')"
+                class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-purple-100 dark:hover:bg-purple-900">
                 💬 상담·서비스
               </button>
-              <button onclick="showFaqCategory('approval')" class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-red-100 dark:hover:bg-red-900">
+              <button onclick="showFaqCategory('approval')"
+                class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-red-100 dark:hover:bg-red-900">
                 ✅ 심사·승인
               </button>
-              <button onclick="showFaqCategory('security')" class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-900">
+              <button onclick="showFaqCategory('security')"
+                class="faq-tab px-5 py-2 rounded-full font-semibold text-sm transition-all bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-900">
                 🔒 개인정보
               </button>
             </div>
@@ -1938,8 +2025,11 @@
             <div class="max-w-4xl mx-auto space-y-4">
 
               <!-- 💼 대출자격 -->
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-blue-500 overflow-hidden" data-category="qualification">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-blue-500 overflow-hidden"
+                data-category="qualification">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-blue-500">💼</span> 신용등급이 낮아도 가능한가요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -1951,12 +2041,16 @@
                     <li>• <strong>신용등급 5~7등급:</strong> 저축은행, 캐피탈</li>
                     <li>• <strong>신용등급 8등급 이하:</strong> 대부업(조건부)</li>
                   </ul>
-                  <p class="text-sm bg-blue-50 dark:bg-blue-900/20 p-3 rounded">💡 불가능한 경우 솔직히 말씀드리며, 신용등급을 올리는 방법도 안내드립니다.</p>
+                  <p class="text-sm bg-blue-50 dark:bg-blue-900/20 p-3 rounded">💡 불가능한 경우 솔직히 말씀드리며, 신용등급을 올리는 방법도
+                    안내드립니다.</p>
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-blue-500 overflow-hidden" data-category="qualification">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-blue-500 overflow-hidden"
+                data-category="qualification">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-blue-500">💼</span> 직장인만 가능한가요? 자영업자도 되나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -1971,8 +2065,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-blue-500 overflow-hidden" data-category="qualification">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-blue-500 overflow-hidden"
+                data-category="qualification">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-blue-500">💼</span> 아파트가 아닌 빌라/오피스텔도 되나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -1988,8 +2085,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-blue-500 overflow-hidden" data-category="qualification">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-blue-500 overflow-hidden"
+                data-category="qualification">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-blue-500">💼</span> 기존에 대출이 있어도 추가 대출이 가능한가요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2005,8 +2105,11 @@
               </details>
 
               <!-- 💰 금리·비용 -->
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-green-500 overflow-hidden" data-category="cost">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-green-500 overflow-hidden"
+                data-category="cost">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-green-500">💰</span> 정말 상담료가 없나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2026,8 +2129,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-green-500 overflow-hidden" data-category="cost">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-green-500 overflow-hidden"
+                data-category="cost">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-green-500">💰</span> 금리가 얼마나 되나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2049,8 +2155,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-green-500 overflow-hidden" data-category="cost">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-green-500 overflow-hidden"
+                data-category="cost">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-green-500">💰</span> 중도상환수수료가 있나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2061,13 +2170,17 @@
                     <li>• <strong>3년 이후:</strong> 대부분 수수료 없음</li>
                     <li>• <strong>일부 상품:</strong> 중도상환수수료 면제 조건</li>
                   </ul>
-                  <p class="mt-3 text-sm bg-green-50 dark:bg-green-900/20 p-3 rounded">💡 상담 시 중도상환 계획을 미리 말씀하시면, 수수료 없는 상품을 우선 추천드립니다.</p>
+                  <p class="mt-3 text-sm bg-green-50 dark:bg-green-900/20 p-3 rounded">💡 상담 시 중도상환 계획을 미리 말씀하시면, 수수료 없는
+                    상품을 우선 추천드립니다.</p>
                 </div>
               </details>
 
               <!-- 📋 진행절차 -->
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-orange-500 overflow-hidden" data-category="process">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-orange-500 overflow-hidden"
+                data-category="process">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-orange-500">📋</span> 얼마나 걸리나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2079,12 +2192,16 @@
                     <li>• <strong>3~5일:</strong> 심사 및 승인</li>
                     <li>• <strong>승인 후:</strong> 계약 및 실행 (1~2일)</li>
                   </ul>
-                  <p class="mt-3 text-sm bg-orange-50 dark:bg-orange-900/20 p-3 rounded">⚡ 긴급하신 경우 우선 처리 가능합니다 (추가 비용 없음)</p>
+                  <p class="mt-3 text-sm bg-orange-50 dark:bg-orange-900/20 p-3 rounded">⚡ 긴급하신 경우 우선 처리 가능합니다 (추가 비용
+                    없음)</p>
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-orange-500 overflow-hidden" data-category="process">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-orange-500 overflow-hidden"
+                data-category="process">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-orange-500">📋</span> 어떤 서류가 필요한가요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2115,8 +2232,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-orange-500 overflow-hidden" data-category="process">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-orange-500 overflow-hidden"
+                data-category="process">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-orange-500">📋</span> 사무실에 방문해야 하나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2131,8 +2251,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-orange-500 overflow-hidden" data-category="process">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-orange-500 overflow-hidden"
+                data-category="process">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-orange-500">📋</span> 중도에 취소 가능한가요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2149,8 +2272,11 @@
               </details>
 
               <!-- 💬 상담·서비스 -->
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-purple-500 overflow-hidden" data-category="service">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-purple-500 overflow-hidden"
+                data-category="service">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-purple-500">💬</span> 정말 전화 안 받아도 되나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2169,8 +2295,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-purple-500 overflow-hidden" data-category="service">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-purple-500 overflow-hidden"
+                data-category="service">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-purple-500">💬</span> 주말이나 야간에도 상담 가능한가요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2185,8 +2314,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-purple-500 overflow-hidden" data-category="service">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-purple-500 overflow-hidden"
+                data-category="service">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-purple-500">💬</span> 지방에 살아도 가능한가요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2211,8 +2343,11 @@
               </details>
 
               <!-- ✅ 심사·승인 -->
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden" data-category="approval">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden"
+                data-category="approval">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-red-500">✅</span> 대출 조회하면 신용등급 떨어지나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2230,8 +2365,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden" data-category="approval">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden"
+                data-category="approval">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-red-500">✅</span> 승인 확률이 어떻게 되나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2248,8 +2386,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden" data-category="approval">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden"
+                data-category="approval">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-red-500">✅</span> 거절되면 어떻게 하나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2265,8 +2406,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden" data-category="approval">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-red-500 overflow-hidden"
+                data-category="approval">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-red-500">✅</span> 한도는 어떻게 결정되나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2294,8 +2438,11 @@
               </details>
 
               <!-- 🔒 개인정보·보안 -->
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-gray-500 overflow-hidden" data-category="security">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-gray-500 overflow-hidden"
+                data-category="security">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-gray-500">🔒</span> 개인정보는 어떻게 보호되나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2308,12 +2455,16 @@
                     <li>• <strong>제3자 제공 절대 불가</strong></li>
                     <li>• <strong>고객 동의 없이 마케팅 활용 불가</strong></li>
                   </ul>
-                  <p class="mt-3 text-sm bg-gray-50 dark:bg-gray-900/20 p-3 rounded">🛡️ 금융위원회 등록 업체로서 개인정보보호법을 철저히 준수합니다.</p>
+                  <p class="mt-3 text-sm bg-gray-50 dark:bg-gray-900/20 p-3 rounded">🛡️ 금융위원회 등록 업체로서 개인정보보호법을 철저히
+                    준수합니다.</p>
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-gray-500 overflow-hidden" data-category="security">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-gray-500 overflow-hidden"
+                data-category="security">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-gray-500">🔒</span> 전화 스팸이 오지 않나요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2332,8 +2483,11 @@
                 </div>
               </details>
 
-              <details class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-gray-500 overflow-hidden" data-category="security">
-                <summary class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
+              <details
+                class="faq-item bg-white dark:bg-slate-800 rounded-xl shadow-sm border-l-4 border-gray-500 overflow-hidden"
+                data-category="security">
+                <summary
+                  class="px-6 py-4 font-bold text-lg cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-slate-50 flex items-center justify-between">
                   <span><span class="text-gray-500">🔒</span> 보이스피싱이나 사기는 아닌가요?</span>
                   <span class="material-symbols-outlined">expand_more</span>
                 </summary>
@@ -2355,7 +2509,8 @@
                     <li>❌ 보증금 요구</li>
                     <li>❌ 타인 명의 사용</li>
                   </ul>
-                  <p class="mt-3 text-sm bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded">⚠️ 대출 중개업체가 돈을 요구하면 100% 사기입니다. 우리는 무료입니다.</p>
+                  <p class="mt-3 text-sm bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded">⚠️ 대출 중개업체가 돈을 요구하면 100% 사기입니다.
+                    우리는 무료입니다.</p>
                 </div>
               </details>
 
@@ -2394,24 +2549,30 @@
 
           <!-- Process Timeline -->
           <section class="mt-16 px-4 mb-16">
-            <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">진행 과정</h2>
+            <h2
+              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+              진행 과정</h2>
             <p class="text-center text-slate-600 dark:text-slate-300 mb-12">신청부터 실행까지 투명하게 진행됩니다</p>
 
             <div class="max-w-4xl mx-auto">
               <div class="relative">
                 <!-- Timeline line -->
-                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-slate-200 dark:bg-slate-700"></div>
+                <div
+                  class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-slate-200 dark:bg-slate-700">
+                </div>
 
                 <!-- Step 1 -->
                 <div class="relative flex items-center mb-12">
                   <div class="w-full md:w-5/12 md:text-right md:pr-8">
-                    <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                    <div
+                      class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
                       <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">신청 및 상담</h3>
                       <p class="text-slate-600 dark:text-slate-400 mb-2">온라인/전화/카톡으로 신청</p>
                       <p class="text-sm text-primary font-semibold">소요 시간: 30분</p>
                     </div>
                   </div>
-                  <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
+                  <div
+                    class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
                     1
                   </div>
                   <div class="w-full md:w-5/12 md:pl-8"></div>
@@ -2420,11 +2581,13 @@
                 <!-- Step 2 -->
                 <div class="relative flex items-center mb-12">
                   <div class="w-full md:w-5/12"></div>
-                  <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-secondary rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
+                  <div
+                    class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-secondary rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
                     2
                   </div>
                   <div class="w-full md:w-5/12 md:pl-8">
-                    <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                    <div
+                      class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
                       <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">금융사 비교</h3>
                       <p class="text-slate-600 dark:text-slate-400 mb-2">20곳 이상 조건 확인</p>
                       <p class="text-sm text-secondary font-semibold">소요 시간: 1~2일</p>
@@ -2435,13 +2598,15 @@
                 <!-- Step 3 -->
                 <div class="relative flex items-center mb-12">
                   <div class="w-full md:w-5/12 md:text-right md:pr-8">
-                    <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                    <div
+                      class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
                       <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">결과 안내</h3>
                       <p class="text-slate-600 dark:text-slate-400 mb-2">최적 조건 상세 설명</p>
                       <p class="text-sm text-yellow-600 font-semibold">소요 시간: 1시간</p>
                     </div>
                   </div>
-                  <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-yellow-500 rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
+                  <div
+                    class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-yellow-500 rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
                     3
                   </div>
                   <div class="w-full md:w-5/12 md:pl-8"></div>
@@ -2450,11 +2615,13 @@
                 <!-- Step 4 -->
                 <div class="relative flex items-center mb-12">
                   <div class="w-full md:w-5/12"></div>
-                  <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-purple-500 rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
+                  <div
+                    class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-purple-500 rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
                     4
                   </div>
                   <div class="w-full md:w-5/12 md:pl-8">
-                    <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                    <div
+                      class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
                       <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">고객 결정</h3>
                       <p class="text-slate-600 dark:text-slate-400 mb-2">충분한 검토 후 결정</p>
                       <p class="text-sm text-purple-600 font-semibold">소요 시간: 원하시는 만큼</p>
@@ -2465,20 +2632,23 @@
                 <!-- Step 5 -->
                 <div class="relative flex items-center">
                   <div class="w-full md:w-5/12 md:text-right md:pr-8">
-                    <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                    <div
+                      class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
                       <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-slate-50">계약 및 실행</h3>
                       <p class="text-slate-600 dark:text-slate-400 mb-2">서류 준비 및 대출 실행</p>
                       <p class="text-sm text-green-600 font-semibold">소요 시간: 3~5일</p>
                     </div>
                   </div>
-                  <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-green-500 rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
+                  <div
+                    class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-green-500 rounded-full items-center justify-center text-white font-black text-2xl shadow-lg z-10">
                     5
                   </div>
                   <div class="w-full md:w-5/12 md:pl-8"></div>
                 </div>
               </div>
 
-              <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 mt-12 text-center border border-blue-200 dark:border-blue-800">
+              <div
+                class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 mt-12 text-center border border-blue-200 dark:border-blue-800">
                 <p class="text-lg font-semibold text-slate-900 dark:text-slate-50 mb-2">전체 평균 소요 시간</p>
                 <p class="text-4xl font-black text-primary">3~5일</p>
                 <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">긴급하신 경우 더 빠르게 진행 가능합니다</p>
@@ -2498,37 +2668,47 @@
                 <h2 class="text-base font-bold leading-tight tracking-[-0.015em]">매치온</h2>
               </div>
               <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">
-                (주)대한재무정보대부중개 | 대표: 서주연<br/>
-                등록번호: 인천남동구 2015-25<br/>
+                (주)대한재무정보대부중개 | 대표: 서주연<br />
+                등록번호: 인천남동구 2015-25<br />
                 인천광역시 남동구 구월남로 117, 202호
               </p>
             </div>
             <div class="col-span-1">
               <h3 class="font-bold text-sm">서비스</h3>
               <ul class="mt-2 space-y-1 text-xs">
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#how-it-works">이용방법</a></li>
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#products">주요 상품</a></li>
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#calculator">금리 계산기</a></li>
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="property-loan.html">부동산담보대출</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                    href="#how-it-works">이용방법</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                    href="#products">주요 상품</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                    href="#calculator">금리 계산기</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                    href="property-loan.html">부동산담보대출</a></li>
               </ul>
             </div>
             <div class="col-span-1">
               <h3 class="font-bold text-sm">고객지원</h3>
               <ul class="mt-2 space-y-1 text-xs">
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">자주 묻는 질문</a></li>
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">상담 신청</a></li>
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">공지사항</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">자주 묻는
+                    질문</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">상담
+                    신청</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">공지사항</a>
+                </li>
               </ul>
             </div>
             <div class="col-span-1">
               <h3 class="font-bold text-sm">정책</h3>
               <ul class="mt-2 space-y-1 text-xs">
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">이용약관</a></li>
-                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">개인정보처리방침</a></li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">이용약관</a>
+                </li>
+                <li><a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                    href="#">개인정보처리방침</a></li>
               </ul>
             </div>
           </div>
-          <div class="mt-8 border-t border-slate-300 dark:border-slate-600 pt-6 text-center text-xs text-slate-500 dark:text-slate-400">
+          <div
+            class="mt-8 border-t border-slate-300 dark:border-slate-600 pt-6 text-center text-xs text-slate-500 dark:text-slate-400">
             © 2025 대한재무대부중개 All Rights Reserved.
           </div>
         </div>
@@ -2537,52 +2717,95 @@
   </div>
 
   <script>
-    let selectedPropertyType = '아파트';
+    // Counter Animation
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseFloat(counter.getAttribute('data-target'));
+          const decimals = parseInt(counter.getAttribute('data-decimals') || 0);
+
+          const options = {
+            decimalPlaces: decimals,
+            duration: 2.5,
+            useEasing: true,
+            useGrouping: true,
+          };
+
+          const anim = new CountUp(counter, target, options);
+          if (!anim.error) {
+            anim.start();
+          } else {
+            console.error(anim.error);
+            counter.innerText = target;
+          }
+
+          observer.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.counter').forEach(counter => {
+      observer.observe(counter);
+    });
 
     // Property Type Selection
-    function selectPropertyType(button) {
+    function selectPropertyType(element) {
       document.querySelectorAll('.property-type-btn').forEach(btn => {
         btn.classList.remove('active');
+        btn.classList.remove('bg-gradient-to-r', 'from-primary', 'to-primary-dark', 'text-white', 'transform', '-translate-y-0.5', 'shadow-lg');
+        btn.classList.add('bg-white', 'text-slate-600', 'hover:border-primary');
       });
-      button.classList.add('active');
-      selectedPropertyType = button.getAttribute('data-type');
+
+      element.classList.add('active');
+      // element.classList.add('bg-gradient-to-r', 'from-primary', 'to-primary-dark', 'text-white', 'transform', '-translate-y-0.5', 'shadow-lg');
+      // element.classList.remove('bg-white', 'text-slate-600', 'hover:border-primary');
     }
 
-    // Tab Switching for Products
-    function switchTab(tabIndex) {
-      // Remove active class from all tabs
+    // Address Search (Mock)
+    function searchAddress() {
+      new daum.Postcode({
+        oncomplete: function (data) {
+          document.getElementById('address').value = data.address;
+        }
+      }).open();
+    }
+
+    // Tab Switching
+    function switchTab(index) {
+      // Update Tab Buttons
       document.querySelectorAll('.product-tab').forEach(tab => {
-        tab.classList.remove('active', 'border-primary', 'bg-primary/5');
-        tab.classList.add('border-transparent');
+        tab.classList.remove('active', 'border-primary', 'bg-primary/5', 'text-primary');
+        tab.classList.add('border-transparent', 'hover:bg-slate-50', 'dark:hover:bg-slate-700');
+
+        if (tab.getAttribute('data-tab') == index) {
+          tab.classList.add('active', 'border-primary', 'bg-primary/5', 'text-primary');
+          tab.classList.remove('border-transparent', 'hover:bg-slate-50', 'dark:hover:bg-slate-700');
+        }
       });
 
-      // Hide all tab contents
+      // Update Tab Content
       document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.add('hidden');
-        content.classList.remove('active');
+        if (content.getAttribute('data-content') == index) {
+          content.classList.remove('hidden');
+          // Add simple fade in effect
+          content.style.opacity = 0;
+          setTimeout(() => {
+            content.style.transition = 'opacity 0.3s ease-in-out';
+            content.style.opacity = 1;
+          }, 10);
+        }
       });
-
-      // Activate selected tab
-      const activeTab = document.querySelector(`.product-tab[data-tab="${tabIndex}"]`);
-      if (activeTab) {
-        activeTab.classList.add('active', 'border-primary', 'bg-primary/5');
-        activeTab.classList.remove('border-transparent');
-      }
-
-      // Show selected content
-      const activeContent = document.querySelector(`.tab-content[data-content="${tabIndex}"]`);
-      if (activeContent) {
-        activeContent.classList.remove('hidden');
-        activeContent.classList.add('active');
-      }
     }
 
-    // Address Search (Mock function)
-    function searchAddress() {
-      alert('주소 검색 기능은 실제 구현 시 Daum 우편번호 API 등을 연동하시면 됩니다.');
-    }
-
-    // Form Submit
+    // Form Submission
     function submitForm() {
       const address = document.getElementById('address').value;
       const phone = document.getElementById('phone').value;
@@ -2592,108 +2815,7 @@
         alert('부동산 주소를 입력해주세요.');
         return;
       }
-
-      if (!phone || phone.length < 10) {
-        alert('올바른 휴대폰 번호를 입력해주세요.');
-        return;
-      }
-
-      const message = noCall
-        ? `신청이 완료되었습니다!\n\n부동산 유형: ${selectedPropertyType}\n주소: ${address}\n연락처: ${phone}\n\n상담 전화 없이 30분~1시간 내에\n카톡 또는 문자로 예상 한도와 금리를 보내드리겠습니다.\n\n원하실 때 언제든 연락 주세요! 😊`
-        : `신청이 완료되었습니다!\n\n부동산 유형: ${selectedPropertyType}\n주소: ${address}\n연락처: ${phone}\n\n곧 담당자가 연락드리겠습니다.\n감사합니다! 😊`;
-
-      alert(message);
     }
-
-    // Initialize Particles.js
-    particlesJS('particles-js', {
-      particles: {
-        number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: '#0066CC' },
-        shape: { type: 'circle' },
-        opacity: { value: 0.3, random: true },
-        size: { value: 3, random: true },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: '#0066CC',
-          opacity: 0.3,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 1.5,
-          direction: 'none',
-          random: true,
-          straight: false,
-          out_mode: 'out',
-          bounce: false
-        }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: { enable: true, mode: 'grab' },
-          onclick: { enable: true, mode: 'push' },
-          resize: true
-        }
-      },
-      retina_detect: true
-    });
-
-    // Initialize CountUp.js
-    const counters = document.querySelectorAll('.counter');
-    const observerOptions = {
-      threshold: 0.5,
-      rootMargin: '0px'
-    };
-
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = entry.target;
-          const targetValue = parseFloat(target.getAttribute('data-target'));
-          const decimals = target.getAttribute('data-decimals') || 0;
-
-          const countUp = new CountUp(target, targetValue, {
-            duration: 2.5,
-            separator: ',',
-            decimal: '.',
-            decimals: parseInt(decimals)
-          });
-
-          if (!countUp.error) {
-            countUp.start();
-          }
-
-          counterObserver.unobserve(target);
-        }
-      });
-    }, observerOptions);
-
-    counters.forEach(counter => {
-      counterObserver.observe(counter);
-    });
-
-    // Initialize Swiper
-    const swiper = new Swiper('.productsSwiper', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-      },
-    });
 
     // Loan Calculator with Chart.js
     const loanAmount = document.getElementById('loan-amount');
@@ -2726,7 +2848,7 @@
           },
           tooltip: {
             callbacks: {
-              label: function(context) {
+              label: function (context) {
                 return context.label + ': ' + context.parsed.toLocaleString() + '원';
               }
             }
@@ -2745,23 +2867,24 @@
       const totalInterest = totalPayment - principal;
 
       monthlyPaymentDisplay.textContent = Math.round(monthlyPayment).toLocaleString() + '원';
-      totalInterestDisplay.textContent = '총 예상 이자: ' + Math.round(totalInterest).toLocaleString() + '원 (연 ' + interestRate.value + '% 기준)';
+      totalInterestDisplay.textContent = '총 예상 이자: ' + Math.round(totalInterest).toLocaleString() + '원 (연 ' +
+        interestRate.value + '% 기준)';
 
       loanChart.data.datasets[0].data = [principal, totalInterest];
       loanChart.update();
     }
 
-    loanAmount.addEventListener('input', function() {
+    loanAmount.addEventListener('input', function () {
       loanAmountDisplay.textContent = parseInt(this.value).toLocaleString();
       calculateLoan();
     });
 
-    interestRate.addEventListener('input', function() {
+    interestRate.addEventListener('input', function () {
       interestRateDisplay.textContent = parseFloat(this.value).toFixed(1);
       calculateLoan();
     });
 
-    loanPeriod.addEventListener('input', function() {
+    loanPeriod.addEventListener('input', function () {
       loanPeriodDisplay.textContent = this.value;
       calculateLoan();
     });
@@ -2783,7 +2906,7 @@
     }
 
     // Phone number formatting
-    document.getElementById('phone').addEventListener('input', function(e) {
+    document.getElementById('phone').addEventListener('input', function (e) {
       this.value = this.value.replace(/[^0-9]/g, '');
     });
 
@@ -2805,4 +2928,5 @@
     });
   </script>
 </body>
+
 </html>
