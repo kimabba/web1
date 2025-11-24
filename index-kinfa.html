@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>서민금융진흥원 (KINFA) - 행복한 금융생활을 위한 포용적 서민금융의 든든한 토대</title>
+  <title>매치온 - 부담없이 한도만 확인하세요</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -15,6 +15,9 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- CountUp.js -->
+  <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
 
   <script>
     tailwind.config = {
@@ -45,6 +48,7 @@
             "text-secondary": "#525252",
             "text-tertiary": "#737373",
             "text-inverse": "#FFFFFF",
+            "kakao": "#FEE500",
           },
           fontFamily: {
             "sans": ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Noto Sans KR", "sans-serif"],
@@ -171,17 +175,50 @@
       background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
     }
 
-    /* Card Grid */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
+    /* Property Type Button */
+    .property-type-btn {
+      background: #FFFFFF;
+      color: #525252;
+      border: 2px solid #D4D4D4;
+      transition: all 300ms ease-in-out;
     }
 
-    @media (max-width: 599px) {
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
+    .property-type-btn:hover {
+      border-color: #0066CC;
+      color: #0066CC;
+    }
+
+    .property-type-btn.active {
+      background: #0066CC;
+      color: #FFFFFF;
+      border-color: #0066CC;
+    }
+
+    /* Tab Styles */
+    .product-tab {
+      background: transparent;
+      color: #525252;
+      border-bottom: 2px solid transparent;
+      transition: all 300ms ease-in-out;
+    }
+
+    .product-tab:hover {
+      color: #0066CC;
+      background: #F9FAFB;
+    }
+
+    .product-tab.active {
+      color: #0066CC;
+      background: rgba(0, 102, 204, 0.05);
+      border-bottom-color: #0066CC;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
     }
   </style>
 </head>
@@ -195,24 +232,23 @@
           <!-- Logo -->
           <div class="flex items-center">
             <a href="/" class="flex items-center">
-              <span class="text-2xl font-bold text-primary">KINFA</span>
-              <span class="ml-2 text-sm text-text-secondary hidden md:block">서민금융진흥원</span>
+              <span class="text-2xl font-bold text-primary">매치온</span>
+              <span class="ml-2 text-sm text-text-secondary hidden md:block">부담없이 한도만 확인</span>
             </a>
           </div>
 
           <!-- Navigation -->
           <nav class="hidden md:flex space-x-8">
-            <a href="#products" class="text-text-primary hover:text-primary transition-colors">금융상품</a>
-            <a href="#services" class="text-text-primary hover:text-primary transition-colors">금융생활지원</a>
-            <a href="#news" class="text-text-primary hover:text-primary transition-colors">알림·공고</a>
-            <a href="#about" class="text-text-primary hover:text-primary transition-colors">기관소개</a>
+            <a href="#hero-form" class="text-text-primary hover:text-primary transition-colors">한도조회</a>
+            <a href="#products" class="text-text-primary hover:text-primary transition-colors">대출상품</a>
+            <a href="#how-it-works" class="text-text-primary hover:text-primary transition-colors">진행절차</a>
           </nav>
 
           <!-- Right Menu -->
           <div class="flex items-center space-x-4">
-            <button class="text-text-primary hover:text-primary">
-              <span class="material-symbols-outlined">search</span>
-            </button>
+            <a href="#hero-form" class="hidden md:block kinfa-btn-primary px-6 py-2 rounded-lg font-semibold">
+              무료 한도 확인
+            </a>
             <button class="md:hidden text-text-primary hover:text-primary">
               <span class="material-symbols-outlined">menu</span>
             </button>
@@ -223,539 +259,536 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="hero-gradient py-20 md:py-32 px-4">
-        <div class="max-w-7xl mx-auto text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-text-inverse mb-6 fade-in-up">
-            행복한 금융생활을 위한<br/>포용적 서민금융의 든든한 토대
-          </h1>
-          <p class="text-lg md:text-xl text-text-inverse opacity-90 mb-10 max-w-3xl mx-auto">
-            서민금융진흥원은 금융소외계층과 서민의 금융생활을 지원하고<br class="hidden md:block"/>
-            건전한 금융시장 조성을 위해 노력합니다
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="kinfa-btn-primary px-8 py-4 rounded-lg text-lg font-semibold">
-              금융상품 둘러보기
+      <section id="hero-section" class="hero-gradient py-12 md:py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-text-inverse mb-4 fade-in-up">
+              부담없이 한도만 확인하세요
+            </h1>
+            <p class="text-lg md:text-xl text-text-inverse opacity-90 mb-2">
+              전화 부담 없이 <strong>메시지로만</strong> 안내받을 수 있습니다.
+            </p>
+            <p class="text-base md:text-lg text-text-inverse opacity-80">
+              메시지로 <strong>예상 한도와 금리</strong>만 받아보세요.
+            </p>
+          </div>
+
+          <!-- Main Form Card -->
+          <div id="hero-form" class="bg-neutral-white rounded-xl shadow-xl border border-neutral-200 p-6 md:p-8">
+            <!-- Property Type Selection -->
+            <div class="mb-6">
+              <label class="block text-sm font-semibold text-text-primary mb-3">
+                <span class="material-symbols-outlined text-lg align-middle mr-1">home</span>
+                부동산 유형
+              </label>
+              <div class="grid grid-cols-5 gap-2">
+                <button class="property-type-btn active h-12 rounded-lg text-sm font-medium" data-type="아파트" onclick="selectPropertyType(this)">
+                  아파트
+                </button>
+                <button class="property-type-btn h-12 rounded-lg text-sm font-medium" data-type="주택" onclick="selectPropertyType(this)">
+                  주택
+                </button>
+                <button class="property-type-btn h-12 rounded-lg text-sm font-medium" data-type="빌라" onclick="selectPropertyType(this)">
+                  빌라
+                </button>
+                <button class="property-type-btn h-12 rounded-lg text-sm font-medium" data-type="오피스텔" onclick="selectPropertyType(this)">
+                  오피스텔
+                </button>
+                <button class="property-type-btn h-12 rounded-lg text-sm font-medium" data-type="무설정" onclick="selectPropertyType(this)">
+                  무설정
+                </button>
+              </div>
+            </div>
+
+            <!-- Address Input -->
+            <div class="mb-5">
+              <label class="block text-sm font-semibold text-text-primary mb-2" for="address">
+                <span class="material-symbols-outlined text-lg align-middle mr-1">location_on</span>
+                부동산 주소
+              </label>
+              <div class="relative">
+                <input
+                  class="w-full h-14 px-4 pr-12 border-2 border-neutral-300 rounded-lg bg-neutral-white focus:ring-2 focus:ring-primary focus:border-primary text-text-primary placeholder-text-tertiary transition-all"
+                  id="address"
+                  placeholder="예) 서울시 강남구 테헤란로 123 (클릭하여 검색)"
+                  type="text"
+                  onclick="searchAddress()"
+                  readonly
+                />
+                <button onclick="searchAddress()" class="absolute right-3 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-2xl">search</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phone Input -->
+            <div class="mb-5">
+              <label class="block text-sm font-semibold text-text-primary mb-2" for="phone">
+                <span class="material-symbols-outlined text-lg align-middle mr-1">phone_iphone</span>
+                휴대폰 번호
+              </label>
+              <input
+                class="w-full h-14 px-4 border-2 border-neutral-300 rounded-lg bg-neutral-white focus:ring-2 focus:ring-primary focus:border-primary text-text-primary placeholder-text-tertiary transition-all"
+                id="phone"
+                placeholder="'-' 없이 숫자만 입력"
+                type="tel"
+                maxlength="11"
+              />
+              <p class="text-xs text-text-tertiary mt-1.5 ml-1">
+                <span class="material-symbols-outlined text-xs align-middle">info</span>
+                예상 한도와 금리를 메시지로 보내드리기 위해 필요합니다
+              </p>
+            </div>
+
+            <!-- No Call Checkbox -->
+            <div class="mb-6 p-4 bg-bg-secondary rounded-lg border border-neutral-200">
+              <label class="flex items-start gap-3 cursor-pointer group">
+                <div class="flex items-center h-6">
+                  <input
+                    type="checkbox"
+                    id="no-call"
+                    class="w-5 h-5 text-primary border-2 border-neutral-300 rounded focus:ring-2 focus:ring-primary cursor-pointer"
+                    checked
+                  />
+                </div>
+                <div class="flex-1">
+                  <span class="text-sm font-semibold text-text-primary group-hover:text-primary transition-colors">
+                    ✅ 상담 전화를 받지 않겠습니다 (리포트만 수령)
+                  </span>
+                  <p class="text-xs text-text-tertiary mt-1">
+                    체크 시 전화 없이 문자/카톡으로만 결과를 받습니다. 원하시면 언제든 직접 연락 주세요.
+                  </p>
+                </div>
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              onclick="submitForm()"
+              class="w-full flex items-center justify-center gap-2 h-16 px-6 rounded-xl bg-gradient-to-r from-kakao to-yellow-400 text-black font-bold text-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.477 2 2 5.79 2 9.993C2 12.444 3.388 14.636 5.738 16.14L5.13 18.828C5.064 19.167 5.373 19.45 5.706 19.378L8.857 18.59C9.858 18.87 10.91 19.017 12 19.017C17.523 19.017 22 15.227 22 11.023C22 6.82 17.523 3 12 3C12 3 12 2 12 2Z" fill="rgba(0,0,0,0.9)"></path>
+              </svg>
+              <span>카톡으로 무료 한도 받기</span>
             </button>
-            <button class="kinfa-btn-secondary px-8 py-4 rounded-lg text-lg font-semibold">
-              상담 신청하기
-            </button>
+
+            <div class="mt-4 text-center">
+              <p class="text-xs text-text-tertiary">
+                <span class="material-symbols-outlined text-xs align-middle">lock</span>
+                입력하신 정보는 <strong>한도 조회 목적으로만</strong> 사용되며, 안전하게 보호됩니다.
+              </p>
+            </div>
           </div>
 
           <!-- Trust Indicators -->
-          <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-text-inverse">
-            <div class="fade-in-up">
-              <div class="text-4xl font-bold mb-2">1,000+</div>
-              <div class="text-sm opacity-80">협력 금융기관</div>
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-text-inverse">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-semantic-success">check_circle</span>
+              <span>전화 부담 없음</span>
             </div>
-            <div class="fade-in-up" style="animation-delay: 0.1s">
-              <div class="text-4xl font-bold mb-2">10만+</div>
-              <div class="text-sm opacity-80">월 상담 건수</div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-semantic-success">check_circle</span>
+              <span>30초 간편 신청</span>
             </div>
-            <div class="fade-in-up" style="animation-delay: 0.2s">
-              <div class="text-4xl font-bold mb-2">99.8%</div>
-              <div class="text-sm opacity-80">고객 만족도</div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-semantic-success">check_circle</span>
+              <span>무료 한도 조회</span>
             </div>
-            <div class="fade-in-up" style="animation-delay: 0.3s">
-              <div class="text-4xl font-bold mb-2">24/7</div>
-              <div class="text-sm opacity-80">온라인 상담</div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-semantic-success">check_circle</span>
+              <span>개인정보 보호</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Products Section - Carousel -->
-      <section id="products" class="py-20 px-4 bg-neutral-white">
-        <div class="max-w-7xl mx-auto">
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="py-16 px-4 bg-neutral-white">
+        <div class="max-w-6xl mx-auto">
           <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">금융상품</h2>
-            <p class="text-lg text-text-secondary">서민을 위한 다양한 금융상품을 만나보세요</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">이렇게 진행됩니다</h2>
+            <p class="text-lg text-text-secondary">부담 없이, 투명하게, 고객님의 선택을 존중합니다</p>
           </div>
-
-          <!-- Swiper Carousel -->
-          <div class="swiper productSwiper">
-            <div class="swiper-wrapper">
-              <!-- Product Card 1 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 h-full border border-neutral-200">
-                  <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-text-inverse text-3xl">savings</span>
-                  </div>
-                  <h3 class="text-2xl font-bold text-text-primary mb-3">서민금융진흥자금</h3>
-                  <p class="text-text-secondary mb-6 leading-relaxed">
-                    저신용·저소득 서민의 생활안정 및 자활을 지원하기 위한 대출상품입니다.
-                  </p>
-                  <ul class="space-y-2 mb-6">
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">연 최저 4.5%의 저금리</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">최대 2,000만원 한도</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">5년 장기 상환</span>
-                    </li>
-                  </ul>
-                  <button class="kinfa-btn-primary w-full py-3 rounded-lg font-semibold">
-                    자세히 보기
-                  </button>
-                </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="kinfa-card bg-neutral-white rounded-xl p-8 shadow-md border border-neutral-200 text-center">
+              <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary bg-opacity-10 mb-6">
+                <span class="text-4xl font-black text-primary">1</span>
               </div>
-
-              <!-- Product Card 2 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 h-full border border-neutral-200">
-                  <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-text-inverse text-3xl">account_balance</span>
-                  </div>
-                  <h3 class="text-2xl font-bold text-text-primary mb-3">햇살론</h3>
-                  <p class="text-text-secondary mb-6 leading-relaxed">
-                    중·저신용자를 위한 정책서민금융상품으로 은행권 대출이 어려운 분들을 지원합니다.
-                  </p>
-                  <ul class="space-y-2 mb-6">
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">연 최고 10.5% 금리</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">최대 3,500만원 한도</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">서민금융통합지원센터</span>
-                    </li>
-                  </ul>
-                  <button class="kinfa-btn-primary w-full py-3 rounded-lg font-semibold">
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-
-              <!-- Product Card 3 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 h-full border border-neutral-200">
-                  <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-text-inverse text-3xl">credit_card</span>
-                  </div>
-                  <h3 class="text-2xl font-bold text-text-primary mb-3">안심전환대출</h3>
-                  <p class="text-text-secondary mb-6 leading-relaxed">
-                    고금리 대출을 저금리로 전환하여 이자 부담을 줄여드립니다.
-                  </p>
-                  <ul class="space-y-2 mb-6">
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">연 10% 이하 저금리</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">최대 2,000만원 한도</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">이자 부담 대폭 절감</span>
-                    </li>
-                  </ul>
-                  <button class="kinfa-btn-primary w-full py-3 rounded-lg font-semibold">
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-
-              <!-- Product Card 4 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 h-full border border-neutral-200">
-                  <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-text-inverse text-3xl">home</span>
-                  </div>
-                  <h3 class="text-2xl font-bold text-text-primary mb-3">전세자금대출</h3>
-                  <p class="text-text-secondary mb-6 leading-relaxed">
-                    주거 안정을 위한 전세자금 대출 상품으로 실수요자를 지원합니다.
-                  </p>
-                  <ul class="space-y-2 mb-6">
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">연 2%대 초저금리</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">최대 1억원 한도</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">2년 거치 후 상환</span>
-                    </li>
-                  </ul>
-                  <button class="kinfa-btn-primary w-full py-3 rounded-lg font-semibold">
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-
-              <!-- Product Card 5 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 h-full border border-neutral-200">
-                  <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-text-inverse text-3xl">business_center</span>
-                  </div>
-                  <h3 class="text-2xl font-bold text-text-primary mb-3">창업자금대출</h3>
-                  <p class="text-text-secondary mb-6 leading-relaxed">
-                    청년 및 영세 자영업자의 창업을 지원하는 특별 대출 상품입니다.
-                  </p>
-                  <ul class="space-y-2 mb-6">
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">연 3%대 금리</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">최대 5,000만원 한도</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">5년 거치 후 분할상환</span>
-                    </li>
-                  </ul>
-                  <button class="kinfa-btn-primary w-full py-3 rounded-lg font-semibold">
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-
-              <!-- Product Card 6 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 h-full border border-neutral-200">
-                  <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-text-inverse text-3xl">school</span>
-                  </div>
-                  <h3 class="text-2xl font-bold text-text-primary mb-3">학자금대출</h3>
-                  <p class="text-text-secondary mb-6 leading-relaxed">
-                    교육비 부담을 덜어드리는 학자금 지원 대출 상품입니다.
-                  </p>
-                  <ul class="space-y-2 mb-6">
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">연 1%대 초저금리</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">등록금 전액 지원</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="material-symbols-outlined text-semantic-success text-xl mr-2">check_circle</span>
-                      <span class="text-text-secondary">졸업 후 상환</span>
-                    </li>
-                  </ul>
-                  <button class="kinfa-btn-primary w-full py-3 rounded-lg font-semibold">
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="swiper-button-next" style="color: #0066CC;"></div>
-            <div class="swiper-button-prev" style="color: #0066CC;"></div>
-
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section - Icon Grid -->
-      <section id="services" class="py-20 px-4 bg-bg-secondary">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">금융생활지원</h2>
-            <p class="text-lg text-text-secondary">서민 금융생활을 돕는 다양한 서비스를 제공합니다</p>
-          </div>
-
-          <div class="card-grid">
-            <!-- Service Card 1 -->
-            <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 border border-neutral-200">
-              <div class="w-16 h-16 bg-semantic-info bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <span class="material-symbols-outlined text-semantic-info text-3xl">support_agent</span>
-              </div>
-              <h3 class="text-xl font-bold text-text-primary mb-3">1:1 금융상담</h3>
-              <p class="text-text-secondary mb-4">
-                전문 상담사가 고객님의 금융 상황을 분석하고 맞춤형 솔루션을 제공합니다.
+              <h3 class="text-xl font-bold mb-3 text-text-primary">정보 입력</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">
+                부동산 주소와 연락처만 입력하세요.
+                <strong class="text-primary">상담 전화 거부</strong> 옵션을 선택하시면 전화 없이 진행됩니다.
               </p>
-              <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                상담 신청하기
-                <span class="material-symbols-outlined ml-1">arrow_forward</span>
-              </a>
             </div>
-
-            <!-- Service Card 2 -->
-            <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 border border-neutral-200">
-              <div class="w-16 h-16 bg-semantic-success bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <span class="material-symbols-outlined text-semantic-success text-3xl">calculate</span>
+            <div class="kinfa-card bg-neutral-white rounded-xl p-8 shadow-md border border-neutral-200 text-center">
+              <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-semantic-success bg-opacity-10 mb-6">
+                <span class="text-4xl font-black text-semantic-success">2</span>
               </div>
-              <h3 class="text-xl font-bold text-text-primary mb-3">대출 계산기</h3>
-              <p class="text-text-secondary mb-4">
-                대출 금리, 기간, 상환 방식에 따른 월 상환액을 미리 계산해보세요.
+              <h3 class="text-xl font-bold mb-3 text-text-primary">한도 리포트 수령</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">
+                <strong class="text-semantic-success">30분~1시간 내</strong> 카톡 또는 문자로
+                <strong>예상 한도, 금리, 조건</strong>을 자세히 안내드립니다.
               </p>
-              <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                계산하기
-                <span class="material-symbols-outlined ml-1">arrow_forward</span>
-              </a>
             </div>
-
-            <!-- Service Card 3 -->
-            <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 border border-neutral-200">
-              <div class="w-16 h-16 bg-semantic-warning bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <span class="material-symbols-outlined text-semantic-warning text-3xl">quiz</span>
+            <div class="kinfa-card bg-neutral-white rounded-xl p-8 shadow-md border border-neutral-200 text-center">
+              <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-semantic-info bg-opacity-10 mb-6">
+                <span class="text-4xl font-black text-semantic-info">3</span>
               </div>
-              <h3 class="text-xl font-bold text-text-primary mb-3">자주 묻는 질문</h3>
-              <p class="text-text-secondary mb-4">
-                서민금융 상품과 서비스에 대한 궁금증을 빠르게 해결하세요.
+              <h3 class="text-xl font-bold mb-3 text-text-primary">원하시면 상담</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">
+                리포트를 보시고 <strong class="text-semantic-info">원하실 때</strong>
+                직접 연락 주시면 <strong>최선의 조건</strong>으로 진행해드립니다.
               </p>
-              <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                FAQ 보기
-                <span class="material-symbols-outlined ml-1">arrow_forward</span>
-              </a>
-            </div>
-
-            <!-- Service Card 4 -->
-            <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 border border-neutral-200">
-              <div class="w-16 h-16 bg-semantic-error bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <span class="material-symbols-outlined text-semantic-error text-3xl">verified_user</span>
-              </div>
-              <h3 class="text-xl font-bold text-text-primary mb-3">채무조정 지원</h3>
-              <p class="text-text-secondary mb-4">
-                과도한 채무로 어려움을 겪고 있다면 채무조정 프로그램을 신청하세요.
-              </p>
-              <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                신청하기
-                <span class="material-symbols-outlined ml-1">arrow_forward</span>
-              </a>
-            </div>
-
-            <!-- Service Card 5 -->
-            <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 border border-neutral-200">
-              <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
-              </div>
-              <h3 class="text-xl font-bold text-text-primary mb-3">금융교육</h3>
-              <p class="text-text-secondary mb-4">
-                올바른 금융 습관 형성을 위한 다양한 교육 프로그램을 제공합니다.
-              </p>
-              <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                교육 신청하기
-                <span class="material-symbols-outlined ml-1">arrow_forward</span>
-              </a>
-            </div>
-
-            <!-- Service Card 6 -->
-            <div class="kinfa-card bg-neutral-white rounded-xl shadow-md p-8 border border-neutral-200">
-              <div class="w-16 h-16 bg-semantic-success bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                <span class="material-symbols-outlined text-semantic-success text-3xl">smartphone</span>
-              </div>
-              <h3 class="text-xl font-bold text-text-primary mb-3">모바일 서비스</h3>
-              <p class="text-text-secondary mb-4">
-                언제 어디서나 스마트폰으로 간편하게 금융 서비스를 이용하세요.
-              </p>
-              <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                앱 다운로드
-                <span class="material-symbols-outlined ml-1">arrow_forward</span>
-              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- News Section - Carousel -->
-      <section id="news" class="py-20 px-4 bg-neutral-white">
-        <div class="max-w-7xl mx-auto">
-          <div class="flex items-center justify-between mb-12">
-            <div>
-              <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-2">알림·공고</h2>
-              <p class="text-lg text-text-secondary">서민금융진흥원의 최신 소식을 확인하세요</p>
-            </div>
-            <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-              전체보기
-              <span class="material-symbols-outlined ml-1">arrow_forward</span>
-            </a>
-          </div>
-
-          <!-- News Tabs -->
-          <div class="mb-8 border-b border-neutral-200">
-            <div class="flex space-x-8">
-              <button class="news-tab pb-4 border-b-2 border-primary text-primary font-semibold">보도자료</button>
-              <button class="news-tab pb-4 border-b-2 border-transparent text-text-secondary hover:text-primary font-semibold">공지사항</button>
-            </div>
-          </div>
-
-          <!-- News Carousel -->
-          <div class="swiper newsSwiper">
-            <div class="swiper-wrapper">
-              <!-- News Card 1 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md overflow-hidden h-full border border-neutral-200">
-                  <div class="h-48 bg-gradient-to-br from-primary to-primary-dark"></div>
-                  <div class="p-6">
-                    <div class="text-sm text-text-tertiary mb-2">2025.11.20</div>
-                    <h3 class="text-xl font-bold text-text-primary mb-3 line-clamp-2">
-                      2025년 서민금융 지원 규모 대폭 확대
-                    </h3>
-                    <p class="text-text-secondary mb-4 line-clamp-3">
-                      서민금융진흥원은 2025년 서민금융 지원 규모를 전년 대비 30% 확대하여 더 많은 서민들이 혜택을 받을 수 있도록 할 예정입니다.
-                    </p>
-                    <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                      자세히 보기
-                      <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                    </a>
+      <!-- Why Choose Us Section -->
+      <section class="py-16 px-4 bg-bg-secondary">
+        <div class="max-w-6xl mx-auto">
+          <div class="hero-gradient rounded-xl p-8 md:p-12 text-text-inverse">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">왜 고객들이 선택하시나요?</h2>
+            <p class="text-center text-text-inverse opacity-90 mb-12 text-lg">강압 없는 자율, 최고의 결과로 보답합니다</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                <div class="flex items-start gap-4">
+                  <span class="material-symbols-outlined text-4xl flex-shrink-0">phone_disabled</span>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2">전화 부담 ZERO</h3>
+                    <p class="text-text-inverse opacity-90 text-sm">원치 않으면 단 한 통의 전화도 드리지 않습니다. 정보만 받고 천천히 결정하세요.</p>
                   </div>
                 </div>
               </div>
-
-              <!-- News Card 2 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md overflow-hidden h-full border border-neutral-200">
-                  <div class="h-48 bg-gradient-to-br from-semantic-success to-semantic-info"></div>
-                  <div class="p-6">
-                    <div class="text-sm text-text-tertiary mb-2">2025.11.18</div>
-                    <h3 class="text-xl font-bold text-text-primary mb-3 line-clamp-2">
-                      청년 창업자금 특별 지원 프로그램 시행
-                    </h3>
-                    <p class="text-text-secondary mb-4 line-clamp-3">
-                      만 39세 이하 청년 창업자를 위한 특별 저금리 대출 프로그램이 새롭게 시행됩니다. 최대 5,000만원까지 지원 가능합니다.
-                    </p>
-                    <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                      자세히 보기
-                      <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                    </a>
+              <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                <div class="flex items-start gap-4">
+                  <span class="material-symbols-outlined text-4xl flex-shrink-0">volunteer_activism</span>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2">고객 중심 철학</h3>
+                    <p class="text-text-inverse opacity-90 text-sm">강요가 아닌 선택. 고객님이 원하실 때, 최선의 조건으로 도와드립니다.</p>
                   </div>
                 </div>
               </div>
-
-              <!-- News Card 3 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md overflow-hidden h-full border border-neutral-200">
-                  <div class="h-48 bg-gradient-to-br from-semantic-warning to-semantic-error"></div>
-                  <div class="p-6">
-                    <div class="text-sm text-text-tertiary mb-2">2025.11.15</div>
-                    <h3 class="text-xl font-bold text-text-primary mb-3 line-clamp-2">
-                      AI 기반 맞춤형 금융상담 서비스 도입
-                    </h3>
-                    <p class="text-text-secondary mb-4 line-clamp-3">
-                      인공지능 기술을 활용한 24시간 맞춤형 금융상담 서비스가 도입되어 더욱 편리한 상담이 가능해집니다.
-                    </p>
-                    <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                      자세히 보기
-                      <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                    </a>
+              <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                <div class="flex items-start gap-4">
+                  <span class="material-symbols-outlined text-4xl flex-shrink-0">speed</span>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2">빠른 한도 확인</h3>
+                    <p class="text-text-inverse opacity-90 text-sm">신청 후 30분~1시간 내 예상 한도와 금리를 상세하게 안내드립니다.</p>
                   </div>
                 </div>
               </div>
-
-              <!-- News Card 4 -->
-              <div class="swiper-slide">
-                <div class="kinfa-card bg-neutral-white rounded-xl shadow-md overflow-hidden h-full border border-neutral-200">
-                  <div class="h-48 bg-gradient-to-br from-primary-dark to-semantic-info"></div>
-                  <div class="p-6">
-                    <div class="text-sm text-text-tertiary mb-2">2025.11.12</div>
-                    <h3 class="text-xl font-bold text-text-primary mb-3 line-clamp-2">
-                      전세자금대출 금리 인하 시행
-                    </h3>
-                    <p class="text-text-secondary mb-4 line-clamp-3">
-                      서민의 주거 안정을 위해 전세자금대출 금리가 기존 대비 0.5%p 인하됩니다. 더 많은 분들이 혜택을 받으실 수 있습니다.
-                    </p>
-                    <a href="#" class="text-primary font-semibold hover:text-primary-dark inline-flex items-center">
-                      자세히 보기
-                      <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                    </a>
+              <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                <div class="flex items-start gap-4">
+                  <span class="material-symbols-outlined text-4xl flex-shrink-0">workspace_premium</span>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2">최고의 조건 보장</h3>
+                    <p class="text-text-inverse opacity-90 text-sm">주요 1금융권 비교를 통해 가장 유리한 금리와 한도를 찾아드립니다.</p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="swiper-button-next" style="color: #0066CC;"></div>
-            <div class="swiper-button-prev" style="color: #0066CC;"></div>
-
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Statistics Section -->
-      <section class="py-20 px-4 bg-primary">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-text-inverse mb-4">서민금융진흥원과 함께하는 금융생활</h2>
-            <p class="text-lg text-text-inverse opacity-90">투명하고 신뢰할 수 있는 서민금융 서비스</p>
-          </div>
-
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-text-inverse">
-            <div class="fade-in-up">
-              <div class="text-5xl font-bold mb-2">15년+</div>
-              <div class="text-lg opacity-80">서민금융 경험</div>
-            </div>
-            <div class="fade-in-up" style="animation-delay: 0.1s">
-              <div class="text-5xl font-bold mb-2">500만+</div>
-              <div class="text-lg opacity-80">누적 지원 건수</div>
-            </div>
-            <div class="fade-in-up" style="animation-delay: 0.2s">
-              <div class="text-5xl font-bold mb-2">15조원+</div>
-              <div class="text-lg opacity-80">누적 지원 금액</div>
-            </div>
-            <div class="fade-in-up" style="animation-delay: 0.3s">
-              <div class="text-5xl font-bold mb-2">ISMS</div>
-              <div class="text-lg opacity-80">정보보호 인증</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CTA Section -->
-      <section class="py-20 px-4 bg-bg-tertiary">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-6">
-            지금 바로 시작하세요
-          </h2>
-          <p class="text-lg text-text-secondary mb-10">
-            서민금융진흥원의 전문 상담사가 고객님께 최적의 금융 솔루션을 제공합니다
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="kinfa-btn-primary px-10 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center">
-              <span class="material-symbols-outlined mr-2">phone</span>
-              전화 상담 신청
-            </button>
-            <button class="kinfa-btn-secondary px-10 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center">
-              <span class="material-symbols-outlined mr-2">chat</span>
-              온라인 상담
-            </button>
+      <!-- Counter Animation Section -->
+      <section class="py-16 px-4 bg-neutral-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="bg-bg-secondary rounded-xl p-8 md:p-12">
+            <h2 class="text-center text-3xl font-bold mb-12 text-text-primary">신뢰할 수 있는 실적</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary bg-opacity-10 mb-4">
+                  <span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+                </div>
+                <p class="text-4xl font-black mb-2 text-text-primary">
+                  <span class="counter" data-target="12345">0</span><span>건</span>
+                </p>
+                <p class="text-text-tertiary text-sm">누적 대출 실행</p>
+              </div>
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-semantic-success bg-opacity-10 mb-4">
+                  <span class="material-symbols-outlined text-semantic-success text-3xl">workspace_premium</span>
+                </div>
+                <p class="text-4xl font-black mb-2 text-text-primary">
+                  <span class="counter" data-target="94">0</span><span>%</span>
+                </p>
+                <p class="text-text-tertiary text-sm">평균 대출 승인율</p>
+              </div>
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-semantic-warning bg-opacity-10 mb-4">
+                  <span class="material-symbols-outlined text-semantic-warning text-3xl">star</span>
+                </div>
+                <p class="text-4xl font-black mb-2 text-text-primary">
+                  <span class="counter" data-target="4.8" data-decimals="1">0</span><span>/5.0</span>
+                </p>
+                <p class="text-text-tertiary text-sm">고객 만족도</p>
+              </div>
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-semantic-info bg-opacity-10 mb-4">
+                  <span class="material-symbols-outlined text-semantic-info text-3xl">groups</span>
+                </div>
+                <p class="text-4xl font-black mb-2 text-text-primary">
+                  <span class="counter" data-target="8500">0</span><span>+</span>
+                </p>
+                <p class="text-text-tertiary text-sm">누적 상담 고객</p>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Contact Info -->
-          <div class="mt-12 p-8 bg-neutral-white rounded-xl shadow-md">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-              <div class="flex items-center">
-                <span class="material-symbols-outlined text-primary text-3xl mr-3">call</span>
-                <div class="text-left">
-                  <div class="text-sm text-text-tertiary">대표전화</div>
-                  <div class="text-xl font-bold text-text-primary">1397</div>
+      <!-- Products Section - Tab Navigation -->
+      <section id="products" class="py-16 px-4 bg-bg-secondary">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-text-primary text-center text-3xl font-bold mb-3">주요 대출 상품</h2>
+          <p class="text-center text-text-secondary mb-8">목적에 맞는 최적의 담보대출 상품을 선택하세요</p>
+
+          <!-- Tab Navigation -->
+          <div class="bg-neutral-white rounded-xl shadow-lg border border-neutral-200 overflow-hidden">
+            <div class="flex overflow-x-auto border-b border-neutral-200">
+              <button onclick="switchTab(0)" class="product-tab active flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold" data-tab="0">
+                담보대환대출
+              </button>
+              <button onclick="switchTab(1)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold" data-tab="1">
+                후순위대출
+              </button>
+              <button onclick="switchTab(2)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold" data-tab="2">
+                무설정대출
+              </button>
+              <button onclick="switchTab(3)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold" data-tab="3">
+                생활자금
+              </button>
+              <button onclick="switchTab(4)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold" data-tab="4">
+                전세보증금
+              </button>
+              <button onclick="switchTab(5)" class="product-tab flex-1 min-w-[140px] px-6 py-4 text-sm font-semibold" data-tab="5">
+                세금납부
+              </button>
+            </div>
+
+            <div class="p-8">
+              <!-- Tab Content 0: 담보대환대출 -->
+              <div class="tab-content active" data-content="0">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop");'></div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3 text-text-primary">담보대환대출 (갈아타기)</h3>
+                    <p class="text-text-secondary mb-4">기존 대출을 더 낮은 금리로 갈아타기</p>
+                    <div class="flex gap-3 mb-6 flex-wrap">
+                      <span class="text-sm font-bold px-4 py-2 bg-primary bg-opacity-10 text-primary rounded-lg">최저금리 연 3.0%</span>
+                      <span class="text-sm font-bold px-4 py-2 bg-neutral-100 rounded-lg">최대 한도 20억</span>
+                    </div>
+                    <ul class="space-y-3 text-text-secondary">
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>기존 대출보다 <strong>최대 2% 낮은 금리</strong> 제공</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>여러 대출을 하나로 통합하여 관리 편의성 향상</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span><strong>중도상환수수료 지원</strong> 가능</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>1금융권 전 상품 비교 후 최적 조건 제시</span>
+                      </li>
+                    </ul>
+                    <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 kinfa-btn-primary rounded-lg font-bold">
+                      <span>무료 한도 확인하기</span>
+                      <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="hidden md:block w-px h-12 bg-neutral-200"></div>
-              <div class="flex items-center">
-                <span class="material-symbols-outlined text-primary text-3xl mr-3">schedule</span>
-                <div class="text-left">
-                  <div class="text-sm text-text-tertiary">상담시간</div>
-                  <div class="text-xl font-bold text-text-primary">평일 09:00 - 18:00</div>
+
+              <!-- Tab Content 1: 후순위대출 -->
+              <div class="tab-content" data-content="1">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop");'></div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3 text-text-primary">후순위 담보대출</h3>
+                    <p class="text-text-secondary mb-4">기존 대출 유지하며 추가 자금 확보</p>
+                    <div class="flex gap-3 mb-6 flex-wrap">
+                      <span class="text-sm font-bold px-4 py-2 bg-primary bg-opacity-10 text-primary rounded-lg">최저금리 연 4.5%</span>
+                      <span class="text-sm font-bold px-4 py-2 bg-neutral-100 rounded-lg">최대 한도 10억</span>
+                    </div>
+                    <ul class="space-y-3 text-text-secondary">
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span><strong>기존 대출 그대로 유지</strong>하면서 추가 자금 마련</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>중도상환수수료 부담 없이 자금 확보</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>기존 저금리 대출 조건 유지 가능</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>담보가치 대비 최대 90%까지 대출 가능</span>
+                      </li>
+                    </ul>
+                    <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 kinfa-btn-primary rounded-lg font-bold">
+                      <span>무료 한도 확인하기</span>
+                      <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="hidden md:block w-px h-12 bg-neutral-200"></div>
-              <div class="flex items-center">
-                <span class="material-symbols-outlined text-primary text-3xl mr-3">smart_toy</span>
-                <div class="text-left">
-                  <div class="text-sm text-text-tertiary">챗봇 상담</div>
-                  <div class="text-xl font-bold text-text-primary">24시간 운영</div>
+
+              <!-- Tab Content 2: 무설정대출 -->
+              <div class="tab-content" data-content="2">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=600&fit=crop");'></div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3 text-text-primary">무설정 담보대출 (아파트론)</h3>
+                    <p class="text-text-secondary mb-4">담보설정 없이 신속하게 자금 확보</p>
+                    <div class="flex gap-3 mb-6 flex-wrap">
+                      <span class="text-sm font-bold px-4 py-2 bg-primary bg-opacity-10 text-primary rounded-lg">최저금리 연 5.0%</span>
+                      <span class="text-sm font-bold px-4 py-2 bg-neutral-100 rounded-lg">최대 한도 3억</span>
+                    </div>
+                    <ul class="space-y-3 text-text-secondary">
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span><strong>담보설정 불필요</strong>, 등기부등본에 기록 없음</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span><strong>1~2일 신속 실행</strong>, 긴급 자금에 최적</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>등기비용, 법무사 수수료 절감</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>아파트 소유주에 한해 가능 (재건축/재개발 불가)</span>
+                      </li>
+                    </ul>
+                    <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 kinfa-btn-primary rounded-lg font-bold">
+                      <span>무료 한도 확인하기</span>
+                      <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab Content 3: 생활자금 -->
+              <div class="tab-content" data-content="3">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&h=600&fit=crop");'></div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3 text-text-primary">주택담보 생활자금대출</h3>
+                    <p class="text-text-secondary mb-4">용도 제한 없이 자유롭게 사용</p>
+                    <div class="flex gap-3 mb-6 flex-wrap">
+                      <span class="text-sm font-bold px-4 py-2 bg-primary bg-opacity-10 text-primary rounded-lg">최저금리 연 4.0%</span>
+                      <span class="text-sm font-bold px-4 py-2 bg-neutral-100 rounded-lg">최대 한도 15억</span>
+                    </div>
+                    <ul class="space-y-3 text-text-secondary">
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span><strong>사용 용도 제한 없음</strong> (의료비, 교육비, 사업자금 등)</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>신용대출보다 낮은 금리, 높은 한도</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>소득 증빙 간소화 (프리랜서, 자영업자 가능)</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>최대 30년 장기 분할 상환 가능</span>
+                      </li>
+                    </ul>
+                    <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 kinfa-btn-primary rounded-lg font-bold">
+                      <span>무료 한도 확인하기</span>
+                      <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab Content 4: 전세보증금 -->
+              <div class="tab-content" data-content="4">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop");'></div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3 text-text-primary">전세보증금 반환대출</h3>
+                    <p class="text-text-secondary mb-4">전세 만료 시 보증금 미반환 문제 해결</p>
+                    <div class="flex gap-3 mb-6 flex-wrap">
+                      <span class="text-sm font-bold px-4 py-2 bg-primary bg-opacity-10 text-primary rounded-lg">최저금리 연 4.8%</span>
+                      <span class="text-sm font-bold px-4 py-2 bg-neutral-100 rounded-lg">최대 한도 10억</span>
+                    </div>
+                    <ul class="space-y-3 text-text-secondary">
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span><strong>전세 만료 시 즉시 대응</strong>, 보증금 미반환 걱정 해소</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>임차인의 전세금 우선변제권 보호</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>긴급 자금 필요 시 48시간 내 실행</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>전세금 반환 소송 진행 중에도 신청 가능</span>
+                      </li>
+                    </ul>
+                    <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 kinfa-btn-primary rounded-lg font-bold">
+                      <span>무료 한도 확인하기</span>
+                      <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab Content 5: 세금납부 -->
+              <div class="tab-content" data-content="5">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop");'></div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3 text-text-primary">증여/상속세 납부대출</h3>
+                    <p class="text-text-secondary mb-4">세금 납부 기한 대응, 분할 납부 가능</p>
+                    <div class="flex gap-3 mb-6 flex-wrap">
+                      <span class="text-sm font-bold px-4 py-2 bg-primary bg-opacity-10 text-primary rounded-lg">최저금리 연 5.5%</span>
+                      <span class="text-sm font-bold px-4 py-2 bg-neutral-100 rounded-lg">최대 한도 20억</span>
+                    </div>
+                    <ul class="space-y-3 text-text-secondary">
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span><strong>증여세, 상속세 전용</strong> 특별 상품</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>세금 납부 기한 내 신속 실행</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>분할 납부로 현금 유동성 확보</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-semantic-success text-xl flex-shrink-0">check_circle</span>
+                        <span>세무사 무료 자문 서비스 제공</span>
+                      </li>
+                    </ul>
+                    <a href="#hero-form" class="mt-6 inline-flex items-center gap-2 px-6 py-3 kinfa-btn-primary rounded-lg font-bold">
+                      <span>무료 한도 확인하기</span>
+                      <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -766,71 +799,35 @@
     </main>
 
     <!-- Footer -->
-    <footer id="about" class="bg-neutral-900 text-neutral-300 py-12 px-4">
+    <footer class="bg-neutral-900 text-neutral-300 py-12 px-4">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <!-- Company Info -->
           <div class="md:col-span-2">
-            <div class="text-2xl font-bold text-neutral-white mb-4">서민금융진흥원</div>
-            <p class="text-sm mb-4">Korea Institute for Financial Advancement (KINFA)</p>
-            <p class="text-sm mb-2">서울특별시 중구 을지로 66</p>
-            <p class="text-sm mb-2">대표전화: 1397</p>
-            <p class="text-sm">이메일: info@kinfa.or.kr</p>
+            <div class="text-2xl font-bold text-neutral-white mb-4">매치온</div>
+            <p class="text-sm mb-4">부담없이 한도만 확인하세요</p>
+            <p class="text-sm mb-2">고객센터: 1234-5678</p>
+            <p class="text-sm">이메일: info@matchon.kr</p>
           </div>
 
           <!-- Quick Links -->
           <div>
             <div class="font-semibold text-neutral-white mb-4">바로가기</div>
             <ul class="space-y-2 text-sm">
-              <li><a href="#" class="hover:text-neutral-white transition-colors">금융상품</a></li>
-              <li><a href="#" class="hover:text-neutral-white transition-colors">금융생활지원</a></li>
-              <li><a href="#" class="hover:text-neutral-white transition-colors">고객상담</a></li>
-              <li><a href="#" class="hover:text-neutral-white transition-colors">알림·공고</a></li>
-              <li><a href="#" class="hover:text-neutral-white transition-colors">기관소개</a></li>
+              <li><a href="#hero-form" class="hover:text-neutral-white transition-colors">한도조회</a></li>
+              <li><a href="#products" class="hover:text-neutral-white transition-colors">대출상품</a></li>
+              <li><a href="#how-it-works" class="hover:text-neutral-white transition-colors">진행절차</a></li>
             </ul>
           </div>
 
-          <!-- Related Links -->
+          <!-- Info -->
           <div>
-            <div class="font-semibold text-neutral-white mb-4">관련기관</div>
+            <div class="font-semibold text-neutral-white mb-4">고객센터</div>
             <ul class="space-y-2 text-sm">
-              <li><a href="#" class="hover:text-neutral-white transition-colors">금융위원회</a></li>
-              <li><a href="#" class="hover:text-neutral-white transition-colors">금융감독원</a></li>
-              <li><a href="#" class="hover:text-neutral-white transition-colors">신용회복위원회</a></li>
-              <li><a href="#" class="hover:text-neutral-white transition-colors">한국주택금융공사</a></li>
+              <li>평일 09:00 - 18:00</li>
+              <li>토요일 09:00 - 13:00</li>
+              <li>일요일, 공휴일 휴무</li>
             </ul>
-          </div>
-        </div>
-
-        <!-- Social Media -->
-        <div class="border-t border-neutral-700 pt-8 mb-8">
-          <div class="flex items-center justify-between flex-wrap gap-4">
-            <div class="flex items-center space-x-4">
-              <span class="text-sm font-semibold">Follow Us</span>
-              <a href="#" class="hover:text-neutral-white transition-colors">
-                <span class="material-symbols-outlined">facebook</span>
-              </a>
-              <a href="#" class="hover:text-neutral-white transition-colors">
-                <span class="text-xl">YouTube</span>
-              </a>
-              <a href="#" class="hover:text-neutral-white transition-colors">
-                <span class="text-xl">Instagram</span>
-              </a>
-              <a href="#" class="hover:text-neutral-white transition-colors">
-                <span class="text-xl">Blog</span>
-              </a>
-            </div>
-
-            <!-- ISMS Certification -->
-            <div class="flex items-center space-x-2">
-              <div class="w-12 h-12 bg-neutral-white rounded flex items-center justify-center">
-                <span class="material-symbols-outlined text-primary">verified</span>
-              </div>
-              <div class="text-xs">
-                <div class="font-semibold text-neutral-white">ISMS 인증</div>
-                <div>정보보호관리체계</div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -841,14 +838,10 @@
             <span class="text-neutral-700">|</span>
             <a href="#" class="hover:text-neutral-white transition-colors">이용약관</a>
             <span class="text-neutral-700">|</span>
-            <a href="#" class="hover:text-neutral-white transition-colors">저작권정책</a>
-            <span class="text-neutral-700">|</span>
-            <a href="#" class="hover:text-neutral-white transition-colors">이메일무단수집거부</a>
-            <span class="text-neutral-700">|</span>
-            <a href="#" class="hover:text-neutral-white transition-colors">찾아오시는길</a>
+            <a href="#" class="hover:text-neutral-white transition-colors">대출상담 안내</a>
           </div>
           <p class="text-xs text-neutral-500">
-            Copyright © 2025 Korea Institute for Financial Advancement (KINFA). All rights reserved.
+            Copyright © 2025 MatchOn. All rights reserved.
           </p>
         </div>
       </div>
@@ -856,66 +849,110 @@
 
   </div>
 
-  <!-- Swiper Initialization Script -->
+  <!-- Scripts -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Product Swiper
-      const productSwiper = new Swiper('.productSwiper', {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.productSwiper .swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.productSwiper .swiper-button-next',
-          prevEl: '.productSwiper .swiper-button-prev',
-        },
-        breakpoints: {
-          600: {
-            slidesPerView: 2,
-            spaceBetween: 24,
-          },
-          1000: {
-            slidesPerView: 3,
-            spaceBetween: 24,
-          },
-        },
+    // Global variable to store selected property type
+    let selectedPropertyType = '아파트';
+
+    // Property Type Selection
+    function selectPropertyType(button) {
+      // Remove active class from all buttons
+      document.querySelectorAll('.property-type-btn').forEach(btn => {
+        btn.classList.remove('active');
       });
 
-      // News Swiper
-      const newsSwiper = new Swiper('.newsSwiper', {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        loop: true,
-        autoplay: {
-          delay: 6000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.newsSwiper .swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.newsSwiper .swiper-button-next',
-          prevEl: '.newsSwiper .swiper-button-prev',
-        },
-        breakpoints: {
-          600: {
-            slidesPerView: 2,
-            spaceBetween: 24,
-          },
-          1000: {
-            slidesPerView: 3,
-            spaceBetween: 24,
-          },
-        },
+      // Add active class to clicked button
+      button.classList.add('active');
+
+      // Store selected type
+      selectedPropertyType = button.getAttribute('data-type');
+    }
+
+    // Tab Switching
+    function switchTab(tabIndex) {
+      // Remove active class from all tabs
+      document.querySelectorAll('.product-tab').forEach(tab => {
+        tab.classList.remove('active');
       });
+
+      // Add active class to clicked tab
+      const activeTab = document.querySelector(`.product-tab[data-tab="${tabIndex}"]`);
+      if (activeTab) {
+        activeTab.classList.add('active');
+      }
+
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+      });
+
+      // Show selected content
+      const activeContent = document.querySelector(`.tab-content[data-content="${tabIndex}"]`);
+      if (activeContent) {
+        activeContent.classList.add('active');
+      }
+    }
+
+    // Address Search (Mock function)
+    function searchAddress() {
+      alert('주소 검색 기능은 실제 구현 시 Daum 우편번호 API 등을 연동하시면 됩니다.');
+    }
+
+    // Form Submit
+    function submitForm() {
+      const address = document.getElementById('address').value;
+      const phone = document.getElementById('phone').value;
+      const noCall = document.getElementById('no-call').checked;
+
+      if (!address) {
+        alert('부동산 주소를 입력해주세요.');
+        return;
+      }
+
+      if (!phone || phone.length < 10) {
+        alert('올바른 휴대폰 번호를 입력해주세요.');
+        return;
+      }
+
+      const message = noCall
+        ? `신청이 완료되었습니다!\n\n부동산 유형: ${selectedPropertyType}\n주소: ${address}\n연락처: ${phone}\n\n상담 전화 없이 30분~1시간 내에\n카톡 또는 문자로 예상 한도와 금리를 보내드리겠습니다.\n\n원하실 때 언제든 연락 주세요! 😊`
+        : `신청이 완료되었습니다!\n\n부동산 유형: ${selectedPropertyType}\n주소: ${address}\n연락처: ${phone}\n\n곧 담당자가 연락드리겠습니다.\n감사합니다! 😊`;
+
+      alert(message);
+    }
+
+    // Initialize CountUp.js
+    const counters = document.querySelectorAll('.counter');
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const targetValue = parseFloat(target.getAttribute('data-target'));
+          const decimals = target.getAttribute('data-decimals') || 0;
+
+          const countUp = new CountUp(target, targetValue, {
+            duration: 2.5,
+            separator: ',',
+            decimal: '.',
+            decimals: parseInt(decimals)
+          });
+
+          if (!countUp.error) {
+            countUp.start();
+          }
+
+          counterObserver.unobserve(target);
+        }
+      });
+    }, observerOptions);
+
+    counters.forEach(counter => {
+      counterObserver.observe(counter);
     });
   </script>
 </body>
