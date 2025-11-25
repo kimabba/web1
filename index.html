@@ -260,7 +260,7 @@
               <div class="text-center mb-8">
                 <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-slate-50 tracking-tight leading-tight mb-4">
                   <span id="typing-text" class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">아파트</span> 담보대출<br class="sm:inline md:hidden"/>
-                  무료 한도 조회
+                  한도부터 확인
                 </h1>
                 <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
                   상담 전화 선택제 시스템으로<br class="sm:hidden"/>
@@ -2513,34 +2513,50 @@
         </div>
       </main>
 
-      <!-- Floating Action Button (Desktop) -->
-      <div class="fixed bottom-8 right-8 z-50 hidden md:flex flex-col gap-3">
-        <a href="#hero-form" class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-all hover:scale-110" title="상담 신청">
-          <span class="material-symbols-outlined text-2xl">support_agent</span>
-        </a>
-        <a href="#calculator" class="flex items-center justify-center w-14 h-14 bg-white text-slate-700 rounded-full shadow-lg border border-slate-200 hover:bg-slate-50 transition-all hover:scale-110" title="금리 계산기">
-          <span class="material-symbols-outlined text-2xl">calculate</span>
-        </a>
+
+
+      <!-- Shortcuts Menu (Hidden by default) -->
+      <div id="shortcuts-menu" class="fixed bottom-20 left-4 right-4 md:left-1/2 md:right-auto md:-translate-x-1/2 md:w-full md:max-w-md bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 z-50 hidden transform transition-all duration-200 origin-bottom scale-95 opacity-0">
+        <div class="grid grid-cols-2 gap-2 p-4">
+          <a href="#products" class="flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" onclick="toggleShortcuts()">
+            <span class="material-symbols-outlined text-2xl mb-2 text-blue-600">grid_view</span>
+            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">상품 안내</span>
+          </a>
+          <a href="#calculator" class="flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" onclick="toggleShortcuts()">
+            <span class="material-symbols-outlined text-2xl mb-2 text-green-600">calculate</span>
+            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">금리 계산기</span>
+          </a>
+          <a href="#process" class="flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" onclick="toggleShortcuts()">
+            <span class="material-symbols-outlined text-2xl mb-2 text-purple-600">timeline</span>
+            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">진행 과정</span>
+          </a>
+          <a href="#faq" class="flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" onclick="toggleShortcuts()">
+            <span class="material-symbols-outlined text-2xl mb-2 text-orange-600">help</span>
+            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">자주 묻는 질문</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Bottom Navigation Bar (Mobile) -->
-      <div class="fixed bottom-0 left-0 w-full bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 z-50 md:hidden pb-safe">
-        <div class="grid grid-cols-4 h-16">
-          <a href="#" class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary">
-            <span class="material-symbols-outlined text-2xl mb-0.5">home</span>
-            <span class="text-[10px] font-medium">홈</span>
+      <!-- Fixed Bottom Navigation Bar -->
+      <!-- Fixed Bottom Navigation Bar -->
+      <div class="fixed bottom-0 left-0 w-full bg-slate-900 border-t border-slate-800 z-50 pb-safe shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)]">
+        <div class="grid grid-cols-3 h-16 max-w-screen-xl mx-auto">
+          <!-- Check Limit -->
+          <a href="#hero-form" class="flex flex-col items-center justify-center text-white hover:text-blue-400 active:bg-slate-800 transition-colors">
+            <span class="material-symbols-outlined text-2xl mb-1">edit_document</span>
+            <span class="text-xs font-bold">한도확인</span>
           </a>
-          <a href="#products" class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary">
-            <span class="material-symbols-outlined text-2xl mb-0.5">grid_view</span>
-            <span class="text-[10px] font-medium">상품</span>
-          </a>
-          <a href="#calculator" class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary">
-            <span class="material-symbols-outlined text-2xl mb-0.5">calculate</span>
-            <span class="text-[10px] font-medium">계산기</span>
-          </a>
-          <a href="#hero-form" class="flex flex-col items-center justify-center text-primary font-bold">
-            <span class="material-symbols-outlined text-2xl mb-0.5">support_agent</span>
-            <span class="text-[10px] font-medium">상담신청</span>
+          
+          <!-- Shortcuts Toggle -->
+          <button onclick="toggleShortcuts()" class="flex flex-col items-center justify-center text-white hover:text-blue-400 active:bg-slate-800 transition-colors">
+            <span class="material-symbols-outlined text-2xl mb-1">apps</span>
+            <span class="text-xs font-bold">바로가기</span>
+          </button>
+
+          <!-- Call -->
+          <a href="tel:010-0000-0000" class="flex flex-col items-center justify-center text-white hover:text-blue-400 active:bg-slate-800 transition-colors">
+            <span class="material-symbols-outlined text-2xl mb-1">call</span>
+            <span class="text-xs font-bold">전화연결</span>
           </a>
         </div>
       </div>
@@ -2803,6 +2819,145 @@
     }
 
     setInterval(updateKeyword, 2500);
+
+    // Particles.js Initialization
+    if (document.getElementById('particles-js')) {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#3b82f6"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#3b82f6",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    }
+
+    // Shortcuts Menu Toggle
+    function toggleShortcuts() {
+      const menu = document.getElementById('shortcuts-menu');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        // Small delay to allow display:block to apply before opacity transition
+        setTimeout(() => {
+          menu.classList.remove('scale-95', 'opacity-0');
+          menu.classList.add('scale-100', 'opacity-100');
+        }, 10);
+      } else {
+        menu.classList.remove('scale-100', 'opacity-100');
+        menu.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+          menu.classList.add('hidden');
+        }, 200);
+      }
+    }
+
+    // Close shortcuts menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('shortcuts-menu');
+      const toggleBtn = event.target.closest('button[onclick="toggleShortcuts()"]');
+      const menuContent = event.target.closest('#shortcuts-menu');
+      
+      if (!menu.classList.contains('hidden') && !toggleBtn && !menuContent) {
+        toggleShortcuts();
+      }
+    });
 
   </script>
 </body>
