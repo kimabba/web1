@@ -5,33 +5,54 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>매치온 - 부담없이 한도만 확인하세요</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="아파트, 빌라, 주택 담보대출 한도를 30분 안에 무료로 확인하세요. 32개 금융사 비교로 최저금리 찾아드립니다. 강압 없는 자율 상담, 17년 신뢰의 매치온" />
+  <meta name="keywords" content="아파트담보대출, 주택담보대출, 대출한도조회, 대출금리비교, 부동산담보대출, 무료한도조회, 대출상담, 금융사비교, 최저금리대출" />
+  <meta name="author" content="매치온" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://match-on.co.kr/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://match-on.co.kr/" />
+  <meta property="og:title" content="매치온 - 부담없이 한도만 확인하세요" />
+  <meta property="og:description" content="아파트, 빌라, 주택 담보대출 한도를 30분 안에 무료로 확인하세요. 32개 금융사 비교로 최저금리 찾아드립니다." />
+  <meta property="og:image" content="https://match-on.co.kr/og-image.jpg" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="매치온" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://match-on.co.kr/" />
+  <meta name="twitter:title" content="매치온 - 부담없이 한도만 확인하세요" />
+  <meta name="twitter:description" content="아파트, 빌라, 주택 담보대출 한도를 30분 안에 무료로 확인하세요. 32개 금융사 비교로 최저금리 찾아드립니다." />
+  <meta name="twitter:image" content="https://match-on.co.kr/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Font Preconnect & Preload -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto Sans KR:wght@400;500;700;800&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&amp;display=swap"
     rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&amp;display=block" rel="stylesheet" />
 
-  <!-- CountUp.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.umd.js"></script>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0"></script>
-
-  <!-- CountUp.js -->
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.min.js"></script>
-
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- External Scripts (Async Loading) -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
   <script>
     tailwind.config = {
@@ -3905,9 +3926,33 @@
       const menu = document.getElementById('shortcuts-menu');
       const toggleBtn = event.target.closest('button[onclick="toggleShortcuts()"]');
       const menuContent = event.target.closest('#shortcuts-menu');
-      
+
       if (!menu.classList.contains('hidden') && !toggleBtn && !menuContent) {
         toggleShortcuts();
+      }
+    });
+
+    // Lazy Loading for Background Images
+    document.addEventListener('DOMContentLoaded', function() {
+      const lazyBackgrounds = document.querySelectorAll('[style*="background-image"]');
+
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              const element = entry.target;
+              element.classList.add('bg-loaded');
+              observer.unobserve(element);
+            }
+          });
+        }, {
+          rootMargin: '50px 0px',
+          threshold: 0.01
+        });
+
+        lazyBackgrounds.forEach(function(bg) {
+          imageObserver.observe(bg);
+        });
       }
     });
 
