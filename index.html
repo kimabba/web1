@@ -1761,350 +1761,141 @@
               <p class="text-lg text-slate-600 dark:text-slate-300">실제 이용하신 분들의 솔직한 후기입니다</p>
             </div>
 
-            <!-- Reviews Swiper -->
-            <div class="swiper reviewsSwiper max-w-5xl mx-auto">
-              <div class="swiper-wrapper pb-12" id="reviewsContainer">
-                <!-- Reviews will be dynamically inserted here -->
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </section>
-
-          <script>
-            // 리뷰 데이터 (20개)
-            const reviewsData = [
-              {
-                initial: "김",
-                name: "김**",
-                rating: 5,
-                title: "전화 안 받아도 돼서 좋았어요",
-                content: "다른 곳은 전화 엄청 오던데 여기는 체크박스 누르니까 진짜 전화 안 오고 카톡으로만 왔습니다. 금리도 4.2%로 나와서 만족합니다. 설명도 자세히 해주셨어요.",
-                tags: ["대출승인", "친절함"],
-                color: "from-primary to-blue-600"
-              },
-              {
-                initial: "박",
-                name: "박**",
-                rating: 5,
-                title: "처음엔 반신반의했는데...",
-                content: "대출 중개가 괜찮을까 의심했어요. 근데 상담받으면서 진짜 꼼꼼하게 여러 곳 비교해주시더라고요. 결국 금리 1.5% 낮춰서 갈아탔습니다. 감사합니다!",
-                tags: ["금리인하", "꼼꼼함"],
-                color: "from-secondary to-green-600"
-              },
-              {
-                initial: "이",
-                name: "이**",
-                rating: 4,
-                title: "응답은 빠른데 승인은 좀 걸렸어요",
-                content: "카톡으로 물어보면 1시간 안에 답변 주셔서 좋았습니다. 다만 제 신용등급이 낮아서 승인까지 일주일 정도 걸렸네요. 그래도 끝까지 찾아주셔서 감사합니다.",
-                tags: ["2금융권", "끈기"],
-                color: "from-blue-500 to-purple-600"
-              },
-              {
-                initial: "최",
-                name: "최**",
-                rating: 5,
-                title: "빠른 응답과 전문적인 상담에 감동했어요",
-                content: "신청하고 30분도 안 돼서 바로 카톡으로 연락 왔더라고요. 어떤 상황인지 먼저 들어보시면서 정말 친절하게 상담해주셨어요. 다른 곳은 그냥 상품만 나열하는데 여기는 제 상황을 먼저 이해하려고 하시더라고요.",
-                tags: ["빠른응답", "전문성"],
-                color: "from-orange-500 to-red-600"
-              },
-              {
-                initial: "정",
-                name: "정**",
-                rating: 5,
-                title: "자영업자도 가능했어요",
-                content: "자영업자라서 서류도 복잡하고 안 될 줄 알았는데, 담당자분이 가능하다고 하시더라고요. 진짜 승인 나서 깜짝 놀랐습니다. 소득증빙 간소화해주셔서 고맙습니다.",
-                tags: ["자영업자", "간소화"],
-                color: "from-indigo-500 to-blue-600"
-              },
-              {
-                initial: "강",
-                name: "강**",
-                rating: 5,
-                title: "압박 영업 전혀 없어요",
-                content: "천천히 생각해보세요 라고 먼저 말씀해주셨어요. 다른 곳 비교도 해보고 일주일 후에 다시 연락드렸는데 흔쾌히 진행해주셨습니다. 이런 곳 처음이에요.",
-                tags: ["압박없음", "여유롭게"],
-                color: "from-pink-500 to-rose-600"
-              },
-              {
-                initial: "윤",
-                name: "윤**",
-                rating: 4,
-                title: "주말에도 상담 가능해서 좋아요",
-                content: "평일에는 회사 때문에 시간이 없는데, 주말에도 카톡으로 상담 가능하다고 해서 편했습니다. 토요일 오후에 신청했는데 월요일 오전에 결과 나왔어요.",
-                tags: ["주말상담", "편리함"],
-                color: "from-teal-500 to-cyan-600"
-              },
-              {
-                initial: "조",
-                name: "조**",
-                rating: 5,
-                title: "부동산 가격 상승분도 반영해주셨어요",
-                content: "3년 전에 산 아파트인데 시세가 많이 올랐더라고요. 그걸 반영해서 한도가 생각보다 높게 나왔습니다. 꼼꼼하게 체크해주셔서 감사해요.",
-                tags: ["한도상향", "꼼꼼함"],
-                color: "from-amber-500 to-orange-600"
-              },
-              {
-                initial: "한",
-                name: "한**",
-                rating: 5,
-                title: "여러 은행 비교가 정말 도움 됐어요",
-                content: "혼자 알아봤으면 1~2곳만 봤을 텐데, 여기서 20곳 넘게 비교해주시니까 확실히 좋은 조건 찾을 수 있었습니다. 금리 차이가 생각보다 컸어요.",
-                tags: ["비교분석", "금리우대"],
-                color: "from-violet-500 to-purple-600"
-              },
-              {
-                initial: "신",
-                name: "신**",
-                rating: 4,
-                title: "서류 준비가 간단했어요",
-                content: "복잡한 서류 많을 줄 알았는데 생각보다 간단했습니다. 필요한 것만 딱딱 알려주셔서 준비하기 편했어요. 다만 승인까지는 5일 정도 걸렸습니다.",
-                tags: ["간단함", "명쾌함"],
-                color: "from-emerald-500 to-green-600"
-              },
-              {
-                initial: "유",
-                name: "유**",
-                rating: 5,
-                title: "대환대출로 이자 많이 줄었어요",
-                content: "기존 대출 금리가 5% 넘었는데 3.2%로 갈아탔습니다. 월 납입금이 40만원 가까이 줄어서 정말 만족합니다. 진작 할걸 그랬어요.",
-                tags: ["대환대출", "이자절감"],
-                color: "from-lime-500 to-green-600"
-              },
-              {
-                initial: "오",
-                name: "오**",
-                rating: 5,
-                title: "중도상환수수료 없는 곳 찾아주셨어요",
-                content: "나중에 목돈 생기면 빨리 갚고 싶다고 했더니, 중도상환수수료 없는 상품으로 찾아주셨습니다. 이런 디테일까지 신경 써주시니 믿음이 갔어요.",
-                tags: ["수수료면제", "디테일"],
-                color: "from-sky-500 to-blue-600"
-              },
-              {
-                initial: "배",
-                name: "배**",
-                rating: 4,
-                title: "신용등급 낮아도 포기하지 않으셨어요",
-                content: "신용등급이 6등급이라 여러 곳에서 거절당했는데, 여기서는 가능한 곳을 끝까지 찾아주셨습니다. 시간은 좀 걸렸지만 결국 승인받았어요.",
-                tags: ["저신용", "포기않음"],
-                color: "from-fuchsia-500 to-pink-600"
-              },
-              {
-                initial: "손",
-                name: "손**",
-                rating: 5,
-                title: "카톡으로만 진행돼서 편했어요",
-                content: "직장에서 전화 받기 어려운데, 카톡으로 모든 게 진행돼서 너무 편했습니다. 서류도 사진 찍어서 보내면 되고, 질문도 언제든 할 수 있어서 좋았어요.",
-                tags: ["카톡상담", "편리함"],
-                color: "from-rose-500 to-red-600"
-              },
-              {
-                initial: "민",
-                name: "민**",
-                rating: 5,
-                title: "설명이 쉽고 이해하기 좋았어요",
-                content: "대출이 처음이라 용어도 잘 모르고 불안했는데, 하나하나 쉽게 설명해주셔서 이해하기 좋았습니다. DSR, LTV 같은 것도 알기 쉽게 알려주셨어요.",
-                tags: ["쉬운설명", "초보환영"],
-                color: "from-cyan-500 to-teal-600"
-              },
-              {
-                initial: "서",
-                name: "서**",
-                rating: 5,
-                title: "후순위 대출 가능한 줄 몰랐어요",
-                content: "기존 대출 금리가 좋아서 유지하고 싶었는데, 후순위로 추가 자금 받을 수 있다는 걸 알려주셨어요. 덕분에 기존 대출은 그대로 두고 필요한 자금 마련했습니다.",
-                tags: ["후순위", "맞춤상담"],
-                color: "from-purple-500 to-indigo-600"
-              },
-              {
-                initial: "권",
-                name: "권**",
-                rating: 4,
-                title: "비대면으로 모든 게 해결됐어요",
-                content: "지방에 살아서 서울 가기 어려운데, 비대면으로 모든 절차가 진행됐습니다. 등기도 대리인분이 처리해주셔서 편했어요. 다만 처음이라 좀 불안하긴 했습니다.",
-                tags: ["비대면", "지방가능"],
-                color: "from-orange-500 to-amber-600"
-              },
-              {
-                initial: "안",
-                name: "안**",
-                rating: 5,
-                title: "명절 전에 급하게 필요했는데 성공했어요",
-                content: "명절이 코앞인데 자금이 필요해서 급하게 신청했습니다. 빠르게 진행해주셔서 명절 전에 받을 수 있었어요. 정말 감사합니다.",
-                tags: ["긴급승인", "빠른처리"],
-                color: "from-red-500 to-pink-600"
-              },
-              {
-                initial: "전",
-                name: "전**",
-                rating: 5,
-                title: "리모델링 자금 용도로 딱이었어요",
-                content: "집 리모델링 하려고 자금이 필요했는데, 용도에 맞는 상품 찾아주셨습니다. 금리도 생각보다 낮게 나와서 계획대로 공사 시작할 수 있었어요.",
-                tags: ["리모델링", "용도적합"],
-                color: "from-green-500 to-emerald-600"
-              },
-              {
-                initial: "황",
-                name: "황**",
-                rating: 5,
-                title: "30대 초반인데도 한도 잘 나왔어요",
-                content: "젊다고 한도가 적을까 걱정했는데, 제 소득과 부동산 가치를 제대로 평가해주셔서 필요한 만큼 한도가 나왔습니다. 나이는 큰 상관이 없더라고요.",
-                tags: ["청년대출", "한도충분"],
-                color: "from-blue-500 to-cyan-600"
-              }
-            ];
-
-            // 최근 7일 이내 랜덤 날짜 생성 함수
-            function getRandomRecentDate() {
-              const today = new Date();
-              const daysAgo = Math.floor(Math.random() * 7); // 0-6일 전
-              const date = new Date(today);
-              date.setDate(date.getDate() - daysAgo);
-              return date;
-            }
-
-            // 날짜 포맷팅 함수 (YYYY.MM.DD)
-            function formatDate(date) {
-              const year = date.getFullYear();
-              const month = String(date.getMonth() + 1).padStart(2, '0');
-              const day = String(date.getDate()).padStart(2, '0');
-              return `${year}.${month}.${day}`;
-            }
-
-            // 별점 HTML 생성 함수
-            function generateStars(rating) {
-              return '⭐'.repeat(rating);
-            }
-
-            // 리뷰 카드 생성 함수
-            function createReviewCard(review, date) {
-              return `
-                <div class="swiper-slide">
-                  <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700 h-full">
-                    <div class="flex items-center gap-4 mb-4">
-                      <div class="w-14 h-14 rounded-full bg-gradient-to-br ${review.color} flex items-center justify-center text-white font-bold text-xl">
-                        ${review.initial}
-                      </div>
-                      <div class="flex-1">
-                        <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50">${review.name}</h3>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">${formatDate(date)}</p>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <span class="text-yellow-500 text-sm">${generateStars(review.rating)}</span>
-                    </div>
-                    <h4 class="font-bold text-base text-slate-900 dark:text-slate-50 mb-3">${review.title}</h4>
-                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4 text-sm">
-                      ${review.content}
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                      ${review.tags.map(tag => `
-                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                          ${tag}
-                        </span>
-                      `).join('')}
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              <!-- Review 1 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">김</div>
+                    <div>
+                      <p class="font-bold text-sm">김**</p>
+                      <p class="text-xs text-slate-500 review-date">2025.01.20</p>
                     </div>
                   </div>
+                  <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
                 </div>
-              `;
-            }
+                <p class="font-semibold mb-2 text-slate-900 dark:text-slate-50">전화 안 받아도 돼서 좋았어요</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  다른 곳은 전화 엄청 오던데 여기는 체크박스 누르니까 진짜 전화 안 오고 카톡으로만 왔습니다. 금리도 4.2%로 나와서 만족합니다. 설명도 자세히 해주셨어요.
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">대출승인</span>
+                  <span class="text-xs px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 rounded">친절함</span>
+                </div>
+              </div>
 
-            // 리뷰 초기화 함수
-            function initializeReviews() {
-              const container = document.getElementById('reviewsContainer');
-              if (!container) return;
+              <!-- Review 2 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold">박</div>
+                    <div>
+                      <p class="font-bold text-sm">박**</p>
+                      <p class="text-xs text-slate-500 review-date">2025.01.19</p>
+                    </div>
+                  </div>
+                  <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="font-semibold mb-2 text-slate-900 dark:text-slate-50">처음엔 반신반의했는데...</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  대출 중개가 괜찮을까 의심했어요. 근데 상담받으면서 진짜 꼼꼼하게 여러 곳 비교해주시더라고요. 결국 금리 1.5% 낮춰서 갈아탔습니다. 감사합니다!
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">금리인하</span>
+                  <span class="text-xs px-2 py-1 bg-purple-50 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded">꼼꼼함</span>
+                </div>
+              </div>
 
-              // 각 리뷰에 랜덤 날짜 할당
-              const reviewsWithDates = reviewsData.map(review => ({
-                ...review,
-                date: getRandomRecentDate()
-              }));
+              <!-- Review 3 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center font-bold">이</div>
+                    <div>
+                      <p class="font-bold text-sm">이**</p>
+                      <p class="text-xs text-slate-500 review-date">2025.01.18</p>
+                    </div>
+                  </div>
+                  <div class="text-yellow-500">⭐⭐⭐⭐</div>
+                </div>
+                <p class="font-semibold mb-2 text-slate-900 dark:text-slate-50">응답은 빠른데 승인은 좀 걸렸어요</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  카톡으로 물어보면 1시간 안에 답변 주셔서 좋았습니다. 다만 제 신용등급이 낮아서 승인까지 일주일 정도 걸렸네요. 그래도 끝까지 찾아주셔서 감사합니다.
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">2금융권</span>
+                  <span class="text-xs px-2 py-1 bg-yellow-50 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 rounded">끈기</span>
+                </div>
+              </div>
 
-              // 날짜별 정렬 (최신순)
-              reviewsWithDates.sort((a, b) => b.date - a.date);
+              <!-- Review 4 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold">최</div>
+                    <div>
+                      <p class="font-bold text-sm">최**</p>
+                      <p class="text-xs text-slate-500 review-date">2025.01.17</p>
+                    </div>
+                  </div>
+                  <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="font-semibold mb-2 text-slate-900 dark:text-slate-50">빠른 응답과 전문적인 상담에 감동했어요</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  신청하고 30분도 안 돼서 바로 카톡으로 연락 왔더라고요. 어떤 상황인지 먼저 들어보시면서 정말 친절하게 상담해주셨어요. 다른 곳은 그냥 상품만 나열하는데 여기는 제 상황을 먼저 이해하려고 하시더라고요.
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">빠른응답</span>
+                  <span class="text-xs px-2 py-1 bg-purple-50 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded">전문성</span>
+                </div>
+              </div>
 
-              // HTML 생성 및 삽입
-              container.innerHTML = reviewsWithDates
-                .map(review => createReviewCard(review, review.date))
-                .join('');
-            }
+              <!-- Review 5 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold">정</div>
+                    <div>
+                      <p class="font-bold text-sm">정**</p>
+                      <p class="text-xs text-slate-500 review-date">2025.01.16</p>
+                    </div>
+                  </div>
+                  <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="font-semibold mb-2 text-slate-900 dark:text-slate-50">자영업자도 가능했어요</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  자영업자라서 서류도 복잡하고 안 될 줄 알았는데, 담당자분이 가능하다고 하시더라고요. 진짜 승인 나서 깜짝 놀랐습니다. 소득증빙 간소화해주셔서 고맙습니다.
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">자영업자</span>
+                  <span class="text-xs px-2 py-1 bg-purple-50 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded">간소화</span>
+                </div>
+              </div>
 
-            // 페이지 로드 시 리뷰 초기화
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', initializeReviews);
-            } else {
-              initializeReviews();
-            }
-
-            // 매일 자정에 날짜 업데이트 (선택사항)
-            function scheduleNextUpdate() {
-              const now = new Date();
-              const tomorrow = new Date(now);
-              tomorrow.setDate(tomorrow.getDate() + 1);
-              tomorrow.setHours(0, 0, 0, 0);
-              const msUntilMidnight = tomorrow - now;
-
-              setTimeout(() => {
-                initializeReviews();
-                scheduleNextUpdate();
-              }, msUntilMidnight);
-            }
-            scheduleNextUpdate();
-          </script>
-
-          <!-- Comparison Table -->
-          <section class="mt-16 px-4">
-            <h2
-              class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
-              타사와 비교해보세요</h2>
-            <p class="text-center text-slate-600 dark:text-slate-300 mb-8">왜 매치온을 선택해야 하는지 명확합니다</p>
-
-            <div class="max-w-4xl mx-auto overflow-x-auto">
-              <table
-                class="w-full bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
-                <thead>
-                  <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-                    <th class="px-6 py-4 text-left text-slate-900 dark:text-slate-50 font-bold">비교 항목</th>
-                    <th class="px-6 py-4 text-center text-slate-600 dark:text-slate-400 font-semibold">일반 중개</th>
-                    <th class="px-6 py-4 text-center bg-primary/5 font-bold text-primary">매치온</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
-                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-slate-900 dark:text-slate-50">상담료</td>
-                    <td class="px-6 py-4 text-center text-red-600 font-semibold">3~5만원</td>
-                    <td class="px-6 py-4 text-center bg-primary/5 text-green-600 font-bold">무료 ✓</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-slate-900 dark:text-slate-50">비교 금융사 수</td>
-                    <td class="px-6 py-4 text-center text-slate-600 dark:text-slate-400">3~5곳</td>
-                    <td class="px-6 py-4 text-center bg-primary/5 text-primary font-bold">20곳 이상 ✓</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-slate-900 dark:text-slate-50">응답 시간</td>
-                    <td class="px-6 py-4 text-center text-slate-600 dark:text-slate-400">1~2일</td>
-                    <td class="px-6 py-4 text-center bg-primary/5 text-primary font-bold">평균 1시간 ✓</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-slate-900 dark:text-slate-50">계약 압박</td>
-                    <td class="px-6 py-4 text-center text-red-600 font-semibold">있음 ✗</td>
-                    <td class="px-6 py-4 text-center bg-primary/5 text-green-600 font-bold">전혀 없음 ✓</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-slate-900 dark:text-slate-50">전화 거부 옵션</td>
-                    <td class="px-6 py-4 text-center text-red-600 font-semibold">없음 ✗</td>
-                    <td class="px-6 py-4 text-center bg-primary/5 text-green-600 font-bold">선택 가능 ✓</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-slate-900 dark:text-slate-50">투명성</td>
-                    <td class="px-6 py-4 text-center text-slate-600 dark:text-slate-400">보통</td>
-                    <td class="px-6 py-4 text-center bg-primary/5 text-primary font-bold">완전 공개 ✓</td>
-                  </tr>
-                </tbody>
-              </table>
+              <!-- Review 6 -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold">강</div>
+                    <div>
+                      <p class="font-bold text-sm">강**</p>
+                      <p class="text-xs text-slate-500 review-date">2025.01.15</p>
+                    </div>
+                  </div>
+                  <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="font-semibold mb-2 text-slate-900 dark:text-slate-50">압박 영업 전혀 없어요</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  천천히 생각해보세요 라고 먼저 말씀해주셨어요. 다른 곳 비교도 해보고 일주일 후에 다시 연락드렸는데 흔쾌히 진행해주셨습니다. 이런 곳 처음이에요.
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">압박없음</span>
+                  <span class="text-xs px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 rounded">여유롭게</span>
+                </div>
+              </div>
             </div>
           </section>
+
 
           <!-- 대출 자격 요건 Section -->
           <section class="mt-16 px-4">
@@ -2178,7 +1969,7 @@
           <section class="mt-16 px-4">
             <div class="max-w-6xl mx-auto">
               <h2 class="text-slate-900 dark:text-slate-50 text-center text-3xl font-bold mb-4">필요 서류 안내</h2>
-              <p class="text-center text-slate-600 dark:text-slate-300 mb-12">신속한 심사를 위해 아래 서류를 준비해 주세요</p>
+              <p class="text-center text-slate-600 dark:text-slate-300 mb-12">진행을 원하시는 경우만 아래 서류를 준비해주세요</p>
 
               <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-slate-200 dark:border-slate-700">
@@ -2334,11 +2125,11 @@
 
               <div class="mt-8 bg-amber-50 dark:bg-amber-900/20 rounded-xl p-6 border border-amber-200 dark:border-amber-800">
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-amber-600 text-2xl flex-shrink-0">lightbulb</span>
+                  <span class="material-symbols-outlined text-amber-600 text-2xl flex-shrink-0">warning</span>
                   <div class="text-sm text-slate-700 dark:text-slate-300">
-                    <strong class="block mb-2">금리 우대 혜택 중복 적용 가능</strong>
-                    <p>• 여러 조건에 해당하시는 경우 우대 금리가 중복 적용되어 최대 <strong class="text-amber-600">1.5%p</strong>까지 금리 인하 혜택을 받으실 수 있습니다.</p>
-                    <p>• 정확한 우대 금리는 심사 후 개별 안내됩니다.</p>
+                    <strong class="block mb-2">주의사항</strong>
+                    <p>• 금리 및 한도는 금융사별, 고객의 신용평점에 따라 상이할 수 있습니다.</p>
+                    <p>• 정확한 금리 및 한도는 심사 후 개별 안내됩니다.</p>
                   </div>
                 </div>
               </div>
