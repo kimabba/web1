@@ -59,17 +59,21 @@
 
 ---
 
-## 🚀 헤드리스 WordPress 전환 계획
+## 🚀 헤드리스 WordPress 전환 계획 (진행 중)
+
+### 현재 상태
+- ✅ Phase 1 완료: SEO 최적화 및 성능 개선
+- 🚀 Phase 2 시작: Next.js 16 프로젝트 전환
 
 ### 아키텍처 설계
 
-**백엔드: WordPress (REST API)**
+**백엔드: WordPress (WPGraphQL)**
 - 콘텐츠 관리 (블로그, 상품 정보, FAQ)
 - Custom Post Types (대출 상품, 후기, 사례)
 - ACF (Advanced Custom Fields) - 필드 관리
-- WP REST API 또는 WPGraphQL
+- WPGraphQL API
 
-**프론트엔드: Next.js (추천) 또는 React**
+**프론트엔드: Next.js 16**
 - Static Site Generation (SSG)
 - Server-Side Rendering (SSR) - 동적 페이지
 - Incremental Static Regeneration (ISR)
@@ -131,7 +135,7 @@
 - **WPGraphQL for ACF** (GraphQL 쿼리)
 
 ### 프론트엔드
-- **Next.js 14+** (App Router)
+- **Next.js 16** (최신 버전, App Router)
 - **TypeScript** (타입 안정성)
 - **Tailwind CSS** (현재 사용 중)
 - **SWR** 또는 **React Query** (데이터 페칭)
@@ -206,11 +210,214 @@
 
 ---
 
-## 📞 다음 단계
+---
 
-**지금 바로 시작할 수 있는 작업:**
-1. SEO 메타태그 추가 (30분)
-2. 이미지 lazy loading (15분)
-3. Google Analytics 설정 (20분)
+## 🎯 Next.js 16 마이그레이션 로드맵
 
-**어떤 작업부터 시작하시겠습니까?**
+### Phase 1: 프로젝트 초기화 (1-2일)
+
+- [ ] **Next.js 16 프로젝트 생성**
+  ```bash
+  npx create-next-app@latest match-on-nextjs --typescript --tailwind --app
+  ```
+
+- [ ] **기본 설정**
+  - [ ] Tailwind CSS 커스텀 설정 (현재 디자인 시스템 적용)
+  - [ ] 폴더 구조 설정
+  - [ ] ESLint/Prettier 설정
+  - [ ] 환경 변수 설정
+
+- [ ] **외부 라이브러리 설치**
+  - [ ] Swiper (슬라이더)
+  - [ ] Chart.js (차트)
+  - [ ] Framer Motion (애니메이션 - Particles.js 대체)
+  - [ ] React Hook Form (폼 관리)
+
+### Phase 2: 공통 컴포넌트 (2-3일)
+
+- [ ] **레이아웃 컴포넌트**
+  - [ ] `Header.tsx` - 네비게이션, 로고
+  - [ ] `Footer.tsx` - 푸터 정보, 링크
+  - [ ] `Layout.tsx` - 전체 레이아웃 래퍼
+
+- [ ] **UI 컴포넌트**
+  - [ ] `Button.tsx` - 재사용 가능한 버튼
+  - [ ] `Card.tsx` - 상품 카드
+  - [ ] `Badge.tsx` - 배지 컴포넌트
+  - [ ] `Input.tsx` - 폼 입력 필드
+
+### Phase 3: 페이지 마이그레이션 (3-4일)
+
+- [ ] **홈페이지** (`app/page.tsx`)
+  - [ ] Hero Section (롤링 텍스트 애니메이션)
+  - [ ] 대출 신청 폼
+  - [ ] 프로세스 섹션
+  - [ ] 통계 섹션 (CountUp 애니메이션)
+  - [ ] 상품 비교표
+  - [ ] FAQ 섹션
+  - [ ] CTA 섹션
+  - [ ] 모바일 스티키 바
+
+- [ ] **소개 페이지** (`app/about/page.tsx`)
+  - [ ] Hero Section
+  - [ ] 회사 소개
+  - [ ] 비전/미션
+  - [ ] 팀 소개 (있다면)
+
+- [ ] **부동산담보대출 페이지** (`app/property-loan/page.tsx`)
+  - [ ] Hero Section
+  - [ ] 상품 유형별 탭
+  - [ ] 상품 리스트
+  - [ ] 신청 폼
+
+### Phase 4: 기능 컴포넌트 (2-3일)
+
+- [ ] **대출 계산기** (`components/LoanCalculator.tsx`)
+  - [ ] 입력 폼 (대출 금액, 기간)
+  - [ ] 실시간 계산 로직
+  - [ ] 결과 표시
+
+- [ ] **상품 비교표** (`components/ProductComparison.tsx`)
+  - [ ] 테이블 레이아웃
+  - [ ] 모바일 최적화 (3줄 레이아웃)
+  - [ ] 필터 기능
+
+- [ ] **문의 폼** (`components/ContactForm.tsx`)
+  - [ ] React Hook Form 통합
+  - [ ] 유효성 검사
+  - [ ] API 연동 준비
+
+### Phase 5: WordPress 설정 (2-3일)
+
+- [ ] **WordPress 설치**
+  - [ ] 호스팅 선택 (Cloudways, WP Engine, 또는 로컬)
+  - [ ] WordPress 최신 버전 설치
+  - [ ] 관리자 계정 설정
+
+- [ ] **필수 플러그인 설치**
+  - [ ] WPGraphQL
+  - [ ] WPGraphQL for ACF
+  - [ ] ACF Pro
+  - [ ] Yoast SEO
+  - [ ] WP Fastest Cache
+
+- [ ] **Custom Post Types 생성**
+  - [ ] 대출 상품 (loan_product)
+    - 필드: 제품명, 최저금리, 최대한도, 특징, 이미지
+  - [ ] 고객 후기 (testimonial)
+    - 필드: 고객명, 내용, 평점, 날짜
+  - [ ] FAQ
+    - 필드: 질문, 답변, 카테고리
+  - [ ] 블로그 포스트 (기본 post 타입 사용)
+
+### Phase 6: Next.js + WordPress 연동 (3-4일)
+
+- [ ] **GraphQL 클라이언트 설정**
+  - [ ] Apollo Client 또는 urql 설치
+  - [ ] GraphQL 엔드포인트 설정
+  - [ ] 인증 설정 (필요 시)
+
+- [ ] **데이터 페칭 구현**
+  - [ ] 홈페이지 데이터 가져오기
+  - [ ] 상품 목록 가져오기
+  - [ ] 블로그 목록/상세 페이지
+  - [ ] FAQ 데이터
+
+- [ ] **이미지 최적화**
+  - [ ] Next.js Image 컴포넌트 사용
+  - [ ] WordPress 이미지 URL 처리
+  - [ ] Lazy loading 구현
+
+### Phase 7: 콘텐츠 마이그레이션 (1-2일)
+
+- [ ] **현재 HTML 콘텐츠 → WordPress 입력**
+  - [ ] 대출 상품 5개 입력
+  - [ ] 회사 소개 내용
+  - [ ] FAQ 입력
+
+- [ ] **이미지 업로드**
+  - [ ] 필요한 이미지 수집
+  - [ ] WordPress 미디어 라이브러리 업로드
+  - [ ] OG 이미지 생성
+
+### Phase 8: 배포 및 최적화 (2-3일)
+
+- [ ] **Vercel 배포**
+  - [ ] GitHub 연동
+  - [ ] 환경 변수 설정 (WordPress API URL)
+  - [ ] 도메인 연결
+
+- [ ] **성능 최적화**
+  - [ ] Lighthouse 테스트 (목표: 90+ 점수)
+  - [ ] Core Web Vitals 확인
+  - [ ] 이미지 최적화 재점검
+  - [ ] 번들 사이즈 최적화
+
+- [ ] **SEO 검증**
+  - [ ] 메타태그 확인
+  - [ ] Sitemap 생성 (next-sitemap)
+  - [ ] robots.txt 설정
+  - [ ] Google Search Console 등록
+
+- [ ] **테스트**
+  - [ ] 모바일 반응형 테스트
+  - [ ] 브라우저 호환성 테스트
+  - [ ] 폼 제출 테스트
+  - [ ] API 연동 테스트
+
+### Phase 9: 문서화 및 인수인계 (1일)
+
+- [ ] **개발 문서 작성**
+  - [ ] 프로젝트 구조 설명
+  - [ ] 환경 설정 가이드
+  - [ ] 배포 가이드
+
+- [ ] **WordPress 관리 가이드**
+  - [ ] 콘텐츠 작성 방법
+  - [ ] 상품 추가/수정 방법
+  - [ ] 이미지 업로드 가이드
+  - [ ] FAQ 관리 방법
+
+---
+
+## 📅 예상 소요 시간
+
+| Phase | 작업 | 예상 시간 |
+|-------|------|-----------|
+| 1 | Next.js 프로젝트 초기화 | 1-2일 |
+| 2 | 공통 컴포넌트 | 2-3일 |
+| 3 | 페이지 마이그레이션 | 3-4일 |
+| 4 | 기능 컴포넌트 | 2-3일 |
+| 5 | WordPress 설정 | 2-3일 |
+| 6 | API 연동 | 3-4일 |
+| 7 | 콘텐츠 마이그레이션 | 1-2일 |
+| 8 | 배포 및 최적화 | 2-3일 |
+| 9 | 문서화 | 1일 |
+| **총계** | | **17-25일** |
+
+---
+
+## 🚀 바로 시작 가능한 첫 단계
+
+**지금 바로 실행:**
+```bash
+# 1. Next.js 16 프로젝트 생성
+npx create-next-app@latest match-on-nextjs --typescript --tailwind --app
+
+# 2. 프로젝트 이동
+cd match-on-nextjs
+
+# 3. 개발 서버 실행
+npm run dev
+```
+
+**다음 작업:**
+1. Tailwind 커스텀 설정 (KINFA 디자인 시스템 적용)
+2. 폴더 구조 설정
+3. Header/Footer 컴포넌트 생성
+
+---
+
+## 📞 시작하시겠습니까?
+
+**Next.js 16 프로젝트를 지금 바로 생성하시겠습니까?**
